@@ -5,11 +5,25 @@ using UnityEngine;
 public class Playercontroller : MonoBehaviour
 {
     public float moveSpeed = 5f;
+    private SpriteRenderer spriteRenderer;
 
-
+    void Start()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            spriteRenderer.flipX = true;
+        }
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            spriteRenderer.flipX = false;
+        }
+
+
         // 獲取滑鼠當前的屏幕位置
         Vector3 mousePosition = Input.mousePosition;
 
