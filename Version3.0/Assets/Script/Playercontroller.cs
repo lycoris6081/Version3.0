@@ -6,23 +6,44 @@ public class Playercontroller : MonoBehaviour
 {
     public float moveSpeed = 5f;
     private SpriteRenderer spriteRenderer;
+    private float lastMouseX;
+    Animator animator;
+
 
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        lastMouseX = Input.mousePosition.x;
+        animator = GetComponent<Animator>();
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        // 獲取滑鼠當前的X位置
+        float mouseX = Input.mousePosition.x;
+
+        // 計算滑鼠移動的方向
+        float direction = Mathf.Sign(mouseX - lastMouseX);
+
+        // 根據方向切換圖片
+        if (direction > 0)
         {
             spriteRenderer.flipX = true;
         }
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        else
         {
             spriteRenderer.flipX = false;
         }
 
+        //攻擊
+        if (Input.GetMouseButtonDown(0))
+        {
+            animator.SetFloat("Attack1",1);
+        }
+        else
+        {
+            animator.SetFloat("Attack1",0);
+        }
 
         // 獲取滑鼠當前的屏幕位置
         Vector3 mousePosition = Input.mousePosition;
