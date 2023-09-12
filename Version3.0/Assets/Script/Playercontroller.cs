@@ -9,42 +9,42 @@ public class Playercontroller : MonoBehaviour
     public float lerpSpeed = 10f;  // 插值速度
     public float sprintDistance = 5f; // 冲刺距离
 
-
+    private bool isWalking = false;
     private bool isSprinting = false;
     private Vector3 targetPosition;
     private float initialDistance;
 
-    private SpriteRenderer spriteRenderer;
-    private float lastMouseX;
-    Animator animator;
+    //private SpriteRenderer spriteRenderer;
+    //private float lastMouseX;
+    public Animator animator;
 
 
     void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        lastMouseX = Input.mousePosition.x;
-        animator = GetComponent<Animator>();
+        //spriteRenderer = GetComponent<SpriteRenderer>();
+        //lastMouseX = Input.mousePosition.x;
+       
     }
 
-    void PictureFlip()
-    {
-        // 獲取滑鼠當前的X位置
-        float mouseX = Input.mousePosition.x;
+    //void PictureFlip()
+    //{
+    //    // 獲取滑鼠當前的X位置
+    //    float mouseX = Input.mousePosition.x;
 
-        // 計算滑鼠移動的方向
-        float direction = Mathf.Sign(mouseX - lastMouseX);
+    //    // 計算滑鼠移動的方向
+    //    float direction = Mathf.Sign(mouseX - lastMouseX);
 
-        // 根據方向切換圖片
-        if (direction > 0)
-        {
-            spriteRenderer.flipX = true;
-        }
-        else
-        {
-            spriteRenderer.flipX = false;
-        }
+    //    // 根據方向切換圖片
+    //    if (direction > 0)
+    //    {
+    //        spriteRenderer.flipX = true;
+    //    }
+    //    else
+    //    {
+    //        spriteRenderer.flipX = false;
+    //    }
         
-    }
+    //}
 
     //滑鼠移動
     void MouseMove()
@@ -67,12 +67,14 @@ public class Playercontroller : MonoBehaviour
 
         // 設置物體的位置
         transform.Translate(moveDirection * moveSpeed * Time.deltaTime);
+
+        isWalking = true;
     }
 
     void Update()
     {
 
-      PictureFlip();
+
         
       MouseMove();
 
@@ -91,10 +93,20 @@ public class Playercontroller : MonoBehaviour
             animator.SetFloat("Attack1",0);
         }
 
+        if(isWalking == true)
+        {
+            animator.SetFloat("WALK", 1);
+
+        }
+        else
+        {
+            animator.SetFloat("WALK", 0);
+        }
+
         if (isSprinting)
         {
-            Vector3 moveDirection = (targetPosition - transform.position).normalized;
-            transform.position = Vector3.Lerp(transform.position, targetPosition, lerpSpeed * Time.deltaTime);
+            Vector3 moveDirection = (targetPosition - transform.position);
+            transform.position = Vector3.Lerp(transform.position, moveDirection, 20 * Time.deltaTime);
 
             // 当物体接近目标位置或者超过冲刺距离时停止冲刺
             if (Vector3.Distance(transform.position, targetPosition) < 0.1f || Vector3.Distance(transform.position, targetPosition) >= initialDistance + sprintDistance)
