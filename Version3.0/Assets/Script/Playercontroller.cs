@@ -1,10 +1,19 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Playercontroller : MonoBehaviour
 {
     public float moveSpeed = 5f;
+    public float sprintSpeed = 5f; // å†²åˆºé€Ÿåº¦
+    public float lerpSpeed = 10f;  // æ’å€¼é€Ÿåº¦
+    public float sprintDistance = 5f; // å†²åˆºè·ç¦»
+
+
+    private bool isSprinting = false;
+    private Vector3 targetPosition;
+    private float initialDistance;
+
     private SpriteRenderer spriteRenderer;
     private float lastMouseX;
     Animator animator;
@@ -17,15 +26,15 @@ public class Playercontroller : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    void Update()
+    void PictureFlip()
     {
-        // Àò¨ú·Æ¹«·í«eªºX¦ì¸m
+        // ç²å–æ»‘é¼ ç•¶å‰çš„Xä½ç½®
         float mouseX = Input.mousePosition.x;
 
-        // ­pºâ·Æ¹«²¾°Êªº¤è¦V
+        // è¨ˆç®—æ»‘é¼ ç§»å‹•çš„æ–¹å‘
         float direction = Mathf.Sign(mouseX - lastMouseX);
 
-        // ®Ú¾Ú¤è¦V¤Á´«¹Ï¤ù
+        // æ ¹æ“šæ–¹å‘åˆ‡æ›åœ–ç‰‡
         if (direction > 0)
         {
             spriteRenderer.flipX = true;
@@ -34,36 +43,69 @@ public class Playercontroller : MonoBehaviour
         {
             spriteRenderer.flipX = false;
         }
+        
+    }
 
-        //§ğÀ»
+    //æ»‘é¼ ç§»å‹•
+    void MouseMove()
+    {
+        
+        // ç²å–æ»‘é¼ ç•¶å‰çš„å±å¹•ä½ç½®
+        Vector3 mousePosition = Input.mousePosition;
+
+        // å°‡æ»‘é¼ ä½ç½®å¾å±å¹•åæ¨™è½‰æ›ç‚ºä¸–ç•Œåæ¨™
+        Vector3 worldMousePosition = Camera.main.ScreenToWorldPoint(new Vector3(mousePosition.x, mousePosition.y, transform.position.z));
+
+        // è¨ˆç®—ç‰©é«”åˆ°æ»‘é¼ ä½ç½®çš„æ–¹å‘å‘é‡
+        Vector3 moveDirection = worldMousePosition - transform.position;
+
+        // é–ä½Zè»¸ï¼Œä½¿ç‰©é«”ä¿æŒåœ¨2Då¹³é¢ä¸Š
+        moveDirection.z = 0;
+
+        // æ­£è¦åŒ–æ–¹å‘å‘é‡ï¼Œä»¥ç¢ºä¿é€Ÿåº¦ä¸€è‡´
+        moveDirection.Normalize();
+
+        // è¨­ç½®ç‰©é«”çš„ä½ç½®
+        transform.Translate(moveDirection * moveSpeed * Time.deltaTime);
+    }
+
+    void Update()
+    {
+
+      PictureFlip();
+        
+      MouseMove();
+
+        //æ”»æ“Š
         if (Input.GetMouseButtonDown(0))
         {
             animator.SetFloat("Attack1",1);
+            isSprinting = true;
+            targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            targetPosition.z = transform.position.z; // ä¿æŒåœ¨åŒä¸€Zè½´ä¸Š
+            initialDistance = Vector3.Distance(transform.position, targetPosition);
         }
         else
         {
+            isSprinting = false;
             animator.SetFloat("Attack1",0);
         }
 
-        // Àò¨ú·Æ¹«·í«eªº«Ì¹õ¦ì¸m
-        Vector3 mousePosition = Input.mousePosition;
+        if (isSprinting)
+        {
+            Vector3 moveDirection = (targetPosition - transform.position).normalized;
+            transform.position = Vector3.Lerp(transform.position, targetPosition, lerpSpeed * Time.deltaTime);
 
-        // ±N·Æ¹«¦ì¸m±q«Ì¹õ§¤¼ĞÂà´«¬°¥@¬É§¤¼Ğ
-        Vector3 worldMousePosition = Camera.main.ScreenToWorldPoint(new Vector3(mousePosition.x, mousePosition.y, transform.position.z));
+            // å½“ç‰©ä½“æ¥è¿‘ç›®æ ‡ä½ç½®æˆ–è€…è¶…è¿‡å†²åˆºè·ç¦»æ—¶åœæ­¢å†²åˆº
+            if (Vector3.Distance(transform.position, targetPosition) < 0.1f || Vector3.Distance(transform.position, targetPosition) >= initialDistance + sprintDistance)
+            {
+                isSprinting = false;
+            }
+        }
 
-        // ­pºâª«Åé¨ì·Æ¹«¦ì¸mªº¤è¦V¦V¶q
-        Vector3 moveDirection = worldMousePosition - transform.position;
 
-        // Âê¦íZ¶b¡A¨Ïª«Åé«O«ù¦b2D¥­­±¤W
-        moveDirection.z = 0;
 
-        // ¥¿³W¤Æ¤è¦V¦V¶q¡A¥H½T«O³t«×¤@­P
-        moveDirection.Normalize();
 
-        // ³]¸mª«Åéªº¦ì¸m
-        transform.Translate(moveDirection * moveSpeed * Time.deltaTime);
-
-       
     }
 
     
