@@ -1,0 +1,95 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Monstercontroller : MonoBehaviour
+
+{
+    int hp = 0;
+    public int max_hp = 0;
+    
+    public enum Status { walk,attack};
+    public Status status;
+    public enum Face {Right,Left };
+    public Face face;
+
+    public float Speed;
+    public float VerticalSpeed;
+    private Transform myTransform;
+
+    public Transform playerTransform;
+    private SpriteRenderer spr;
+    void Start()
+    {
+        max_hp = 20;
+        hp = max_hp;
+        status = Status.walk;
+        spr = this.transform.GetComponent<SpriteRenderer>();
+
+        if (spr.flipX)
+        {
+            face = Face.Right;
+        }
+        else
+        {
+            face = Face.Left;
+        }
+        myTransform = this.transform;
+        playerTransform = GameObject.Find("CATCAT").transform;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if(hp <= 0)
+        {
+            Destroy(this.gameObject);
+        }
+       
+       
+
+
+        float deltaTime = Time.deltaTime;
+        //STATUS UPDATE
+        switch (status)
+        {
+            case Status.walk:
+                if(myTransform.position.x >= playerTransform.position.x)
+                {
+                    spr.flipX = false;
+                    face = Face.Left;
+                }
+                else
+                {
+                    spr.flipX = true;
+                    face = Face.Right;
+                }
+                switch(face)
+
+                {
+                    case Face.Right:
+                        myTransform.position += new Vector3(Speed * deltaTime, 0, 0);
+                        break;
+                    case Face.Left:
+                        myTransform.position -= new Vector3(Speed * deltaTime, 0, 0);
+                        break;
+                }
+
+                // 控制垂直移动
+                if (myTransform.position.y < playerTransform.position.y)
+                {
+                    myTransform.position += new Vector3(0, VerticalSpeed * deltaTime, 0);
+                }
+                else if (myTransform.position.y > playerTransform.position.y)
+                {
+                    myTransform.position -= new Vector3(0, VerticalSpeed * deltaTime, 0);
+                }
+                break;
+
+
+        
+        }
+
+
+    }
+}

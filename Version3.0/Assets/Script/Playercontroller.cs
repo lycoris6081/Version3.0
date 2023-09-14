@@ -14,38 +14,17 @@ public class Playercontroller : MonoBehaviour
     private Vector3 targetPosition;
     private float initialDistance;
 
-    //private SpriteRenderer spriteRenderer;
-    //private float lastMouseX;
+        
     public Animator animator;
 
 
     void Start()
     {
-        //spriteRenderer = GetComponent<SpriteRenderer>();
-        //lastMouseX = Input.mousePosition.x;
+       
        
     }
 
-    //void PictureFlip()
-    //{
-    //    // 獲取滑鼠當前的X位置
-    //    float mouseX = Input.mousePosition.x;
-
-    //    // 計算滑鼠移動的方向
-    //    float direction = Mathf.Sign(mouseX - lastMouseX);
-
-    //    // 根據方向切換圖片
-    //    if (direction > 0)
-    //    {
-    //        spriteRenderer.flipX = true;
-    //    }
-    //    else
-    //    {
-    //        spriteRenderer.flipX = false;
-    //    }
-        
-    //}
-
+   
     //滑鼠移動
     void MouseMove()
     {
@@ -93,6 +72,7 @@ public class Playercontroller : MonoBehaviour
             animator.SetFloat("Attack1",0);
         }
 
+        //走路動畫
         if(isWalking == true)
         {
             animator.SetFloat("WALK", 1);
@@ -102,6 +82,32 @@ public class Playercontroller : MonoBehaviour
         {
             animator.SetFloat("WALK", 0);
         }
+
+       
+
+        if(PlayerHP.Isdead == true)
+        {
+            animator.SetFloat("DEAD1", 1);
+            // 停止游戏时间，以防止继续更新游戏状态
+            StartCoroutine(DelayedGameOver());
+
+        }
+        else
+        {
+            animator.SetFloat("DEAD1", 0);
+        }
+        IEnumerator DelayedGameOver()
+        {
+            yield return new WaitForSeconds(0.3f); // 等待0.3秒
+
+            // 停止游戏
+            Time.timeScale = 0f;
+
+           
+        }
+
+
+
 
         if (isSprinting)
         {
