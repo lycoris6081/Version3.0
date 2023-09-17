@@ -5,6 +5,8 @@ using UnityEngine;
 public class Monstercontroller : MonoBehaviour
 
 {
+
+
     int hp = 0;
     public int max_hp = 0;
     
@@ -14,11 +16,16 @@ public class Monstercontroller : MonoBehaviour
     public Face face;
 
     public float Speed;
-    public float VerticalSpeed;
+    public float VerticalSpeed; //垂直移動變數
     private Transform myTransform;
 
     public Transform playerTransform;
     private SpriteRenderer spr;
+
+    public Collider2D wallCollider; // 牆壁的碰撞器
+
+
+
     void Start()
     {
         max_hp = 20;
@@ -36,7 +43,17 @@ public class Monstercontroller : MonoBehaviour
         }
         myTransform = this.transform;
         playerTransform = GameObject.Find("CATCAT").transform;
+
+        //// 获取怪物的碰撞器
+        //Collider2D monsterCollider = GetComponent<Collider2D>();
+
+        //// 忽略与牆壁的碰撞
+        //if (wallCollider != null && monsterCollider != null)
+        //{
+        //    Physics2D.IgnoreCollision(wallCollider, monsterCollider);
+        //}
     }
+
 
     // Update is called once per frame
     void Update()
