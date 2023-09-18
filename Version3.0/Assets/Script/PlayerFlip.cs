@@ -37,5 +37,6 @@ public class PlayerFlip : MonoBehaviour
     void Update()
     {
         PictureFlip();
+        
     }
 }

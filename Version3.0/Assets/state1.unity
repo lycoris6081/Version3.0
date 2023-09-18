@@ -1025,7 +1025,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1143869076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2020,9 +2020,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 4
-  sprintSpeed: 100
-  lerpSpeed: 20
-  sprintDistance: 5
+  sprintSpeed: 200
+  lerpSpeed: 50
+  sprintDistance: 10
   animator: {fileID: 983904391}
 --- !u!114 &2132485466
 MonoBehaviour:
