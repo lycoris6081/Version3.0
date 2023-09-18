@@ -1887,7 +1887,7 @@ GameObject:
   - component: {fileID: 2132485460}
   m_Layer: 0
   m_Name: CATCAT
-  m_TagString: Untagged
+  m_TagString: CATCAT
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2020,9 +2020,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 4
-  sprintSpeed: 500
-  lerpSpeed: 200
-  sprintDistance: 10
+  sprintSpeed: 5000
+  maxSprintSpeed: 5
+  sprintDistance: 5000
   animator: {fileID: 983904391}
 --- !u!114 &2132485466
 MonoBehaviour:

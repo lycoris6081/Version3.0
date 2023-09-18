@@ -23,17 +23,20 @@ public class PlayerHP : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-
-
-        if (hp <= 0)
+        if(Playercontroller.isAttacking == true)
         {
+            if (hp <= 0)
+            {
 
-            // 显示游戏结束UI
-            gameOverUI.SetActive(true);
-            
-            Isdead = true;
+                // 显示游戏结束UI
+                gameOverUI.SetActive(true);
+
+                Isdead = true;
+            }
         }
+
+
+        
 
     }
     private void OnTriggerEnter2D(Collider2D other)
