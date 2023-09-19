@@ -5,7 +5,7 @@ using UnityEngine;
 public class MonsterSpawner : MonoBehaviour
 {
     public GameObject enemyPrefab; // 敌人的预制体
-    public float spawnInterval = 10f; // 敌人生成的时间间隔
+    public float spawnInterval = 3f; // 敌人生成的时间间隔
     public int maxEnemies = 3;
     public float spawnRadius = 10f; // 环型区域的半径
     public float centerRadius = 5f; // 中心区域的半径

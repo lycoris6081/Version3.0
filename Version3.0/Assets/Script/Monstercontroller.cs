@@ -9,10 +9,10 @@ public class Monstercontroller : MonoBehaviour
 
     int hp = 0;
     public int max_hp = 0;
-    
-    public enum Status { walk,attack};
+
+    public enum Status { walk, attack };
     public Status status;
-    public enum Face {Right,Left };
+    public enum Face { Right, Left };
     public Face face;
 
     public float Speed;
@@ -28,7 +28,7 @@ public class Monstercontroller : MonoBehaviour
 
     void Start()
     {
-        max_hp = 20;
+        max_hp = 1;
         hp = max_hp;
         status = Status.walk;
         spr = this.transform.GetComponent<SpriteRenderer>();
@@ -58,13 +58,13 @@ public class Monstercontroller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        if(hp <= 0)
+
+        if (hp <= 0)
         {
             Destroy(this.gameObject);
         }
-       
-       
+
+
 
 
         float deltaTime = Time.deltaTime;
@@ -72,7 +72,7 @@ public class Monstercontroller : MonoBehaviour
         switch (status)
         {
             case Status.walk:
-                if(myTransform.position.x >= playerTransform.position.x)
+                if (myTransform.position.x >= playerTransform.position.x)
                 {
                     spr.flipX = false;
                     face = Face.Left;
@@ -82,7 +82,7 @@ public class Monstercontroller : MonoBehaviour
                     spr.flipX = true;
                     face = Face.Right;
                 }
-                switch(face)
+                switch (face)
 
                 {
                     case Face.Right:
@@ -105,16 +105,20 @@ public class Monstercontroller : MonoBehaviour
                 break;
 
 
-        
+
         }
 
 
     }
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.tag == "CATCAT")
+        if (other.gameObject.tag == "AttackBox")
         {
             Destroy(gameObject);
         }
+
     }
 }
+
+
+

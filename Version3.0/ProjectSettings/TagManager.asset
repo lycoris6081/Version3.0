@@ -8,6 +8,7 @@ TagManager:
   - Bullet
   - Wall
   - CATCAT
+  - AttackBox
   layers:
   - Default
   - TransparentFX

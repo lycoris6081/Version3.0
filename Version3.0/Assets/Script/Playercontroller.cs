@@ -9,11 +9,12 @@ public class Playercontroller : MonoBehaviour
     public float sprintSpeed = 5f; // 冲刺速度
     public float maxSprintSpeed = 10f; // 冲刺最大速度
     public float sprintDistance = 5f; // 冲刺距离
-    
+    public GameObject AttackBox;
 
     public static bool isAttacking;
     private bool isWalking = false;
     private bool isSprinting = false;
+    private bool canSprint = true; // 用于控制是否可以进行冲刺
     private Vector3 targetPosition;
     private float initialDistance;
     private Rigidbody2D rb; // Rigidbody2D组件
@@ -27,7 +28,7 @@ public class Playercontroller : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>(); // 获取Rigidbody2D组件
         rb.gravityScale = 0; // 防止重力影响
-
+        AttackBox.SetActive(false);
     }
 
    
@@ -60,15 +61,25 @@ public class Playercontroller : MonoBehaviour
     {
 
         MouseMove();
+        
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && canSprint)
         {
+            // 禁止再次点击鼠标
+            canSprint = false;
+
+            isAttacking = true;
+            AttackBox.SetActive(true);
+           
             animator.SetFloat("Attack1", 1);
+            
             isSprinting = true;
             targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             targetPosition.z = transform.position.z; // 保持在同一Z轴上
             initialDistance = Vector3.Distance(transform.position, targetPosition);
             
+            
+
             // 保存原始速度
             originalVelocity = rb.velocity;
 
@@ -78,6 +89,9 @@ public class Playercontroller : MonoBehaviour
 
             // 启动衝刺计时器
             sprintTimer = 0.5f;
+
+           
+
         }
         else if (isSprinting)
         {
@@ -90,9 +104,20 @@ public class Playercontroller : MonoBehaviour
                 rb.velocity = originalVelocity;
                 isSprinting = false;
                 animator.SetFloat("Attack1", 0);
-            }
-        }
 
+                // 允许再次点击鼠标
+                canSprint = true;
+            }
+            
+            
+
+        }
+        else
+        {
+            isAttacking = false;
+            AttackBox.SetActive(false);
+        }
+        
 
         //走路動畫
         if (isWalking == true)
@@ -120,7 +145,7 @@ public class Playercontroller : MonoBehaviour
         }
         IEnumerator DelayedGameOver()
         {
-            yield return new WaitForSeconds(0.3f); // 等待0.3秒
+            yield return new WaitForSeconds(0.5f); // 等待0.3秒
 
             // 停止游戏
             Time.timeScale = 0f;

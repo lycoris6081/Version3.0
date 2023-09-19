@@ -23,7 +23,7 @@ public class PlayerHP : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Playercontroller.isAttacking == true)
+        if(Playercontroller.isAttacking == false)
         {
             if (hp <= 0)
             {
@@ -43,12 +43,21 @@ public class PlayerHP : MonoBehaviour
     {
         if (other.gameObject.tag == "Enemy")
         {
-            hp -= 1;
+            if (Playercontroller.isAttacking == false)
+            {
+                hp -= 1;
+            }
+           
         }
         if (other.gameObject.tag == "Bullet")
         {
-            hp -= 1;
-            Destroy(other.gameObject);
+            if (Playercontroller.isAttacking == false)
+            {
+                hp -= 1;
+                Destroy(other.gameObject);
+            }
+            
+           
         }
 
     }
