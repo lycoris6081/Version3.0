@@ -29,7 +29,7 @@ public class SMeneger : MonoBehaviour
     {
         //Â÷¶}¹CÀ¸
         Application.Quit();
-        //EditorApplication.isPlaying = false;
+        EditorApplication.isPlaying = false;
     }
 
     public void back()
