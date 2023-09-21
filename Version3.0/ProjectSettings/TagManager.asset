@@ -9,6 +9,7 @@ TagManager:
   - Wall
   - CATCAT
   - AttackBox
+  - Soul
   layers:
   - Default
   - TransparentFX

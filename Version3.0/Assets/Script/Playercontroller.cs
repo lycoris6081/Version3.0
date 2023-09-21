@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
+using UnityEngine.UI;
+
+
 
 public class Playercontroller : MonoBehaviour
 {
@@ -18,6 +20,8 @@ public class Playercontroller : MonoBehaviour
     private Vector3 targetPosition;
     private float initialDistance;
     private Rigidbody2D rb; // Rigidbody2D组件
+   
+    private SoulCountTEXT SoulCollect;//靈魂收集數量顯示
 
     public Animator animator;
 
@@ -29,6 +33,7 @@ public class Playercontroller : MonoBehaviour
         rb = GetComponent<Rigidbody2D>(); // 获取Rigidbody2D组件
         rb.gravityScale = 0; // 防止重力影响
         AttackBox.SetActive(false);
+        SoulCollect = GameObject.Find("SoulCount").GetComponent<SoulCountTEXT>();
     }
 
    
@@ -175,7 +180,21 @@ public class Playercontroller : MonoBehaviour
 
 
     }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.CompareTag("Soul"))
+        {
+            CollectSoul(other.gameObject);
 
-    
+            Debug.Log("Collision with Soul detected");
+        }
+    }
+
+    void CollectSoul(GameObject soul)
+    {
+        SoulCollect.CollectSoul();
+        Destroy(soul);
+
+    }
 }
 

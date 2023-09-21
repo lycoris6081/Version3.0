@@ -15,6 +15,7 @@ public class Monstercontroller : MonoBehaviour
     public enum Face { Right, Left };
     public Face face;
 
+    public GameObject soulPrefab;
     public float Speed;
     public float VerticalSpeed; //垂直移動變數
     private Transform myTransform;
@@ -24,8 +25,7 @@ public class Monstercontroller : MonoBehaviour
 
     public Collider2D wallCollider; // 牆壁的碰撞器
 
-
-
+  
     void Start()
     {
         max_hp = 1;
@@ -53,6 +53,16 @@ public class Monstercontroller : MonoBehaviour
         //    Physics2D.IgnoreCollision(wallCollider, monsterCollider);
         //}
     }
+
+    void SoulSpawn()
+    {
+         
+       GameObject soul = Instantiate(soulPrefab, transform.position, Quaternion.identity);
+ 
+       
+       Destroy(soul, 2f); // 假设2秒后销毁灵魂对象，根据需要进行调整
+    }
+
 
 
     // Update is called once per frame
@@ -114,6 +124,9 @@ public class Monstercontroller : MonoBehaviour
     {
         if (other.gameObject.tag == "AttackBox")
         {
+
+          SoulSpawn();
+
             Destroy(gameObject);
         }
 
