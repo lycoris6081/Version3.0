@@ -13,6 +13,8 @@ public class Playercontroller : MonoBehaviour
     public float sprintDistance = 5f; // 冲刺距离
     public GameObject AttackBox;
 
+    public float knockbackForce = 5f; // 物理衝撞反射的大小
+
     public static bool isAttacking;
     private bool isWalking = false;
     private bool isSprinting = false;
@@ -21,7 +23,8 @@ public class Playercontroller : MonoBehaviour
     private float initialDistance;
     private Rigidbody2D rb; // Rigidbody2D组件
    
-    private SoulCountTEXT SoulCollect;//靈魂收集數量顯示
+    private SoulUI UI;//靈魂收集數量顯示
+    private Boxcontroller Box;
 
     public Animator animator;
 
@@ -33,7 +36,8 @@ public class Playercontroller : MonoBehaviour
         rb = GetComponent<Rigidbody2D>(); // 获取Rigidbody2D组件
         rb.gravityScale = 0; // 防止重力影响
         AttackBox.SetActive(false);
-        SoulCollect = GameObject.Find("SoulCount").GetComponent<SoulCountTEXT>();
+        UI = GameObject.Find("SoulScript").GetComponent<SoulUI>();
+        Box = GameObject.Find("BoxControl").GetComponent<Boxcontroller>();
     }
 
    
@@ -119,6 +123,7 @@ public class Playercontroller : MonoBehaviour
         }
         else
         {
+            
             isAttacking = false;
             AttackBox.SetActive(false);
         }
@@ -163,10 +168,6 @@ public class Playercontroller : MonoBehaviour
 
         if (isSprinting)
         {
-            
-
-            
-
             // 当物体接近目标位置或者超过冲刺距离或者计时器结束时停止冲刺
             if (Vector3.Distance(transform.position, targetPosition) < 0.1f ||
                 Vector3.Distance(transform.position, targetPosition) >= initialDistance + sprintDistance)
@@ -185,16 +186,30 @@ public class Playercontroller : MonoBehaviour
         if(other.CompareTag("Soul"))
         {
             CollectSoul(other.gameObject);
-
-            Debug.Log("Collision with Soul detected");
+        }
+        else if (other.CompareTag("Box"))
+        {
+            CollectBox(other.gameObject);
         }
     }
 
-    void CollectSoul(GameObject soul)
-    {
-        SoulCollect.CollectSoul();
-        Destroy(soul);
 
+    void CollectSoul(GameObject Soul)
+    {
+        UI.CollectSoul();
+        Destroy(Soul);
+        Box.AddSoulToCurrentCount(1);
+        Box.CheckSoulcount(UI.GetSoulCount());
     }
+
+
+    void CollectBox(GameObject box)
+    {
+        
+        Box.DestroyBox(); // 销毁箱子
+        
+    }
+
+    
 }
 

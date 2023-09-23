@@ -15,7 +15,7 @@ public class Monstercontroller : MonoBehaviour
     public enum Face { Right, Left };
     public Face face;
 
-    public GameObject soulPrefab;
+    public GameObject SoulPrefab;
     public float Speed;
     public float VerticalSpeed; //垂直移動變數
     private Transform myTransform;
@@ -57,10 +57,10 @@ public class Monstercontroller : MonoBehaviour
     void SoulSpawn()
     {
          
-       GameObject soul = Instantiate(soulPrefab, transform.position, Quaternion.identity);
+       GameObject Soul = Instantiate(SoulPrefab, transform.position, Quaternion.identity);
  
        
-       Destroy(soul, 2f); // 假设2秒后销毁灵魂对象，根据需要进行调整
+       Destroy(Soul, 2f); // 假设2秒后销毁灵魂对象，根据需要进行调整
     }
 
 
@@ -127,7 +127,7 @@ public class Monstercontroller : MonoBehaviour
 
           SoulSpawn();
 
-            Destroy(gameObject);
+            
         }
 
     }
