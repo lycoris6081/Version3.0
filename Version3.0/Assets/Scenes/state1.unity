@@ -1583,7 +1583,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 0.13836467, b: 0.13836467, a: 0.7294118}
+  m_Color: {r: 1, g: 0.13836467, b: 0.13836467, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2376,7 +2376,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 6
   sprintSpeed: 5000
-  maxSprintSpeed: 15
+  maxSprintSpeed: 25
   sprintDistance: 5000
   AttackBox: {fileID: 1648438171}
   animator: {fileID: 983904391}
