@@ -13,7 +13,9 @@ public class Playercontroller : MonoBehaviour
     public float sprintDistance = 5f; // 冲刺距离
     public GameObject AttackBox;
 
-    public float knockbackForce = 5f; // 物理衝撞反射的大小
+
+
+    /*public float knockbackForce = 5f;*/ // 物理衝撞反射的大小
 
     public static bool isAttacking;
     private bool isWalking = false;
@@ -84,7 +86,7 @@ public class Playercontroller : MonoBehaviour
             
             isSprinting = true;
             targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            targetPosition.z = transform.position.z; // 保持在同一Z轴上
+            
             initialDistance = Vector3.Distance(transform.position, targetPosition);
             
             
@@ -97,7 +99,7 @@ public class Playercontroller : MonoBehaviour
             rb.velocity = moveDirection.normalized * maxSprintSpeed;
 
             // 启动衝刺计时器
-            sprintTimer = 0.5f;
+            sprintTimer = 0.2f;
 
            
 
@@ -110,12 +112,14 @@ public class Playercontroller : MonoBehaviour
             // 如果计时器小于等于0，停止衝刺
             if (sprintTimer <= 0f)
             {
-                rb.velocity = originalVelocity;
-                isSprinting = false;
-                animator.SetFloat("Attack1", 0);
-
                 // 允许再次点击鼠标
                 canSprint = true;
+                isSprinting = false;
+                rb.velocity = originalVelocity;
+                
+                animator.SetFloat("Attack1", 0);
+
+               
             }
             
             
