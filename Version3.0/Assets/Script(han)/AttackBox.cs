@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AttackBox : MonoBehaviour
 {
-    public static bool enemyAttack = false;
+    
     private Rigidbody2D rb;
     void Start()
     {
@@ -14,18 +14,12 @@ public class AttackBox : MonoBehaviour
     {
         if (other.gameObject.tag == "Enemy")
         {
-           enemyAttack = true;
-          //  Destroy(other.gameObject);
-
             Vector2 direction = (transform.position - other.transform.position).normalized;
             float knockbackForce = 35f; // 调整物理反馈力的大小
             rb.AddForce(direction * knockbackForce, ForceMode2D.Impulse);
 
         }
-        else
-        {
-            enemyAttack= false;
-        }
+       
 
 
     }
