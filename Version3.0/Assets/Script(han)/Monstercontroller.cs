@@ -8,7 +8,7 @@ public class Monstercontroller : MonoBehaviour
 
     Animator animator;
     
-    public static int hp = 0;
+    public int hp = 0;
     public int max_hp = 0;
 
     public enum Status { walk, attack };
@@ -73,11 +73,7 @@ public class Monstercontroller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(AttackBox.enemyAttack == true)
-        {
-            hp--;
-        }
-
+  
         if (hp <= 0)
         {
             animator.SetFloat("Die", 1);
@@ -133,6 +129,7 @@ public class Monstercontroller : MonoBehaviour
     {
         if (other.gameObject.tag == "AttackBox")
         {
+            hp--;
 
             SoulSpawn();
        
