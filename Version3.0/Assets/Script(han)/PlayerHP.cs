@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PlayerHP : MonoBehaviour
 {
 
-    public int hp = 1;
+    public static int hp = 1;
     public int max_hp = 0;
     public static bool Isdead;
 

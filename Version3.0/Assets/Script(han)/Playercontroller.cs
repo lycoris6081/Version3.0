@@ -24,10 +24,13 @@ public class Playercontroller : MonoBehaviour
     private Vector3 targetPosition;
     private float initialDistance;
     private Rigidbody2D rb; // Rigidbody2D组件
-   
+
+    private CardControl CCUI;
+
     private SoulUI UI;//靈魂收集數量顯示
     private Boxcontroller Box;
 
+   
     public Animator animator;
 
     private Vector2 originalVelocity; // 用于保存原始速度
@@ -40,6 +43,8 @@ public class Playercontroller : MonoBehaviour
         AttackBox.SetActive(false);
         UI = GameObject.Find("SoulScript").GetComponent<SoulUI>();
         Box = GameObject.Find("BoxControl").GetComponent<Boxcontroller>();
+        CCUI = GameObject.Find("Cardsystem").GetComponent<CardControl>();
+
     }
 
    
@@ -211,7 +216,8 @@ public class Playercontroller : MonoBehaviour
     {
         
         Box.DestroyBox(); // 销毁箱子
-        
+        CCUI.CollectBox();//叫出選擇介面
+       
     }
 
     
