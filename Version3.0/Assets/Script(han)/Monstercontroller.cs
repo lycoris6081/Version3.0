@@ -125,6 +125,7 @@ public class Monstercontroller : MonoBehaviour
 
 
     }
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "AttackBox")
@@ -134,8 +135,17 @@ public class Monstercontroller : MonoBehaviour
             SoulSpawn();
        
         }
+        
     }
-    
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            Debug.Log("hit");
+           collision.gameObject.GetComponent<Collider2D>().isTrigger = true;
+        }
+    }
+
 }
 
    

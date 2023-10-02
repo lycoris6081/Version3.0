@@ -10,6 +10,10 @@ public class AttackBox : MonoBehaviour
     {
       rb = GameObject.Find("CATCAT").GetComponent<Rigidbody2D>();
     }
+
+
+
+   
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Enemy")

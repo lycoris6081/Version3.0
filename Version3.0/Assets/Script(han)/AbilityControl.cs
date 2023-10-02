@@ -1,13 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AbilityControl : MonoBehaviour
 {
+    public Image A1;
+    public Image A2;
+    public Image A3;
+    public Image A4;
+    public Image A5;
     // Start is called before the first frame update
     void Start()
     {
-        
+        A1 = GetComponent<Image>();
+        A2 = GetComponent<Image>();
+        A3 = GetComponent<Image>();
+        A4 = GetComponent<Image>();
+        A5 = GetComponent<Image>();
     }
 
     // Update is called once per frame
@@ -19,6 +29,9 @@ public class AbilityControl : MonoBehaviour
     public void Ability1()
     {
         PlayerHP.hp++;
+        A1.color = new Color32(255,255, 255, 100);
+
+        Debug.Log("+1");
     }
     public void Ability2()
     {

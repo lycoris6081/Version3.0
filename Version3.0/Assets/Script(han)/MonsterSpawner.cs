@@ -8,7 +8,7 @@ public class MonsterSpawner : MonoBehaviour
     public float spawnInterval = 3f; // 敌人生成的时间间隔
     public int maxEnemies = 3;
     public float spawnRadius = 10f; // 环型区域的半径
-    public float centerRadius = 5f; // 中心区域的半径
+    public float centerRadius = 6f; // 中心区域的半径
     private float nextSpawnTime = 3f;
 
     void Update()

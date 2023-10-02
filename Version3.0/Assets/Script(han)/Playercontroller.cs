@@ -44,7 +44,7 @@ public class Playercontroller : MonoBehaviour
         UI = GameObject.Find("SoulScript").GetComponent<SoulUI>();
         Box = GameObject.Find("BoxControl").GetComponent<Boxcontroller>();
         CCUI = GameObject.Find("Cardsystem").GetComponent<CardControl>();
-
+        
     }
 
    
@@ -190,6 +190,8 @@ public class Playercontroller : MonoBehaviour
 
 
     }
+
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.CompareTag("Soul"))
