@@ -13,11 +13,7 @@ public class AbilityControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        A1 = GetComponent<Image>();
-        A2 = GetComponent<Image>();
-        A3 = GetComponent<Image>();
-        A4 = GetComponent<Image>();
-        A5 = GetComponent<Image>();
+        
     }
 
     // Update is called once per frame
@@ -29,7 +25,7 @@ public class AbilityControl : MonoBehaviour
     public void Ability1()
     {
         PlayerHP.hp++;
-        A1.color = new Color32(255,255, 255, 100);
+        A1.color = new Color(1,1,1,1);
 
         Debug.Log("+1");
     }
