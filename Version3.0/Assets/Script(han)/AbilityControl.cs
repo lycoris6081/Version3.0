@@ -25,13 +25,13 @@ public class AbilityControl : MonoBehaviour
     public void Ability1()
     {
         PlayerHP.hp++;
-        A1.color = new Color(1,1,1,1);
+        A1.color = new Color(255,255,255,255);
 
         Debug.Log("+1");
     }
     public void Ability2()
     {
-        print("2");
+       
     }
     public void Ability3()
     {
@@ -40,7 +40,9 @@ public class AbilityControl : MonoBehaviour
     }
     public void Ability4()
     {
-        print("4");
+        AttackBox.Damage++;
+        A2.color = new Color(255, 255, 255, 255);
+        Debug.Log("Damage+1");
     }
     public void Ability5()
     {

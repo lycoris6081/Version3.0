@@ -9,7 +9,8 @@ public class Monstercontroller : MonoBehaviour
     Animator animator;
     
     public int hp = 0;
-    public int max_hp = 0;
+
+    
 
     public enum Status { walk, attack };
     public Status status;
@@ -26,11 +27,12 @@ public class Monstercontroller : MonoBehaviour
 
     public Collider2D wallCollider; // 牆壁的碰撞器
 
+   
 
     void Start()
     {
-        max_hp = 1;
-        hp = max_hp;
+
+        hp = 3;
         status = Status.walk;
         spr = this.transform.GetComponent<SpriteRenderer>();
 
@@ -60,7 +62,7 @@ public class Monstercontroller : MonoBehaviour
     {
 
         GameObject Soul = Instantiate(SoulPrefab, transform.position, Quaternion.identity);
-
+        Debug.Log("soul");
 
         Destroy(Soul, 2f); // 假设2秒后销毁灵魂对象，根据需要进行调整
     }
@@ -68,18 +70,25 @@ public class Monstercontroller : MonoBehaviour
     void Dead()
     {
         Destroy(this.gameObject);
+        
     }
+   
 
     // Update is called once per frame
     void Update()
     {
   
-        if (hp <= 0)
-        {
-            animator.SetFloat("Die", 1);
-            Invoke("Dead",0.2f);
-        }
+     
         
+       if (hp <= 0)
+       {
+          animator.SetFloat("Die", 1);
+
+          Invoke("Dead", 0.2f);
+          Invoke("SoulSpawn", 0.2f);
+          
+       }
+       
 
 
         float deltaTime = Time.deltaTime;
@@ -130,10 +139,8 @@ public class Monstercontroller : MonoBehaviour
     {
         if (other.gameObject.tag == "AttackBox")
         {
-            hp--;
+            hp = hp -= AttackBox.Damage;
 
-            SoulSpawn();
-       
         }
         
     }

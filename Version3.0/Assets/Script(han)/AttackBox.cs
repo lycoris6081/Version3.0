@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class AttackBox : MonoBehaviour
 {
-    
+    public static int Damage = 1;
+     
     private Rigidbody2D rb;
     void Start()
     {
