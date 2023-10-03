@@ -149,13 +149,19 @@ public class Playercontroller : MonoBehaviour
             animator.SetFloat("WALK", 0);
         }
 
-       
+       void GameStop()
+       {
+             //游戏时间，以防止继续更新游戏状态
+            StartCoroutine(DelayedGameOver());
+            
+       }
 
         if(PlayerHP.Isdead == true)
         {
             animator.SetFloat("DEAD1", 1);
-            // 停止游戏时间，以防止继续更新游戏状态
-            StartCoroutine(DelayedGameOver());
+            GameStop();
+
+
 
         }
         else
