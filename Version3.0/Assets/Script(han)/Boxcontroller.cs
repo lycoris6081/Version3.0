@@ -16,7 +16,7 @@ public class Boxcontroller : MonoBehaviour
         if(!IsBoxSpawned && soulCount >= NeedsSoul)
         {
             SpawnBox();
-            NeedsSoul += 3;
+            NeedsSoul += 10;
         }
 
     }
@@ -25,10 +25,7 @@ public class Boxcontroller : MonoBehaviour
     {
         Instantiate(BoxPrefab, new Vector3(0f, 0f, 0f), Quaternion.identity);
         IsBoxSpawned = true;
-
-     
-
-        
+       
     }
 
     public void DestroyBox()

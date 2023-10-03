@@ -7,17 +7,18 @@ public class SoulUI : MonoBehaviour
 {
 
 
-
+    public Image soulUI;
     public Text soulCountText; // 将 UI Text 组件拖放到这个字段中
     private int soulCount = 0; // 用於追蹤踪灵魂数量
     void Start()
     {
+       soulUI = GetComponent<Image>();
         UpdateSoulCountText();
     }
 
     void UpdateSoulCountText() 
     {
-        soulCountText.text = "Souls: " + soulCount.ToString();
+        soulCountText.text = soulCount.ToString();
     }
 
     public void CollectSoul()
