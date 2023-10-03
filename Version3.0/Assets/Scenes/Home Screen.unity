@@ -395,7 +395,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.76470596, g: 0.7411765, b: 0.69803923, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1532,7 +1532,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonImage: {fileID: 559922051}
   imageOne: {fileID: 341597621, guid: a12245c4fb50f274a8a25ac7fe7679f3, type: 3}
-  imageTwo: {fileID: -1108874516, guid: be46418094a690648b340f204cb2a2e5, type: 3}
+  imageTwo: {fileID: -573831421, guid: a12245c4fb50f274a8a25ac7fe7679f3, type: 3}
 --- !u!114 &559922054
 MonoBehaviour:
   m_ObjectHideFlags: 0
