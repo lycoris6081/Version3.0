@@ -6,9 +6,11 @@ public class Bullet : MonoBehaviour
 {
     public float bulletDamage = 1f; // 子弹伤害值
 
-    private void OnTriggerEnter2D(Collider2D collision)
+
+  
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.gameObject.tag == "Wall")
+        if (other.gameObject.tag == "Wall")
         {
             // 销毁子弹
             Destroy(gameObject);

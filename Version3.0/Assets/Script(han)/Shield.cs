@@ -29,22 +29,19 @@ public class Shield : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Enemy")
+        if (other.CompareTag("Enemy"))
         {
-            if (shieldopen)
-            {
-                // 计算反弹力
-                Vector2 bounceForce = (other.transform.position - transform.position).normalized * 100f;
+            // 计算反弹力
+            Vector2 bounceForce = (other.transform.position - transform.position).normalized * 100f;
 
-                // 获取敌人的刚体组件
-                Rigidbody2D enemyRigidbody = other.gameObject.GetComponent<Rigidbody2D>();
+            // 获取敌人的刚体组件
+            Rigidbody2D enemyRigidbody = other.gameObject.GetComponent<Rigidbody2D>();
 
-                // 将反弹力应用于敌人
-                enemyRigidbody.AddForce(bounceForce);
-
-            }
+            // 将反弹力应用于敌人
+            enemyRigidbody.AddForce(bounceForce);
 
 
         }
@@ -58,8 +55,6 @@ public class Shield : MonoBehaviour
 
             Destroy(other.gameObject);
         }
-
-
     }
 
 

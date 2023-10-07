@@ -60,5 +60,10 @@ public class CardControl : MonoBehaviour
         ShowChoicePanel();
     }
 
-   
+    public void ReshuffleAbilities()
+    {
+        DeactivateButtons(); // 先隱藏當前的按鈕
+        RandomlySelectButtons(); // 隨機選擇新的按鈕
+    }
+
 }

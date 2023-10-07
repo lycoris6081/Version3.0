@@ -11,6 +11,7 @@ TagManager:
   - AttackBox
   - Soul
   - Box
+  - Shield
   layers:
   - Default
   - TransparentFX

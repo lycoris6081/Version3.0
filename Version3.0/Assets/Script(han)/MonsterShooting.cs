@@ -32,7 +32,7 @@ public class MonsterShooting : MonoBehaviour
             // 创建子弹，并将其旋转到正确的角度
             GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.Euler(0, 0, angle));
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-
+ 
             // 应用射击力量
             rb.AddForce(direction * bulletForce, ForceMode2D.Impulse);
 
@@ -40,15 +40,37 @@ public class MonsterShooting : MonoBehaviour
             nextFireTime = Time.time + 1f / fireRate;
         }
 
-        //void Shoot(Vector3 direction)
-        //{
-        //    // 创建子弹
-        //    GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
-        //    Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+        if (AbilityControl.Slowdown)
+        {
+            SlowdownBulletsWithTag("Bullet", 2f);
+        }
 
-        //    // 设置子弹的速度方向
-        //    rb.velocity = direction * bulletForce;
-        //}
+    }
+    private IEnumerator SlowDownBullet(GameObject bullet, float duration)
+    {
+        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+
+        // 保存原始速度
+        Vector2 originalVelocity = rb.velocity;
+
+        // 減慢速度
+        rb.velocity /= 2;
+
+        // 等待持續時間
+        yield return new WaitForSeconds(duration);
+
+        // 恢復正常速度
+        rb.velocity = originalVelocity;
+    }
+
+    private void SlowdownBulletsWithTag(string tag, float duration)
+    {
+        GameObject[] bullets = GameObject.FindGameObjectsWithTag(tag);
+        foreach (GameObject bullet in bullets)
+        {
+            // 直接將子彈 GameObject 傳遞給 SlowDownBullet 函數
+            StartCoroutine(SlowDownBullet(bullet, duration));
+        }
     }
 
 }

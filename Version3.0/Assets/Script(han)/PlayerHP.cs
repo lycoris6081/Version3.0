@@ -61,6 +61,12 @@ public class PlayerHP : MonoBehaviour
             }
 
         }
+       
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
         if (other.gameObject.tag == "Bullet")
         {
             if (Playercontroller.isAttacking == false)
@@ -78,7 +84,6 @@ public class PlayerHP : MonoBehaviour
 
 
         }
-
     }
     //private void OnColliderEnter2D(Collider2D other)
     //{
@@ -95,7 +100,7 @@ public class PlayerHP : MonoBehaviour
 
     //            Debug.Log("-1");
     //        }
-           
+
     //    }
     //    if (other.gameObject.tag == "Bullet")
     //    {
@@ -104,8 +109,8 @@ public class PlayerHP : MonoBehaviour
     //            hp -= 1;
     //            Destroy(other.gameObject);
     //        }
-            
-           
+
+
     //    }
 
     //}

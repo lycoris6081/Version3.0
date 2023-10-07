@@ -10,7 +10,7 @@ public class Monstercontroller : MonoBehaviour
     
     public int hp = 0;
 
-    
+    private static int Boomhp = 0;
 
     public enum Status { walk, attack };
     public Status status;
@@ -32,14 +32,15 @@ public class Monstercontroller : MonoBehaviour
     private bool isDead = false;
 
 
-
+    public static bool Boom = false;
 
     void Start()
     {
-
+        Boomhp = 0;
         hp = 1;
         status = Status.walk;
         spr = this.transform.GetComponent<SpriteRenderer>();
+        
 
         if (spr.flipX)
         {
@@ -84,7 +85,43 @@ public class Monstercontroller : MonoBehaviour
         Destroy(this.gameObject);
         
     }
-   
+
+    public void TakeDamage(int damageAmount)
+    {
+        hp -= damageAmount; // 減少敵人的血量
+     
+    }
+
+    private IEnumerator SlowDown(float duration)
+    {
+        // 保存原始速度
+        float originalSpeed = Speed;
+        float originalVerticalSpeed = VerticalSpeed;
+
+        // 減慢速度
+        Speed /= 4;
+        VerticalSpeed /= 4;
+
+        // 等待持續時間
+        yield return new WaitForSeconds(duration);
+
+        // 恢復正常速度
+        Speed = originalSpeed;
+        VerticalSpeed = originalVerticalSpeed;
+    }
+
+    private void SlowdownEnemiesWithTag(string tag, float duration)
+    {
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag(tag);
+        foreach (GameObject enemy in enemies)
+        {
+            Monstercontroller enemyController = enemy.GetComponent<Monstercontroller>();
+            if (enemyController != null)
+            {
+                enemyController.StartCoroutine(enemyController.SlowDown(duration));
+            }
+        }
+    }
 
     // Update is called once per frame
     void Update()
@@ -98,7 +135,24 @@ public class Monstercontroller : MonoBehaviour
           Invoke("SoulSpawn", 0.2f);
           
        }
-       
+
+       if (AbilityControl.Boom == true)
+       {
+        
+        Boomhp--; // 只在Boom為true時減少hp
+        AbilityControl.Boom = false; // 重置Boom為false，以便下一次觸發
+
+
+       }
+
+        if (AbilityControl.Slowdown)
+        {
+            SlowdownEnemiesWithTag("Enemy", 2f); // 假設要減慢10秒
+
+            // 重置 Slowdown 為 false，以便下一次觸發
+            AbilityControl.Slowdown = false;
+        }
+
 
 
         float deltaTime = Time.deltaTime;
@@ -144,7 +198,13 @@ public class Monstercontroller : MonoBehaviour
 
 
     }
+
     
+
+
+
+
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "AttackBox")
