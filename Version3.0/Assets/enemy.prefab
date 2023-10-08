@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 209c97c990fcacb468480a6e1a0496ce, type: 3}
+  m_Sprite: {fileID: -1589013426, guid: e0f7eeec812c3944a81a4d4c93be9a7f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -125,6 +125,8 @@ MonoBehaviour:
   status: 0
   face: 0
   SoulPrefab: {fileID: 2084250237380657556, guid: 39e4a32fcdc04b443a9f67b52efcc9e1, type: 3}
+  minSouls: 1
+  maxSouls: 2
   Speed: 5
   VerticalSpeed: 5
   playerTransform: {fileID: 0}
@@ -146,7 +148,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 23.88, y: 16.685682}
+    oldSize: {x: 2.22, y: 2.72}
     newSize: {x: 23.88, y: 16.685682}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

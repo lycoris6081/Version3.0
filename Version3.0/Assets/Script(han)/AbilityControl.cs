@@ -14,12 +14,16 @@ public class AbilityControl : MonoBehaviour
 
     public static bool Slowdown = false;
 
+    public GameObject character; 
+
     private CardControl cardControl;
 
     private bool isIconVisible = false; // 是否 icon 已顯示
     private float iconDuration = 2f; // icon 顯示持續時間（秒）
 
-
+    private Collider2D characterCollider;
+    private bool isColliderDisabled = false;
+    private float duration = 10f;
 
     //public Image A1;
     //public Image A2;
@@ -33,12 +37,24 @@ public class AbilityControl : MonoBehaviour
         abilityIconsContainer.gameObject.SetActive(false);
         Boom = false;
         cardControl = FindObjectOfType<CardControl>();
+
+        characterCollider = character.GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (isColliderDisabled)
+        {
+            duration -= Time.deltaTime;
+
+            if (duration <= 0f)
+            {
+                characterCollider.enabled = true;
+                isColliderDisabled = false;
+                duration = 10f;
+            }
+        }
     }
     
 
@@ -126,8 +142,13 @@ public class AbilityControl : MonoBehaviour
 
         Debug.Log("Damage+1");
     }
+
+
     public void Ability5()
     {
+
+        characterCollider.enabled = false;
+        isColliderDisabled = true;
         print("5");
         // 创建一个新的Image对象
         Image newAbilityIcon = Instantiate(abilityIcons[3], abilityIconsContainer);
@@ -142,6 +163,9 @@ public class AbilityControl : MonoBehaviour
         // 启用AbilityIconsContainer对象
         abilityIconsContainer.gameObject.SetActive(true);
     }
+
+
+
     public void Ability6()
     {
         print("6");

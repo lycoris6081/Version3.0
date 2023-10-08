@@ -16,7 +16,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - cat
   - Water
   - UI
   - ignoreCollision
@@ -24,7 +24,7 @@ TagManager:
   - monster
   - 
   - background
-  - cat
+  - 
   - 
   - 
   - 

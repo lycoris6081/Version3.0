@@ -136,7 +136,9 @@ public class Playercontroller : MonoBehaviour
             isAttacking = false;
             AttackBox.SetActive(false);
         }
+
         
+
 
         //走路動畫
         if (isWalking == true)

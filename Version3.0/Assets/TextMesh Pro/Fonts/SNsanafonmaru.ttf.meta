@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 3580f8c04aa911f4c99103aa9b170521
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - SanafonMaru
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 9477209c24dfaa0439f57c9e64ffbc13, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
