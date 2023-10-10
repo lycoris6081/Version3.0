@@ -6,7 +6,9 @@ public class Boxcontroller : MonoBehaviour
 {
 
     public GameObject BoxPrefab;
+
     public int NeedsSoul = 10;//需要的靈魂數量
+
     private bool IsBoxSpawned = false;
     private int currentSoulCount = 0; // 当前的灵魂获取量
     
@@ -20,6 +22,7 @@ public class Boxcontroller : MonoBehaviour
         }
 
     }
+
 
     void SpawnBox()
     {
