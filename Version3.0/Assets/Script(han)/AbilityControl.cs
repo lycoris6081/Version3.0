@@ -52,6 +52,7 @@ public class AbilityControl : MonoBehaviour
             {
                 characterCollider.enabled = true;
                 isColliderDisabled = false;
+                Shield.shieldopen = false;
                 duration = 10f;
             }
         }
@@ -146,6 +147,7 @@ public class AbilityControl : MonoBehaviour
 
     public void Ability5()
     {
+        Shield.shieldopen = true;
 
         characterCollider.enabled = false;
         isColliderDisabled = true;
