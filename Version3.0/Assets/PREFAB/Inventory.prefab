@@ -33,10 +33,10 @@ RectTransform:
   m_Father: {fileID: 5694777241260512700}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -100}
-  m_SizeDelta: {x: 160, y: 160}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5694777241241067553
 CanvasRenderer:
@@ -254,6 +254,7 @@ GameObject:
   - component: {fileID: 5694777241523424335}
   - component: {fileID: 5694777241523424329}
   - component: {fileID: 5694777241523424328}
+  - component: {fileID: 4694125566160621142}
   m_Layer: 5
   m_Name: InventoryDescription
   m_TagString: Untagged
@@ -367,6 +368,21 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &4694125566160621142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5694777241523424333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 895d68df868599543aaa7da56bdbaa33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemImage: {fileID: 5694777241241067558}
+  title: {fileID: 5694777242874699057}
+  description: {fileID: 5694777243076774428}
 --- !u!1 &5694777241839699682
 GameObject:
   m_ObjectHideFlags: 0
@@ -885,6 +901,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 1251243602508887476, guid: 335c3fe908e34b34fa8e4c57b1575c2a, type: 3}
   contentPanel: {fileID: 5694777241299652467}
+  itemDescription: {fileID: 4694125566160621142}
+  image: {fileID: 176781614, guid: 2311158b2eaaadc41a4c07e716e6cbad, type: 3}
+  quantity: 2
+  title: 4564
+  description: 45555555555555555555555555
 --- !u!1 &5694777242713307161
 GameObject:
   m_ObjectHideFlags: 0
@@ -1499,7 +1520,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 5555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555
+  m_text: '5555555555555555555555555555555555555555555555555555555555555555555555555555555555555
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
