@@ -1238,7 +1238,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryUI: {fileID: 5694777241840998974}
-  inventorySize: 10
+  inventorySize: 7
 --- !u!4 &837994464
 Transform:
   m_ObjectHideFlags: 0
@@ -2782,7 +2782,7 @@ GameObject:
   - component: {fileID: 2101258124}
   - component: {fileID: 2101258126}
   m_Layer: 5
-  m_Name: Image
+  m_Name: CATBUTTON
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
