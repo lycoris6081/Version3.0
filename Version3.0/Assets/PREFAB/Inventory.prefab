@@ -104,8 +104,8 @@ RectTransform:
   m_GameObject: {fileID: 5694777241260512701}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5694777241241067559}
   m_Father: {fileID: 5694777242172541292}
@@ -237,7 +237,7 @@ MonoBehaviour:
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 200, y: 200}
+  m_CellSize: {x: 100, y: 100}
   m_Spacing: {x: 35, y: 35}
   m_Constraint: 0
   m_ConstraintCount: 2
@@ -269,7 +269,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5694777241523424333}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -358,7 +358,7 @@ MonoBehaviour:
     m_Left: 0
     m_Right: 0
     m_Top: 0
-    m_Bottom: 0
+    m_Bottom: 100
   m_ChildAlignment: 4
   m_Spacing: 0
   m_ChildForceExpandWidth: 1
@@ -557,7 +557,7 @@ MonoBehaviour:
   m_PreferredWidth: -1
   m_PreferredHeight: -1
   m_FlexibleWidth: -1
-  m_FlexibleHeight: 200
+  m_FlexibleHeight: 1
   m_LayoutPriority: 1
 --- !u!114 &5694777241848200255
 MonoBehaviour:
@@ -611,7 +611,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5694777241898418813}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -680,7 +680,7 @@ MonoBehaviour:
   m_MinHeight: -1
   m_PreferredWidth: -1
   m_PreferredHeight: -1
-  m_FlexibleWidth: 11000
+  m_FlexibleWidth: 1100
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
 --- !u!1 &5694777242172541293
@@ -775,7 +775,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_IgnoreLayout: 0
   m_MinWidth: -1
-  m_MinHeight: 200
+  m_MinHeight: 50
   m_PreferredWidth: -1
   m_PreferredHeight: -1
   m_FlexibleWidth: -1
@@ -877,7 +877,7 @@ MonoBehaviour:
     m_Left: 55
     m_Right: 55
     m_Top: 40
-    m_Bottom: 60
+    m_Bottom: 140
   m_ChildAlignment: 4
   m_Spacing: 20
   m_ChildForceExpandWidth: 1
@@ -902,10 +902,7 @@ MonoBehaviour:
   itemPrefab: {fileID: 1251243602508887476, guid: 335c3fe908e34b34fa8e4c57b1575c2a, type: 3}
   contentPanel: {fileID: 5694777241299652467}
   itemDescription: {fileID: 4694125566160621142}
-  image: {fileID: 176781614, guid: 2311158b2eaaadc41a4c07e716e6cbad, type: 3}
-  quantity: 2
-  title: 4564
-  description: 45555555555555555555555555
+  mouseFollower: {fileID: 0}
 --- !u!1 &5694777242713307161
 GameObject:
   m_ObjectHideFlags: 0
@@ -1382,8 +1379,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -154.49893}
+  m_SizeDelta: {x: 0, y: 308.9979}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5694777242947761280
 CanvasRenderer:
