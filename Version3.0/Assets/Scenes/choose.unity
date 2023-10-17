@@ -1285,19 +1285,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1033393774736386051, guid: 335c3fe908e34b34fa8e4c57b1575c2a, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1033393774736386051, guid: 335c3fe908e34b34fa8e4c57b1575c2a, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1033393774736386051, guid: 335c3fe908e34b34fa8e4c57b1575c2a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 45.68175
       objectReference: {fileID: 0}
     - target: {fileID: 1033393774736386051, guid: 335c3fe908e34b34fa8e4c57b1575c2a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -35.9253
       objectReference: {fileID: 0}
     - target: {fileID: 1138131291945151188, guid: 335c3fe908e34b34fa8e4c57b1575c2a, type: 3}
       propertyPath: m_Name
@@ -1448,6 +1448,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryUI: {fileID: 5694777241840998974}
   inventoryData: {fileID: 11400000, guid: 8fed4425a750a324bafd516a87fb325f, type: 2}
+  inventoryItems:
+  - quantity: 5
+    item: {fileID: 11400000, guid: 63a47a829477bbb4a9f71cb5145ddf2f, type: 2}
+  - quantity: 0
+    item: {fileID: 0}
+  - quantity: 1
+    item: {fileID: 11400000, guid: 6193ad4346d0a4d4b8db22314bd516c9, type: 2}
+  - quantity: 2
+    item: {fileID: 11400000, guid: 63a47a829477bbb4a9f71cb5145ddf2f, type: 2}
 --- !u!4 &837994464
 Transform:
   m_ObjectHideFlags: 0

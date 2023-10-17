@@ -96,7 +96,7 @@ namespace Inventory.UI
                 return;
             }
             OnSwapItems?.Invoke(currentlyDraggedItemIndex, index);
-
+            HandledItemSelection(inventoryItemUI);
         }
 
         private void ResetDraggtedItem()
@@ -149,6 +149,15 @@ namespace Inventory.UI
         {
             gameObject.SetActive(false);
             ResetDraggtedItem();
+        }
+
+        internal void ResetALLItems()
+        {
+            foreach (var item in ListofUIItems)
+            {
+                item.ResetData();
+                item.Deselect();
+            }
         }
     }
 }
