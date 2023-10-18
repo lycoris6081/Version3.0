@@ -9,7 +9,9 @@ public class SMeneger : MonoBehaviour
 {
     public void Play()
     {
-        //進入關卡選擇
+        //開始遊戲
+
+        
         SceneManager.LoadScene(1);
     }
 
@@ -40,6 +42,11 @@ public class SMeneger : MonoBehaviour
     public void choose()
     {
         //回到遊戲介面
+        SceneManager.LoadScene(3);
+    }
+
+    public void BacktoMenu()
+    {
         SceneManager.LoadScene(3);
     }
 }

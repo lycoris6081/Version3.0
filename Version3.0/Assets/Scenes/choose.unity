@@ -1628,13 +1628,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 619696140}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 814.3187, y: 535.55383, z: -6.198333}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -145.68127, y: -4.446167, z: -6.198333}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 2084671975}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &650201457
 GameObject:
@@ -1946,19 +1946,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1033393774736386051, guid: 335c3fe908e34b34fa8e4c57b1575c2a, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1033393774736386051, guid: 335c3fe908e34b34fa8e4c57b1575c2a, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1033393774736386051, guid: 335c3fe908e34b34fa8e4c57b1575c2a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 42.767303
       objectReference: {fileID: 0}
     - target: {fileID: 1033393774736386051, guid: 335c3fe908e34b34fa8e4c57b1575c2a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -32.267952
       objectReference: {fileID: 0}
     - target: {fileID: 1138131291945151188, guid: 335c3fe908e34b34fa8e4c57b1575c2a, type: 3}
       propertyPath: m_Name
@@ -3771,7 +3771,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1708204876}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5694777241840998974}
+        m_TargetAssemblyTypeName: Inventory.UI.UIInventoryPage, Assembly-CSharp
+        m_MethodName: Hide
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1708204876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4193,7 +4205,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1896141970}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5694777241840998974}
+        m_TargetAssemblyTypeName: Inventory.UI.UIInventoryPage, Assembly-CSharp
+        m_MethodName: Hide
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1896141970
 MonoBehaviour:
   m_ObjectHideFlags: 0

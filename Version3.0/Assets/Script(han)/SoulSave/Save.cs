@@ -28,15 +28,13 @@ public class Save : MonoBehaviour
 
     public void ResetSoulCount()
     {
-        // 重置灵魂获取量并保存到PlayerPrefs
-        PlayerPrefs.SetInt("SoulCount", 0);
-        PlayerPrefs.Save();
-        UpdateSoulCountText();
+        // 不要重置靈魂計數，只需要清除UI顯示
+        soulCountText.text = "Soul Count: 0 / 10";
     }
 
     private void LoadSoulCount()
     {
-        // 从PlayerPrefs加载灵魂数量
+ // 从PlayerPrefs加载灵魂数量
         soulCountText.text = "Soul Count: " + GetSoulCount().ToString();
     }
 }

@@ -9,10 +9,11 @@ public class SoulUI : MonoBehaviour
 
     public Image soulUI;
     public Text soulCountText; // 将 UI Text 组件拖放到这个字段中
-    private int soulCount = 0; // 用於追蹤踪灵魂数量
+    public static int soulCount = 0; // 用於追蹤踪灵魂数量
     void Start()
     {
-       soulUI = GetComponent<Image>();
+        PlayerPrefs.GetInt("SoulCount", 0);
+        soulUI = GetComponent<Image>();
         UpdateSoulCountText();
     }
 
@@ -25,6 +26,8 @@ public class SoulUI : MonoBehaviour
     {
         // 收集靈魂邏輯
         soulCount++;
+
+
         UpdateSoulCountText();
 
         // 将灵魂数量保存到PlayerPrefs
@@ -42,4 +45,24 @@ public class SoulUI : MonoBehaviour
         soulCount = 0;
         UpdateSoulCountText();
     }
+
+    public void gameover()
+    {
+
+        if (PlayerHP.gameover)
+        {
+            // 載入之前的靈魂數量
+            int previousSoulCount = PlayerPrefs.GetInt("SoulCount", 0);
+
+            // 將之前的數量添加到當前的靈魂計數中
+            soulCount += previousSoulCount;
+
+            // 将灵魂数量保存到PlayerPrefs
+            PlayerPrefs.SetInt("SoulCount", soulCount);
+            PlayerPrefs.Save();
+        }
+       
+    }
+   
+
 }

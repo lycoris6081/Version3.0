@@ -10,7 +10,7 @@ public class PlayerHP : MonoBehaviour
 
     public static bool Hp;
     public static bool Isdead;
-
+    public static bool gameover;
     public GameObject gameOverUI; // 游戏结束UI
     // Start is called before the first frame update
     void Start()
@@ -19,6 +19,7 @@ public class PlayerHP : MonoBehaviour
        
         gameOverUI.SetActive(false);
         Isdead = false;
+        gameover= false;
         rb = GameObject.Find("CATCAT").GetComponent<Rigidbody2D>();
     }
 
@@ -30,8 +31,8 @@ public class PlayerHP : MonoBehaviour
             if (hp <= 0)
             {
 
-                
 
+                gameover = true;
                 // 显示游戏结束UI
                 gameOverUI.SetActive(true);
 
