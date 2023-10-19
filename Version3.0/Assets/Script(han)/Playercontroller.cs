@@ -163,8 +163,6 @@ public class Playercontroller : MonoBehaviour
             animator.SetFloat("DEAD1", 1);
             GameStop();
 
-
-
         }
         else
         {

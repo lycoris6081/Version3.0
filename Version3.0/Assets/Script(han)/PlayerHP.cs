@@ -38,6 +38,15 @@ public class PlayerHP : MonoBehaviour
 
                 Isdead = true;
             }
+            else
+            {
+                gameover = false;
+                // 显示游戏结束UI
+                gameOverUI.SetActive(false);
+
+                Isdead = false;
+            }
+           
         }
 
        
@@ -86,33 +95,5 @@ public class PlayerHP : MonoBehaviour
 
         }
     }
-    //private void OnColliderEnter2D(Collider2D other)
-    //{
-    //    if (other.gameObject.tag == "Enemy")
-    //    {
-    //        if (Playercontroller.isAttacking == false)
-    //        {
-    //            hp -= 1;
-
-    //            // 计算反弹力
-    //            Vector2 bounceForce = (transform.position - other.transform.position).normalized *15f;
-    //            // 施加反弹力到玩家刚体
-    //            rb.AddForce(bounceForce, ForceMode2D.Impulse);
-
-    //            Debug.Log("-1");
-    //        }
-
-    //    }
-    //    if (other.gameObject.tag == "Bullet")
-    //    {
-    //        if (Playercontroller.isAttacking == false)
-    //        {
-    //            hp -= 1;
-    //            Destroy(other.gameObject);
-    //        }
-
-
-    //    }
-
-    //}
+   
 }

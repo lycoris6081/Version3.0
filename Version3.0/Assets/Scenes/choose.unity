@@ -1768,6 +1768,7 @@ GameObject:
   m_Component:
   - component: {fileID: 689323433}
   - component: {fileID: 689323432}
+  - component: {fileID: 689323434}
   m_Layer: 0
   m_Name: GameMeneger
   m_TagString: Untagged
@@ -1803,6 +1804,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &689323434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 689323431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bd82f3767e60f64d9feb3021b66b167, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &720949926
 GameObject:
   m_ObjectHideFlags: 0
@@ -1887,9 +1900,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2113255960}
-        m_TargetAssemblyTypeName: SMeneger, Assembly-CSharp
-        m_MethodName: Play
+      - m_Target: {fileID: 689323434}
+        m_TargetAssemblyTypeName: ResetGame, Assembly-CSharp
+        m_MethodName: Resetgame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1946,19 +1959,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1033393774736386051, guid: 335c3fe908e34b34fa8e4c57b1575c2a, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1033393774736386051, guid: 335c3fe908e34b34fa8e4c57b1575c2a, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1033393774736386051, guid: 335c3fe908e34b34fa8e4c57b1575c2a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 42.767303
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1033393774736386051, guid: 335c3fe908e34b34fa8e4c57b1575c2a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -32.267952
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1138131291945151188, guid: 335c3fe908e34b34fa8e4c57b1575c2a, type: 3}
       propertyPath: m_Name

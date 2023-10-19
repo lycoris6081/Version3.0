@@ -49,7 +49,7 @@ public class SoulUI : MonoBehaviour
     public void gameover()
     {
 
-        if (PlayerHP.gameover)
+        if (PlayerHP.gameover == true)
         {
             // 載入之前的靈魂數量
             int previousSoulCount = PlayerPrefs.GetInt("SoulCount", 0);
