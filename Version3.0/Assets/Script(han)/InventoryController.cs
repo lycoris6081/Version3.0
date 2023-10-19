@@ -20,6 +20,7 @@ namespace Inventory
 
         public List<InventoryItem> inventoryItems = new List<InventoryItem>();
 
+        public ItemSO[] items;
         private InventorySO GetInventoryData()
         {
             return inventoryData;
@@ -35,13 +36,29 @@ namespace Inventory
         {
             inventoryData.Initialize();
             inventoryData.OnInventoryUpdated += UpdateInventoryUI;
-            foreach (InventoryItem item in inventoryItems) 
+            foreach (ItemSO unlockitem in items ) 
             {
-              if(item.IsEmpty)
-              
-                continue;
-                inventoryData.AddItem(item);
-              
+                if (unlockitem.Price == 0)
+                {
+
+                    unlockitem.IsUnlocked = true;
+                }
+                else
+                {
+                    unlockitem.IsUnlocked = PlayerPrefs.GetInt(unlockitem.name, 0) == 0 ? false : true; //等於下面那幾行
+
+                    //if(PlayerPrefs.GetInt(unlockitem.name, 0)==0)
+                    //{
+                    //    unlockitem.IsUnlocked = false;
+                    //}
+                    //else
+                    //{
+                    //    unlockitem.IsUnlocked = true;
+                    //}
+
+                }
+
+
             }
         }
 

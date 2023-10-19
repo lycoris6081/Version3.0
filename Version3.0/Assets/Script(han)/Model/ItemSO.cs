@@ -5,6 +5,7 @@ using UnityEngine;
 namespace Inventory.Model
 {
     [CreateAssetMenu]
+    [System.Serializable]
     public class ItemSO : ScriptableObject
     {
 
@@ -27,7 +28,8 @@ namespace Inventory.Model
         [field: SerializeField]
         public Sprite ItemImage { get; set; }
 
-
+        public int Price;
+        public bool IsUnlocked;
 
 
     }

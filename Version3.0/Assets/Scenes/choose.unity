@@ -2123,14 +2123,18 @@ MonoBehaviour:
   inventoryUI: {fileID: 5694777241840998974}
   inventoryData: {fileID: 11400000, guid: 8fed4425a750a324bafd516a87fb325f, type: 2}
   inventoryItems:
-  - quantity: 5
-    item: {fileID: 11400000, guid: 63a47a829477bbb4a9f71cb5145ddf2f, type: 2}
   - quantity: 0
     item: {fileID: 0}
   - quantity: 1
     item: {fileID: 11400000, guid: 6193ad4346d0a4d4b8db22314bd516c9, type: 2}
   - quantity: 2
     item: {fileID: 11400000, guid: 63a47a829477bbb4a9f71cb5145ddf2f, type: 2}
+  - quantity: 2
+    item: {fileID: 11400000, guid: 63a47a829477bbb4a9f71cb5145ddf2f, type: 2}
+  items:
+  - {fileID: 11400000, guid: 63a47a829477bbb4a9f71cb5145ddf2f, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!4 &837994464
 Transform:
   m_ObjectHideFlags: 0
@@ -3107,7 +3111,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1219522438}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Inventory.InventoryController, Assembly-CSharp
+        m_MethodName: UnlockItem
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 63a47a829477bbb4a9f71cb5145ddf2f, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Inventory.Model.ItemSO, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1219522438
 MonoBehaviour:
   m_ObjectHideFlags: 0
