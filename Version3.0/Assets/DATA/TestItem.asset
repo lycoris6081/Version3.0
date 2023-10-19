@@ -12,10 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ded0c0a683e9a045949d358b320e4a1, type: 3}
   m_Name: TestItem
   m_EditorClassIdentifier: 
-  <IsStackable>k__BackingField: 0
-  <MaxStackSize>k__BackingField: 1
-  <Name>k__BackingField: Test
   <Description>k__BackingField: "\u9019\u6771\u6771\u597D\u50CF\u6709\u9EDE\u53B2\u5BB3"
   <ItemImage>k__BackingField: {fileID: 1285347070, guid: e9e15e3be94906b45a472f4b8ebafe9c, type: 3}
-  Price: 20
-  IsUnlocked: 0
+  Cost: 20

@@ -34,7 +34,7 @@ public class Save : MonoBehaviour
 
     private void LoadSoulCount()
     {
- // 从PlayerPrefs加载灵魂数量
+        // 从PlayerPrefs加载灵魂数量
         soulCountText.text = "Soul Count: " + GetSoulCount().ToString();
     }
 }
