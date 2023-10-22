@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShowHidePanel : MonoBehaviour
+public class PauseMenu : MonoBehaviour
 {
     public GameObject panelToToggle; // 引用你想要顯示/隱藏的Panel
     private bool isGamePaused = false;
