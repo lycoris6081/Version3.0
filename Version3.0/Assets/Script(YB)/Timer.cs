@@ -1,9 +1,12 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
     private float elapsedTime = 0.0f;
     private bool timing = false;
+
+    public Text timerText; // 引用UI Text元素
 
     void Start()
     {
@@ -15,12 +18,8 @@ public class Timer : MonoBehaviour
         if (timing)
         {
             elapsedTime += Time.deltaTime;
+            UpdateTimerText();
         }
-    }
-
-    void OnGUI()
-    {
-        GUI.Label(new Rect(10, 10, 200, 20), "已過時間: " + elapsedTime.ToString("F2") + " 秒");
     }
 
     void StartTimer()
@@ -28,4 +27,13 @@ public class Timer : MonoBehaviour
         elapsedTime = 0.0f;
         timing = true;
     }
+
+    void UpdateTimerText()
+    {
+        if (timerText != null)
+        {
+            timerText.text = elapsedTime.ToString("F2") + " 秒";
+        }
+    }
 }
+
