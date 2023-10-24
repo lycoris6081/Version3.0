@@ -1,15 +1,15 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PauseMenu : MonoBehaviour
 {
-    public GameObject panelToToggle; // ¤Ş¥Î§A·Q­nÅã¥Ü/ÁôÂÃªºPanel
+    public GameObject panelToToggle; // å¼•ç”¨ä½ æƒ³è¦æ˜¾ç¤º/éšè—çš„Panel
     private bool isGamePaused = false;
 
     void Start()
     {
-        // ½T«O¦b¹CÀ¸¶}©l®É±NPanelÁôÂÃ
+        // ç¡®ä¿åœ¨æ¸¸æˆå¼€å§‹æ—¶å°†Paneléšè—
         if (panelToToggle != null)
         {
             panelToToggle.SetActive(false);
@@ -20,13 +20,7 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            TogglePanel(); // «ö¤UESCÁä®É½Õ¥ÎTogglePanel¨ç¼Æ
-        }
-
-        // ¦b«ö¤U¥ô·N«ö¶s®É«ì´_¹CÀ¸®É¶¡
-        if (isGamePaused && Input.anyKeyDown)
-        {
-            ResumeGame();
+            TogglePanel(); // æŒ‰ä¸‹ESCé”®æ—¶è°ƒç”¨TogglePanelå‡½æ•°
         }
     }
 
@@ -34,7 +28,9 @@ public class PauseMenu : MonoBehaviour
     {
         if (panelToToggle != null)
         {
-            // Ãö³¬¨ä¥LCanvas©MPanel
+            Debug.Log("TogglePanel() called");
+
+            // å…³é—­å…¶ä»–Canvaså’ŒPanel
             Canvas[] allCanvases = FindObjectsOfType<Canvas>();
             foreach (Canvas canvas in allCanvases)
             {
@@ -44,10 +40,11 @@ public class PauseMenu : MonoBehaviour
                 }
             }
 
-            // ¤ÏÂàPanelªºÅã¥Üª¬ºA
+            // åè½¬Panelçš„æ˜¾ç¤ºçŠ¶æ€
             panelToToggle.SetActive(!panelToToggle.activeSelf);
+            Debug.Log("Panel is active: " + panelToToggle.activeSelf);
 
-            // ®Ú¾ÚPanelªºÅã¥Üª¬ºA¼È°±/«ì´_¹CÀ¸®É¶¡
+            // æ ¹æ®Panelçš„æ˜¾ç¤ºçŠ¶æ€æš‚åœ/æ¢å¤æ¸¸æˆæ—¶é—´
             if (panelToToggle.activeSelf)
             {
                 PauseGame();
@@ -61,13 +58,15 @@ public class PauseMenu : MonoBehaviour
 
     void PauseGame()
     {
-        Time.timeScale = 0f; // ¼È°±¹CÀ¸®É¶¡
+        Debug.Log("PauseGame() called");
+        Time.timeScale = 0f; // æš‚åœæ¸¸æˆæ—¶é—´
         isGamePaused = true;
     }
 
     void ResumeGame()
     {
-        Time.timeScale = 1f; // «ì´_¹CÀ¸®É¶¡
+        Debug.Log("ResumeGame() called");
+        Time.timeScale = 1f; // æ¢å¤æ¸¸æˆæ—¶é—´
         isGamePaused = false;
     }
 }
