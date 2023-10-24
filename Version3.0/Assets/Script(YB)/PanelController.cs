@@ -1,24 +1,45 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.UI;
 
 public class PanelController : MonoBehaviour
 {
-    public GameObject panel; // ¦bUnity??¾¹¤¤?­n±±¨îªºPanel©ì«û¨ì??¦r¬q
-    public Button showButton; // ¦bUnity??¾¹¤¤?àD??¥Ü¾Ş§@ªº«ö?©ì«û¨ì??¦r¬q
+    public GameObject panel; // åœ¨Unityç¼–è¾‘å™¨ä¸­è¦æ§åˆ¶çš„Panelæ‹–æ‹½åˆ°è¯¥å­—æ®µ
+    public Button showButton; // åœ¨Unityç¼–è¾‘å™¨ä¸­è§¦å‘æ˜¾ç¤ºæ“ä½œçš„æŒ‰é’®æ‹–æ‹½åˆ°è¯¥å­—æ®µ
 
     private bool isPanelVisible = false;
 
     private void Start()
     {
-        // ªì©l¤Æ«ö?ªº??¨Æ¥ó
+        // åˆå§‹åŒ–æŒ‰é’®çš„ç‚¹å‡»äº‹ä»¶
         showButton.onClick.AddListener(TogglePanelVisibility);
     }
 
     private void TogglePanelVisibility()
     {
-        // ¤Á?Panelªº¥i?©Ê
+        // åˆ‡æ¢Panelçš„å¯è§æ€§
         isPanelVisible = !isPanelVisible;
         panel.SetActive(isPanelVisible);
+
+        // æ ¹æ®Panelçš„å¯è§æ€§è®¾ç½®æ¸¸æˆæ—¶é—´
+        if (isPanelVisible)
+        {
+            PauseGame();
+        }
+        else
+        {
+            ResumeGame();
+        }
+    }
+
+    private void PauseGame()
+    {
+        Time.timeScale = 0f; // æš‚åœæ¸¸æˆæ—¶é—´
+    }
+
+    private void ResumeGame()
+    {
+        Time.timeScale = 1f; // æ¢å¤æ¸¸æˆæ—¶é—´
     }
 }
+
 
