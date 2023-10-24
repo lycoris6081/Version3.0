@@ -26,7 +26,7 @@ namespace Inventory.Model
             }
         }
 
-        public void AddItem(ItemSO item, int quantity)
+        public void AddItem(ItemSO item, int quantity, int cost)
         {
             for (int i = 0; i < inventoryItems.Count; i++)
             {
@@ -35,7 +35,8 @@ namespace Inventory.Model
                     inventoryItems[i] = new InventoryItem
                     {
                         item = item,
-                        quantity = quantity
+                        quantity = quantity,
+                        cost = cost
                     };
                     return;
                 }
@@ -62,7 +63,7 @@ namespace Inventory.Model
 
         public void AddItem(InventoryItem item)
         {
-           AddItem(item.item, item.quantity);
+           AddItem(item.item, item.quantity, item.cost);
         }
 
         public void swapItems(int itemIndex_1, int itemIndex_2)
@@ -84,6 +85,7 @@ namespace Inventory.Model
     {
         public int quantity;
         public ItemSO item;
+        public int cost;
         public bool IsEmpty => item == null;
 
         public InventoryItem ChangeQuantity(int newQuantity)

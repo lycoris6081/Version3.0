@@ -1,4 +1,4 @@
-using Inventory.Model;
+﻿using Inventory.Model;
 using Inventory.UI;
 using System;
 using System.Collections;
@@ -99,6 +99,12 @@ namespace Inventory
             ItemSO item = inventoryItem.item;
             inventoryUI.updateDescription(ItemIndex, item.ItemImage,
                 item.name, item.Description);
+
+
+            // 更新TMP字段以显示Cost值
+            string costText = "Cost: " + item.Cost.ToString(); // 获取Cost值并转换为字符串
+            inventoryUI.UpdateCostText(costText); // 使用此方法更新Cost TMP字段
+
         }
 
         public void InventoryShow()

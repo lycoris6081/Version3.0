@@ -1,7 +1,9 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI; // 导入 UnityEngine.UI 命名空间
 
 namespace Inventory.UI
 {
@@ -66,6 +68,18 @@ namespace Inventory.UI
             if (ListofUIItems.Count > itemIndex)
             {
                 ListofUIItems[itemIndex].SetData(itemImage, itemQuantity);
+            }
+        }
+
+        [SerializeField]
+        private TextMeshProUGUI costText; // 引用 TMP 文本字段用于显示 Cost
+
+
+        public void UpdateCostText(string costValue)
+        {
+            if (costText != null)
+            {
+                costText.text = costValue; // 设置 TMP 文本字段的文本内容为 Cost 值
             }
         }
 
