@@ -20,7 +20,7 @@ namespace Inventory
 
         public List<InventoryItem> inventoryItems = new List<InventoryItem>();
 
-        public ItemSO[]  items;
+
         public InventorySO[] inventorySO;
 
         private InventorySO GetInventoryData()
@@ -102,7 +102,7 @@ namespace Inventory
 
 
             // 更新TMP字段以显示Cost值
-            string costText = "Cost: " + item.Cost.ToString(); // 获取Cost值并转换为字符串
+            string costText = item.Cost.ToString(); // 获取Cost值并转换为字符串
             inventoryUI.UpdateCostText(costText); // 使用此方法更新Cost TMP字段
 
         }
@@ -117,10 +117,7 @@ namespace Inventory
                     item.Value.quantity);
             }
         }
-
-        
-
-
+   
        
 
     }
