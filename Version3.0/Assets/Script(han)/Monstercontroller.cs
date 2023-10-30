@@ -39,6 +39,7 @@ public class Monstercontroller : MonoBehaviour
         Boomhp = 0;
         hp = 1;
         status = Status.walk;
+       
         spr = this.transform.GetComponent<SpriteRenderer>();
         
 
@@ -160,6 +161,9 @@ public class Monstercontroller : MonoBehaviour
         switch (status)
         {
             case Status.walk:
+
+                animator.SetBool("walk", true);
+
                 if (myTransform.position.x >= playerTransform.position.x)
                 {
                     spr.flipX = false;
@@ -212,8 +216,17 @@ public class Monstercontroller : MonoBehaviour
             hp = hp -= AttackBox.Damage;
 
         }
-        
+        if (other.gameObject.tag == "Shield")
+        {
+
+            hp = 0;
+            
+
+        }
+
     }
+   
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Wall"))

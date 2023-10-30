@@ -79,7 +79,7 @@ public class PlayerHP : MonoBehaviour
     {
         if (other.gameObject.tag == "Bullet")
         {
-            if (Playercontroller.isAttacking == false)
+            if (Playercontroller.isAttacking == false&&Shield.shieldopen == false)
             {
                 hp -= 1;
 

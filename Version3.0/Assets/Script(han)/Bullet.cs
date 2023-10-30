@@ -15,12 +15,11 @@ public class Bullet : MonoBehaviour
             // 销毁子弹
             Destroy(gameObject);
         }
-        //if (collision.gameObject.tag == "Enemy")
-        //{
-        //    // 销毁子弹
-        //    Destroy(gameObject);
-        //}
-
+        if (other.gameObject.CompareTag("Shield"))
+        {
+            // 销毁子弹
+            Destroy(gameObject);
+        }
     }
 
 }
