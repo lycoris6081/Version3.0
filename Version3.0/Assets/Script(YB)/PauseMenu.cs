@@ -30,16 +30,6 @@ public class PauseMenu : MonoBehaviour
         {
             Debug.Log("TogglePanel() called");
 
-            // 关闭其他Canvas和Panel
-            Canvas[] allCanvases = FindObjectsOfType<Canvas>();
-            foreach (Canvas canvas in allCanvases)
-            {
-                if (canvas != null && canvas != panelToToggle.GetComponentInParent<Canvas>())
-                {
-                    canvas.gameObject.SetActive(false);
-                }
-            }
-
             // 反转Panel的显示状态
             panelToToggle.SetActive(!panelToToggle.activeSelf);
             Debug.Log("Panel is active: " + panelToToggle.activeSelf);
