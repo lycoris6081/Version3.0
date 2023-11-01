@@ -12,6 +12,7 @@ TagManager:
   - Soul
   - Box
   - Shield
+  - Enemy2
   layers:
   - Default
   - TransparentFX

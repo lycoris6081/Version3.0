@@ -134,8 +134,18 @@ public class Monstercontroller : MonoBehaviour
           animator.SetFloat("Die", 1);
           Invoke("Dead", 0.2f);
           Invoke("SoulSpawn", 0.2f);
-          
-       }
+
+            GameObject gameManager = GameObject.Find("GameMenager");
+            if (gameManager != null)
+            {
+                GamePass gamePass = gameManager.GetComponent<GamePass>();
+                if (gamePass != null)
+                {
+                    gamePass.EnemyDown();
+                }
+            }
+
+        }
 
        if (AbilityControl.Boom == true)
        {

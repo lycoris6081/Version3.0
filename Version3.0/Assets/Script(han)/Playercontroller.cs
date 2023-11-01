@@ -7,11 +7,14 @@ using UnityEngine.UI;
 
 public class Playercontroller : MonoBehaviour
 {
+
+   public GamePass gameMenager; // 参考GameManager脚本
+
     public float moveSpeed = 5f;
     public float sprintSpeed = 5f; // 冲刺速度
     public float maxSprintSpeed = 10f; // 冲刺最大速度
     public float sprintDistance = 5f; // 冲刺距离
-    public GameObject AttackBox;
+        public GameObject AttackBox;
 
 
 
@@ -21,6 +24,8 @@ public class Playercontroller : MonoBehaviour
     private bool isWalking = false;
     private bool isSprinting = false;
     private bool canSprint = true; // 用于控制是否可以进行冲刺
+   
+
     private Vector3 targetPosition;
     private float initialDistance;
     private Rigidbody2D rb; // Rigidbody2D组件
@@ -44,7 +49,9 @@ public class Playercontroller : MonoBehaviour
         UI = GameObject.Find("SoulScript").GetComponent<SoulUI>();
         Box = GameObject.Find("BoxControl").GetComponent<Boxcontroller>();
         CCUI = GameObject.Find("Cardsystem").GetComponent<CardControl>();
-        
+        // 获取对GameManager脚本的引用
+        gameMenager = GameObject.Find("GameMenager").GetComponent<GamePass>();
+
     }
 
    
@@ -78,6 +85,8 @@ public class Playercontroller : MonoBehaviour
 
         MouseMove();
         
+
+       
 
         if (Input.GetMouseButtonDown(0) && canSprint)
         {
@@ -124,11 +133,9 @@ public class Playercontroller : MonoBehaviour
                 
                 animator.SetFloat("Attack1", 0);
 
-               
-            }
-            
-            
+                gameMenager.IncreaseSprintCount();
 
+            }                    
         }
         else
         {

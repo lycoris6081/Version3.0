@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class SoulUI : MonoBehaviour
 {
 
 
     public Image soulUI;
-    public Text soulCountText; // 将 UI Text 组件拖放到这个字段中
+    public TMP_Text soulCountText; // 将 UI Text 组件拖放到这个字段中
     public static int soulCount = 0; // 用於追蹤踪灵魂数量
     void Start()
     {

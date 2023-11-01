@@ -24,7 +24,7 @@ public class AttackBox : MonoBehaviour
             rb.AddForce(direction * knockbackForce, ForceMode2D.Impulse);
 
         }
-       
+      
 
 
     }
