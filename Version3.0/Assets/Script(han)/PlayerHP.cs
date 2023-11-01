@@ -6,16 +6,18 @@ using UnityEngine.UI;
 public class PlayerHP : MonoBehaviour
 {
     private Rigidbody2D rb;
-    public static int hp = 2;
+    public static int hp = 3;
 
     public static bool Hp;
     public static bool Isdead;
     public static bool gameover;
     public GameObject gameOverUI; // 游戏结束UI
+    public Image[] lifeImages; // 存放生命图像的数组
+
     // Start is called before the first frame update
     void Start()
     {
-        hp = 2;
+        hp = 3;
        
         gameOverUI.SetActive(false);
         Isdead = false;
@@ -61,6 +63,7 @@ public class PlayerHP : MonoBehaviour
             if (Playercontroller.isAttacking == false)
             {
                 hp -= 1;
+                UpdateLifeUI(); // 更新生命图像
 
                 // 计算反弹力
                 Vector2 bounceForce = (transform.position - other.transform.position).normalized * 50f;
@@ -82,7 +85,7 @@ public class PlayerHP : MonoBehaviour
             if (Playercontroller.isAttacking == false&&Shield.shieldopen == false)
             {
                 hp -= 1;
-
+                UpdateLifeUI(); // 更新生命图像
 
                 // 计算反弹力
                 Vector2 bounceForce = (transform.position - other.transform.position).normalized * 50f;
@@ -95,5 +98,19 @@ public class PlayerHP : MonoBehaviour
 
         }
     }
-   
+    private void UpdateLifeUI()
+    {
+        for (int i = 0; i < lifeImages.Length; i++)
+        {
+            if (i < hp)
+            {
+                lifeImages[i].enabled = true; // 启用图像
+            }
+            else
+            {
+                lifeImages[i].enabled = false; // 禁用图像
+            }
+        }
+    }
+
 }
