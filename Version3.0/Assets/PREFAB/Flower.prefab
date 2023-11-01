@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 8024544536985701849}
   - component: {fileID: 1061125836318482473}
   - component: {fileID: 4109264366385979257}
-  - component: {fileID: 2874203407813388169}
   m_Layer: 0
   m_Name: Flower
   m_TagString: Enemy
@@ -105,6 +104,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 3423636653185167368, guid: fc80fa6581ccfdc4ca45bd4845f37076, type: 3}
   bulletForce: 12
   fireRate: 0.5
+  ISshooting: 0
 --- !u!61 &1061125836318482473
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -149,26 +149,6 @@ MonoBehaviour:
   minSouls: 1
   maxSouls: 2
   playerTransform: {fileID: 0}
---- !u!95 &2874203407813388169
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8024544536985701854}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2a2ca00c7a1ca1f40a3af17e0a512e53, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8024544537876520760
 GameObject:
   m_ObjectHideFlags: 0
