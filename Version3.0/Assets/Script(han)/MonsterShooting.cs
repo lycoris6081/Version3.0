@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MonsterShooting : MonoBehaviour
 {
-    Animator animator;
+   
     public Transform firePoint; // 射击点
     public GameObject bulletPrefab; // 子弹预制体
     public float bulletForce = 10f; // 子弹发射力量
@@ -18,7 +18,7 @@ public class MonsterShooting : MonoBehaviour
     {
         player = GameObject.Find("CATCAT").transform; // 根据玩家的名称查找玩家对象
         nextFireTime = Time.time; // 初始化下一次射击时间
-        animator = GetComponent<Animator>();
+        
     }
 
     void Update()
@@ -46,15 +46,7 @@ public class MonsterShooting : MonoBehaviour
             nextFireTime = Time.time + 1f / fireRate;
             ISshooting = true;
         }
-        if(ISshooting)
-
-        {
-            animator.SetBool("FIRE", true);
-        }
-        else
-        {
-            animator.SetBool("IDLE", true);
-        }
+       
 
         if (AbilityControl.Slowdown)
         {

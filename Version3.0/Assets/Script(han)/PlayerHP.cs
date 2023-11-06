@@ -95,6 +95,16 @@ public class PlayerHP : MonoBehaviour
                 Destroy(other.gameObject);
             }
 
+        }
+        if (other.gameObject.tag == "BOOM")
+        {
+            if (Playercontroller.isAttacking == false && Shield.shieldopen == false)
+            {
+                hp -= 2;
+                UpdateLifeUI(); // 更新生命图像
+
+               
+            }
 
         }
     }

@@ -24,7 +24,13 @@ public class AttackBox : MonoBehaviour
             rb.AddForce(direction * knockbackForce, ForceMode2D.Impulse);
 
         }
-      
+        if (other.gameObject.tag == "CUP")
+        {
+            Vector2 direction = (transform.position - other.transform.position).normalized;
+            float knockbackForce = 80f; // 调整物理反馈力的大小
+            rb.AddForce(direction * knockbackForce, ForceMode2D.Impulse);
+
+        }
 
 
     }

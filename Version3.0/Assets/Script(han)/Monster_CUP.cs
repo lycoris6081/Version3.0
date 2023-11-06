@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Monster_Flower : MonoBehaviour
+public class Monster_CUP : MonoBehaviour
 
 {
 
@@ -12,25 +12,26 @@ public class Monster_Flower : MonoBehaviour
 
     private static int Boomhp = 0;
 
-    public enum Face { Right, Left };
-    public Face face;
+    
+ 
 
     public GameObject SoulPrefab;
 
     public int minSouls = 3; // 最少掉落的灵魂数量
     public int maxSouls = 4; // 最多掉落的灵魂数量
-
+    public GameObject BoomRange;
+    public GameObject Player;
     public Transform playerTransform;
-
+    public Rigidbody2D rb;
     private bool isDead = false;
     public static bool Boom = false;
 
     void Start()
     {
        
-        hp = 2;
-
-                
+        hp = 3;
+        BoomRange.SetActive(false);
+        rb = GameObject.Find("CATCAT").GetComponent<Rigidbody2D>();
     }
 
     void SoulSpawn()
@@ -60,7 +61,14 @@ public class Monster_Flower : MonoBehaviour
         hp -= damageAmount; // 減少敵人的血量
 
     }
-
+    public void Boomdied()
+    {
+        BoomRange.SetActive(true);
+        Vector2 direction = (transform.position - Player.transform.position).normalized;
+        float knockbackForce = 150f; // 调整物理反馈力的大小
+        rb.AddForce(direction * knockbackForce, ForceMode2D.Impulse);
+        Invoke("Dead", 1f);
+    }
   
 
  
@@ -72,8 +80,12 @@ public class Monster_Flower : MonoBehaviour
         if (!isDead && hp <= 0)
         {
             isDead = true;
-            Dead();
-            //Invoke("Dead", 0.1f);
+           
+            
+            
+            Invoke("Boomdied", 1f);
+
+            
 
 
             GameObject gameManager = GameObject.Find("GameMenager");

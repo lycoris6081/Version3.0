@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: -398339650, guid: 1cb50c05d82fec34398f1d2483ec71ad, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -146,8 +146,8 @@ MonoBehaviour:
   hp: 2
   face: 0
   SoulPrefab: {fileID: 2084250237380657556, guid: 39e4a32fcdc04b443a9f67b52efcc9e1, type: 3}
-  minSouls: 1
-  maxSouls: 2
+  minSouls: 3
+  maxSouls: 4
   playerTransform: {fileID: 0}
 --- !u!1 &8024544537876520760
 GameObject:

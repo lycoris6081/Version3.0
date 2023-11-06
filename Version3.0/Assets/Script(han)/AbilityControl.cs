@@ -24,7 +24,7 @@ public class AbilityControl : MonoBehaviour
     private Collider2D characterCollider;
     private bool isColliderDisabled = false;
     private float duration = 10f;
-
+    public static int Ability6UsageCount = 0; // 追踪Ability6的使用次数
     //public Image A1;
     //public Image A2;
     //public Image A3;
@@ -76,6 +76,7 @@ public class AbilityControl : MonoBehaviour
         // 启用AbilityIconsContainer对象
         abilityIconsContainer.gameObject.SetActive(true);
 
+        Ability6UsageCount++;
         Debug.Log("+1");
     }
     public void Ability2()
@@ -92,13 +93,19 @@ public class AbilityControl : MonoBehaviour
             {
                 // 檢查是否帶有 Monstercontroller 腳本
                 Monstercontroller monsterController = enemy.GetComponent<Monstercontroller>();
-
+                Monster_Flower monsterController_F = enemy.GetComponent<Monster_Flower>();
                 // 如果帶有 Monstercontroller 腳本，則對其調用 TakeDamage 方法
                 if (monsterController != null)
                 {
                     monsterController.TakeDamage(1);
                 }
+                if (monsterController_F != null)
+                {
+                    monsterController_F.TakeDamage(3);
+                }
+
             }
+            Ability6UsageCount++;
         }
 
 
@@ -123,7 +130,7 @@ public class AbilityControl : MonoBehaviour
 
         // 启用AbilityIconsContainer对象
         abilityIconsContainer.gameObject.SetActive(true);
-
+        Ability6UsageCount++;
     }
     public void Ability4()
     {
@@ -142,6 +149,7 @@ public class AbilityControl : MonoBehaviour
         abilityIconsContainer.gameObject.SetActive(true);
 
         Debug.Log("Damage+1");
+        Ability6UsageCount++;
     }
 
 
@@ -164,6 +172,7 @@ public class AbilityControl : MonoBehaviour
 
         // 启用AbilityIconsContainer对象
         abilityIconsContainer.gameObject.SetActive(true);
+        Ability6UsageCount++;
     }
 
 
@@ -175,6 +184,7 @@ public class AbilityControl : MonoBehaviour
         if(!Slowdown)
         {
             Slowdown = true;
+            Ability6UsageCount++;
         }
 
         // 创建一个新的Image对象
@@ -235,5 +245,6 @@ public class AbilityControl : MonoBehaviour
     public void Ability7()
     {
         cardControl.ReshuffleAbilities();
+        Ability6UsageCount++;
     }
 }
