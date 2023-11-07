@@ -37,7 +37,7 @@ public class Monstercontroller14 : MonoBehaviour
     void Start()
     {
         Boomhp = 0;
-        hp = 1;
+        hp = 3;
         status = Status.walk;
        
         spr = this.transform.GetComponent<SpriteRenderer>();

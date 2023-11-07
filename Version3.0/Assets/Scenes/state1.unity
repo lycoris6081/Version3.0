@@ -5777,6 +5777,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 3423636653185167368, guid: fc80fa6581ccfdc4ca45bd4845f37076, type: 3}
   bulletForce: 12
   fireRate: 0.5
+  ISshooting: 0
 --- !u!212 &1143869077
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8105,7 +8106,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1812864665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9249,6 +9250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c047e7725de90a46a40510d203a52e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameMenager: {fileID: 0}
   moveSpeed: 8
   sprintSpeed: 5000
   maxSprintSpeed: 50
