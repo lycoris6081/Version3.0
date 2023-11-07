@@ -15,7 +15,8 @@ public class MonsterSpawnRegion
 
 public class MonsterSpawn_Flower : MonoBehaviour
 {
-    public GameObject enemyPrefab; // 敌人的预制体
+    public GameObject Enemyspawnready; // 敌人的预制体
+    public GameObject Enemy; // 敌人的预制体
     public List<SpawnArea> spawnAreas; // 多个生成区域
 
     void Update()
@@ -31,6 +32,13 @@ public class MonsterSpawn_Flower : MonoBehaviour
             }
         }
     }
+    public void Spawn(SpawnArea spawnArea)
+    {
+        Vector3 spawnPosition = spawnArea.spawnPoint.position;
+
+        Instantiate(Enemy, spawnPosition, Quaternion.identity);
+        Enemyspawnready.SetActive(false);
+    }
 
     void SpawnEnemy(SpawnArea spawnArea)
     {
@@ -43,6 +51,8 @@ public class MonsterSpawn_Flower : MonoBehaviour
         spawnPosition += new Vector3(randomX, randomY, 0);
 
         // 实例化敌人
-        Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+        Instantiate(Enemyspawnready, spawnPosition, Quaternion.identity);
+
+        Invoke("Spawn", 3f);
     }
 }

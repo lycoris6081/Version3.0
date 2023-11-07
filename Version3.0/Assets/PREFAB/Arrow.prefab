@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1115060273122340192}
   - component: {fileID: 3132057161724524466}
-  - component: {fileID: 1427437015333330973}
   m_Layer: 0
   m_Name: Arrow
   m_TagString: Untagged
@@ -73,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: -1756059072, guid: 3578804c444f7c4418ba51f506817060, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -85,16 +84,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1427437015333330973
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5831095170735610345}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11fb5d71ba20b08459e35b40f1ee4cb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 8892894412727211729, guid: f6489e4dacff31649840c5046e6660eb, type: 3}
