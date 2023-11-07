@@ -15,44 +15,50 @@ public class MonsterSpawnRegion
 
 public class MonsterSpawn_Flower : MonoBehaviour
 {
-    public GameObject Enemyspawnready; // 敌人的预制体
-    public GameObject Enemy; // 敌人的预制体
-    public List<SpawnArea> spawnAreas; // 多个生成区域
+    public GameObject EnemyspawnreadyPrefab; // 预备标志的预制体
+    public GameObject enemyPrefab; // 敌人的预制体
+    public List<MonsterSpawnRegion> spawnAreas; // 多个生成区域
 
-    void Update()
+    bool isReadySpawned = false;
+    float readySpawnTime = 0f;
+
+    void Start()
+    {
+        // 开始生成 "ready" 标志
+       InvokeRepeating("InstantiateReady", 1f, 5f);
+    }
+
+    void InstantiateReady()
     {
         foreach (var spawnArea in spawnAreas)
         {
-            int currentEnemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
+            Vector3 spawnPosition = spawnArea.spawnPoint.position;
 
-            if (Time.time >= spawnArea.nextSpawnTime && currentEnemyCount < spawnArea.maxEnemies)
-            {
-                SpawnEnemy(spawnArea);
-                spawnArea.nextSpawnTime = Time.time + spawnArea.spawnInterval;
-            }
+            // 添加一个随机偏移，以在指定区域内随机生成
+            float randomX = Random.Range(-10f, 10f); // 根据需要调整X轴的随机范围
+            float randomY = Random.Range(-10f, 10f); // 根据需要调整Y轴的随机范围
+            spawnPosition += new Vector3(randomX, randomY, 0);
+
+            // 实例化 "ready" 标志
+            GameObject readyObject = Instantiate(EnemyspawnreadyPrefab, spawnPosition, Quaternion.identity);
+
+            // 调用生成敌人的方法
+            StartCoroutine(SpawnEnemyWithDelay(readyObject, spawnArea.spawnInterval));
         }
-    }
-    public void Spawn(SpawnArea spawnArea)
-    {
-        Vector3 spawnPosition = spawnArea.spawnPoint.position;
 
-        Instantiate(Enemy, spawnPosition, Quaternion.identity);
-        Enemyspawnready.SetActive(false);
+        isReadySpawned = true;
+        readySpawnTime = Time.time;
     }
 
-    void SpawnEnemy(SpawnArea spawnArea)
+    IEnumerator SpawnEnemyWithDelay(GameObject readyObject, float delay)
     {
-        // 获取生成区域的位置
-        Vector3 spawnPosition = spawnArea.spawnPoint.position;
+        yield return new WaitForSeconds(delay);
 
-        // 添加一个随机偏移，以在指定区域内随机生成
-        float randomX = Random.Range(-10f, 10f); // 根据需要调整X轴的随机范围
-        float randomY = Random.Range(-10f, 10f); // 根据需要调整Y轴的随机范围
-        spawnPosition += new Vector3(randomX, randomY, 0);
+        Vector3 spawnPosition = readyObject.transform.position;
 
+       
         // 实例化敌人
-        Instantiate(Enemyspawnready, spawnPosition, Quaternion.identity);
-
-        Invoke("Spawn", 3f);
+        Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+        Destroy(readyObject);
     }
 }

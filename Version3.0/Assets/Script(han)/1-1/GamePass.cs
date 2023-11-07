@@ -15,6 +15,7 @@ public class GamePass : MonoBehaviour
     public GameObject pass2D;
     public GameObject pass2B;
     public GameObject Pass;
+    public GameObject Clear;
     public GameObject WinButton; // 参考过关按钮的GameObject
     private float showPassTimer = 0f; // 用于计时显示过关图像的时间
 
@@ -24,6 +25,7 @@ public class GamePass : MonoBehaviour
         sprintCount = 0;
         enemyCount = 0;
         Pass.SetActive(false);
+        Clear.SetActive(false);
         WinButton.SetActive(false);
     }
     private void Update()
@@ -58,11 +60,13 @@ public class GamePass : MonoBehaviour
             // 增加显示过关图像的计时器
             showPassTimer += Time.deltaTime;
 
+
             if (showPassTimer >= 3f)
             {
                 // 3秒后，禁用过关图像
                 Pass.SetActive(false);
 
+                Clear.SetActive(true);
                 // 启用过关按钮
                 WinButton.SetActive(true);
             }
@@ -93,9 +97,7 @@ public class GamePass : MonoBehaviour
             PlayerPrefs.SetInt("PASS12", 1); // 将通关状态存储为1
         }
     }
-    public void WIN()
-    {
-        SceneManager.LoadScene(3);
-    }
+   
+    
 
 }

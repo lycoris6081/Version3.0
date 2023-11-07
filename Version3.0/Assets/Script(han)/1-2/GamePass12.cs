@@ -15,6 +15,7 @@ public class GamePass12 : MonoBehaviour
     public GameObject pass2D;
     public GameObject pass2B;
     public GameObject Pass;
+    public GameObject Clear;
     public GameObject WinButton; // 参考过关按钮的GameObject
     private float showPassTimer = 0f; // 用于计时显示过关图像的时间
 
@@ -25,12 +26,13 @@ public class GamePass12 : MonoBehaviour
         sprintCount = 0;
         enemyCount = 0;
         Pass.SetActive(false);
+        Clear.SetActive(false);
         WinButton.SetActive(false);
     }
     private void Update()
     {
         //1-2 過關條件
-        if (SoulUI.soulCount >= 50 && AbilityControl.Ability6UsageCount >= 5)
+        if (SoulUI.soulCount >= 10 && AbilityControl.Ability6UsageCount >= 1)
         {
             pass1B.SetActive(true);
             pass1D.SetActive(false);
@@ -64,7 +66,7 @@ public class GamePass12 : MonoBehaviour
             {
                 // 3秒后，禁用过关图像
                 Pass.SetActive(false);
-
+                Clear.SetActive(true);
                 // 启用过关按钮
                 WinButton.SetActive(true);
             }
@@ -76,11 +78,11 @@ public class GamePass12 : MonoBehaviour
     {
         sprintCount++;
 
-        if (sprintCount >= 10)
+        if (sprintCount >= 1)
         {
 
             Debug.Log("冲刺次数达到10！");
-            PASS11 = true;
+            
             PlayerPrefs.SetInt("PASS11", 1); // 将通关状态存储为1
         }
     }
@@ -95,9 +97,6 @@ public class GamePass12 : MonoBehaviour
             PlayerPrefs.SetInt("PASS12", 1); // 将通关状态存储为1
         }
     }
-    public void WIN()
-    {
-        SceneManager.LoadScene(3);
-    }
+    
 
 }

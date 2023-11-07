@@ -133,7 +133,7 @@ public class Playercontroller : MonoBehaviour
                 
                 animator.SetFloat("Attack1", 0);
 
-
+                gameMenager.IncreaseSprintCount();
 
             }                    
         }
