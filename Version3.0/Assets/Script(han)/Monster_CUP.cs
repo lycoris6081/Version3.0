@@ -20,7 +20,7 @@ public class Monster_CUP : MonoBehaviour
     public int minSouls = 3; // 最少掉落的灵魂数量
     public int maxSouls = 4; // 最多掉落的灵魂数量
     public GameObject BoomRange;
-    public GameObject Player;
+
     public Transform playerTransform;
     public Rigidbody2D rb;
     private bool isDead = false;
@@ -64,9 +64,6 @@ public class Monster_CUP : MonoBehaviour
     public void Boomdied()
     {
         BoomRange.SetActive(true);
-        Vector2 direction = (transform.position - Player.transform.position).normalized;
-        float knockbackForce = 150f; // 调整物理反馈力的大小
-        rb.AddForce(direction * knockbackForce, ForceMode2D.Impulse);
         Invoke("Dead", 1f);
     }
   
@@ -80,8 +77,7 @@ public class Monster_CUP : MonoBehaviour
         if (!isDead && hp <= 0)
         {
             isDead = true;
-           
-            
+                    
             
             Invoke("Boomdied", 1f);
 
@@ -91,7 +87,7 @@ public class Monster_CUP : MonoBehaviour
             GameObject gameManager = GameObject.Find("GameMenager");
             if (gameManager != null)
             {
-                GamePass12 gamePass = gameManager.GetComponent<GamePass12>();
+                GamePass13 gamePass = gameManager.GetComponent<GamePass13>();
                 if (gamePass != null)
                 {
                     gamePass.EnemyDown();

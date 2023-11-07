@@ -130,7 +130,6 @@ MonoBehaviour:
   minSouls: 3
   maxSouls: 4
   BoomRange: {fileID: 5669763353605392540}
-  Player: {fileID: 4971453889819881229, guid: 8e4d4ea91de2dfa4f9935cede54d00bb, type: 3}
   playerTransform: {fileID: 0}
   rb: {fileID: 0}
 --- !u!1 &5669763353605392540
@@ -144,6 +143,7 @@ GameObject:
   - component: {fileID: 5669763353605392543}
   - component: {fileID: 5669763353605392542}
   - component: {fileID: 5669763353605392541}
+  - component: {fileID: 6001006022816603802}
   m_Layer: 0
   m_Name: BOOM
   m_TagString: BOOM
@@ -234,3 +234,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6001006022816603802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5669763353605392540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecee7242e8d88ef40872b21530188768, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
+  Player: {fileID: 4971453889819881229, guid: 8e4d4ea91de2dfa4f9935cede54d00bb, type: 3}
