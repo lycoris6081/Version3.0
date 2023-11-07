@@ -13,7 +13,7 @@ public class EnemyCounter : MonoBehaviour
 
     private void UpdateEnemyCountText()
     {
-        enemyCountText.text = "Enemy Count: " + enemyCount.ToString();
+        enemyCountText.text =  enemyCount.ToString();
     }
 
     private void OnTriggerEnter(Collider other)
