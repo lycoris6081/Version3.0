@@ -97,16 +97,25 @@ public class AbilityControl : MonoBehaviour
                 // 檢查是否帶有 Monstercontroller 腳本
                 Monstercontroller monsterController = enemy.GetComponent<Monstercontroller>();
                 Monster_Flower monsterController_F = enemy.GetComponent<Monster_Flower>();
+                Monster_Flower14 monsterController_F14 = enemy.GetComponent<Monster_Flower14>();
+                Monstercontroller14 monsterController14 = enemy.GetComponent<Monstercontroller14>();
                 // 如果帶有 Monstercontroller 腳本，則對其調用 TakeDamage 方法
                 if (monsterController != null)
                 {
-                    monsterController.TakeDamage(1);
+                    monsterController.TakeDamage(3);
                 }
                 if (monsterController_F != null)
                 {
                     monsterController_F.TakeDamage(3);
                 }
-
+                if (monsterController_F14 != null)
+                {
+                    monsterController_F14.TakeDamage(3);
+                }
+                if (monsterController14 != null)
+                {
+                    monsterController14.TakeDamage(3);
+                }
             }
             Ability6UsageCount++;
         }

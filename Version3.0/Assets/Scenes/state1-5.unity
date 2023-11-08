@@ -7033,14 +7033,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefabs:
+  - {fileID: 3967819675857569969, guid: d330a7c6e1af8144c8a7eb0c37343532, type: 3}
   - {fileID: 8024544536985701854, guid: 1fc365aee84120148b71116adadca933, type: 3}
   - {fileID: 5669763353197261743, guid: 0ac5f0182371f9740b1c3c770f223e77, type: 3}
-  - {fileID: 3967819675857569969, guid: d330a7c6e1af8144c8a7eb0c37343532, type: 3}
   EnemyspawnreadyPrefab: {fileID: 6519466635305862087, guid: acaa0cc811af9984ea05f0ad20b7b07b, type: 3}
   spawnAreas:
   - spawnPoint: {fileID: 999114332}
     spawnInterval: 3
-    maxEnemies: 3
+    maxEnemies: 5
     nextSpawnTime: 0
 --- !u!61 &1447198692
 BoxCollider2D:
