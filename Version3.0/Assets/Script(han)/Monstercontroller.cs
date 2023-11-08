@@ -235,16 +235,7 @@ public class Monstercontroller : MonoBehaviour
         }
 
     }
-   
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Wall"))
-        {
-            Debug.Log("hit");
-           collision.gameObject.GetComponent<Collider2D>().isTrigger = true;
-        }
-    }
 
 }
 

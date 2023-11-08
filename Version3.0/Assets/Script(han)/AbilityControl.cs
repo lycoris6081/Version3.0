@@ -14,11 +14,14 @@ public class AbilityControl : MonoBehaviour
 
     public static bool Slowdown = false;
 
-    public GameObject character; 
+    public GameObject character;
+    public static bool AttckLevelUP = false;
 
     private CardControl cardControl;
 
     private bool isIconVisible = false; // 是否 icon 已顯示
+
+
     private float iconDuration = 2f; // icon 顯示持續時間（秒）
 
     private Collider2D characterCollider;
@@ -135,6 +138,8 @@ public class AbilityControl : MonoBehaviour
     public void Ability4()
     {
         AttackBox.Damage++;
+        AttckLevelUP = true;
+
         // 创建一个新的Image对象
         Image newAbilityIcon = Instantiate(abilityIcons[2], abilityIconsContainer);
 
@@ -150,8 +155,21 @@ public class AbilityControl : MonoBehaviour
 
         Debug.Log("Damage+1");
         Ability6UsageCount++;
+
+        // 启动一个协程等待90秒
+        StartCoroutine(EndAbilityAfterDelay(90f));
     }
 
+    private IEnumerator EndAbilityAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        // 在这里执行计时结束后的操作，例如禁用AbilityIconsContainer对象
+        abilityIconsContainer.gameObject.SetActive(false);
+        AttackBox.Damage--;
+        AttckLevelUP = false;
+        Debug.Log("Ability4 结束");
+    }
 
     public void Ability5()
     {

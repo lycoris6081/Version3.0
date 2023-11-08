@@ -31,7 +31,16 @@ public class AttackBox : MonoBehaviour
             rb.AddForce(direction * knockbackForce, ForceMode2D.Impulse);
 
         }
-
+        if (other.gameObject.tag == "CUP"&&AbilityControl.AttckLevelUP)
+        {
+          
+            GameObject gameManager = GameObject.Find("GameMenager");
+            GamePass13 gamePass = gameManager.GetComponent<GamePass13>();
+            if (gamePass != null)
+            {
+                gamePass.EnemyDowninAbility();
+            }
+        }
 
     }
 }

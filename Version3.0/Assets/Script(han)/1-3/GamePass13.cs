@@ -7,6 +7,7 @@ public class GamePass13 : MonoBehaviour
 {
     public int sprintCount = 0; // 冲刺次数
     private int enemyCount = 0; // 用于跟踪击倒的敌人数量
+    private int AbilityenemyCount = 0;
 
     public bool PASS11 = false;
     public GameObject pass1D;
@@ -32,11 +33,11 @@ public class GamePass13 : MonoBehaviour
     private void Update()
     {
         //1-2 過關條件
-        if (SoulUI.soulCount >= 50 && AbilityControl.Ability6UsageCount >= 5)
+        if (PASS11 == true)
         {
             pass1B.SetActive(true);
             pass1D.SetActive(false);
-            PASS11 = true;
+       
         }
         else
         {
@@ -82,7 +83,7 @@ public class GamePass13 : MonoBehaviour
         {
 
             Debug.Log("冲刺次数达到10！");
-            PASS11 = true;
+           
             PlayerPrefs.SetInt("PASS11", 1); // 将通关状态存储为1
         }
     }
@@ -97,5 +98,16 @@ public class GamePass13 : MonoBehaviour
             PlayerPrefs.SetInt("PASS12", 1); // 将通关状态存储为1
         }
     }
-   
+    public void EnemyDowninAbility()
+    {
+        AbilityenemyCount++;
+
+        if (AbilityenemyCount >= 10)
+        {
+            Debug.Log("用能力擊倒10個敵人！");
+            PASS11 = true;
+            PlayerPrefs.SetInt("PASS12", 1); // 将通关状态存储为1
+        }
+    }
+
 }
