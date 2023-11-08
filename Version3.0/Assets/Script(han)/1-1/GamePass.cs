@@ -1,7 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class GamePass : MonoBehaviour
 {
@@ -23,6 +21,7 @@ public class GamePass : MonoBehaviour
     public GameObject Image2; // 图像2
     public GameObject Image3; // 图像3
     public GameObject Image4; // 图像4
+    public Text enemyCountText; // 用于显示敌人计数的UI文本
 
     // 在Start方法中初始化计数并禁用亮图像
     private void Start()
@@ -32,17 +31,16 @@ public class GamePass : MonoBehaviour
         Pass.SetActive(false);
         Clear.SetActive(false);
         WinButton.SetActive(false);
+        UpdateEnemyCountText();
     }
 
     private void Update()
     {
-        //1-1 過關條件
+        // 1-1 過關條件
         if (PASS11 == true)
         {
             pass1B.SetActive(true);
             pass1D.SetActive(false);
-
-            // 切换图像1到图像2
             Image1.SetActive(false);
             Image2.SetActive(true);
         }
@@ -50,17 +48,14 @@ public class GamePass : MonoBehaviour
         {
             pass1D.SetActive(true);
             pass1B.SetActive(false);
-
-            // 切换图像2到图像1
             Image2.SetActive(false);
             Image1.SetActive(true);
         }
+
         if (PASS12 == true)
         {
             pass2B.SetActive(true);
             pass2D.SetActive(false);
-
-            // 切换图像3到图像4
             Image3.SetActive(false);
             Image4.SetActive(true);
         }
@@ -68,27 +63,19 @@ public class GamePass : MonoBehaviour
         {
             pass2D.SetActive(true);
             pass2B.SetActive(false);
-
-            // 切换图像4到图像3
             Image4.SetActive(false);
             Image3.SetActive(true);
         }
 
         if (PASS11 && PASS12 == true)
         {
-            // 设置过关图像为激活状态
             Pass.SetActive(true);
-
-            // 增加显示过关图像的计时器
             showPassTimer += Time.deltaTime;
 
             if (showPassTimer >= 3f)
             {
-                // 3秒后，禁用过关图像
                 Pass.SetActive(false);
-
                 Clear.SetActive(true);
-                // 启用过关按钮
                 WinButton.SetActive(true);
             }
         }
@@ -107,6 +94,7 @@ public class GamePass : MonoBehaviour
         }
     }
 
+    // 在这里增加击倒敌人的方法
     public void EnemyDown()
     {
         enemyCount++;
@@ -117,6 +105,12 @@ public class GamePass : MonoBehaviour
             PASS12 = true;
             PlayerPrefs.SetInt("PASS12", 1); // 将通关状态存储为1
         }
+
+        UpdateEnemyCountText();
+    }
+
+    private void UpdateEnemyCountText()
+    {
+        enemyCountText.text = enemyCount.ToString();
     }
 }
-

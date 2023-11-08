@@ -5734,7 +5734,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &908872444
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11659,6 +11659,7 @@ MonoBehaviour:
   Image2: {fileID: 1324676420}
   Image3: {fileID: 1774811915}
   Image4: {fileID: 2022566597}
+  enemyCountText: {fileID: 882085461}
 --- !u!1 &1648438171
 GameObject:
   m_ObjectHideFlags: 0
