@@ -6,7 +6,7 @@ public class Monster_Flower : MonoBehaviour
 
 {
 
-    
+    Animator animator;
 
     public int hp = 0;
 
@@ -30,7 +30,10 @@ public class Monster_Flower : MonoBehaviour
        
         hp = 2;
 
-                
+        animator = GetComponent<Animator>();
+
+
+      
     }
 
     void SoulSpawn()
@@ -68,6 +71,7 @@ public class Monster_Flower : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
 
         if (!isDead && hp <= 0)
         {
