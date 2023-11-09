@@ -6,7 +6,7 @@ public class Monster_Flower : MonoBehaviour
 
 {
 
-    Animator animator;
+    public Animator animator;
 
     public int hp = 0;
 
@@ -30,7 +30,7 @@ public class Monster_Flower : MonoBehaviour
        
         hp = 2;
 
-        animator = GetComponent<Animator>();
+       
 
 
       
@@ -52,7 +52,16 @@ public class Monster_Flower : MonoBehaviour
 
     }
 
-    void Dead()
+    public void Dead()
+    {
+        // 播放死亡动画或其他操作
+        animator.SetFloat("Die", 1);
+
+        // 延迟一定时间后销毁对象
+        Invoke("DestroyEnemy", 1f);
+    }
+
+    public void DestroyEnemy()
     {
         Destroy(this.gameObject);
         SoulSpawn();
@@ -77,7 +86,6 @@ public class Monster_Flower : MonoBehaviour
         {
             isDead = true;
             Dead();
-            //Invoke("Dead", 0.1f);
 
 
             GameObject gameManager = GameObject.Find("GameMenager");
@@ -91,6 +99,8 @@ public class Monster_Flower : MonoBehaviour
             }
 
         }
+       
+        
 
         if (AbilityControl.Boom == true)
         {

@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class MonsterShooting : MonoBehaviour
 {
-   
+    
     public Transform firePoint; // 射击点
     public GameObject bulletPrefab; // 子弹预制体
     public float bulletForce = 10f; // 子弹发射力量
     public float fireRate = 2f; // 发射频率（每秒发射次数）
-    public bool ISshooting = false;
+    public static bool ISshooting = false;
 
     private Transform player; // 玩家的Transform
     private float nextFireTime; // 下一次射击的时间
@@ -36,7 +36,7 @@ public class MonsterShooting : MonoBehaviour
             // 创建子弹，并将其旋转到正确的角度
             GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.Euler(0, 0, angle));
 
-            
+           
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
  
             // 应用射击力量
@@ -46,6 +46,7 @@ public class MonsterShooting : MonoBehaviour
             nextFireTime = Time.time + 1f / fireRate;
             ISshooting = true;
         }
+        
        
 
         if (AbilityControl.Slowdown)
