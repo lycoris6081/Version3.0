@@ -508,9 +508,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 859
-        y: 996
+        y: 941
         width: 344
-        height: 389
+        height: 444
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -613,9 +613,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 86
-        y: 1010
-        width: 247
-        height: 295
+        y: 939
+        width: 270
+        height: 366
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -634,9 +634,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 497
-        y: 1029
-        width: 257
-        height: 295
+        y: 939
+        width: 278
+        height: 385
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -646,111 +646,6 @@ TextureImporter:
       bones: []
       spriteID: f73b136e9856bbc45bc94234397cdb86
       internalID: 832308168
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: IMG_1612_26
-      rect:
-        serializedVersion: 2
-        x: 755
-        y: 1131
-        width: 20
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d2efecfbb09952d409fddb1aa9e733bf
-      internalID: -1727284904
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: IMG_1612_30
-      rect:
-        serializedVersion: 2
-        x: 334
-        y: 1009
-        width: 22
-        height: 25
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c455dc0adefa77f4f8857c0d5ff550b3
-      internalID: 617092927
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: IMG_1612_31
-      rect:
-        serializedVersion: 2
-        x: 123
-        y: 939
-        width: 170
-        height: 57
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ef20ae64613a2e1438c1f3b7b2b0c9b6
-      internalID: 196630204
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: IMG_1612_32
-      rect:
-        serializedVersion: 2
-        x: 533
-        y: 939
-        width: 170
-        height: 57
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a3c578dfcf44d4a4cb424da436f5a2b7
-      internalID: -1763163423
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: IMG_1612_33
-      rect:
-        serializedVersion: 2
-        x: 955
-        y: 938
-        width: 170
-        height: 57
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a7eb428fa84e6a8419233ca1930da853
-      internalID: -669963892
       vertices: []
       indices: 
       edges: []
@@ -1058,7 +953,7 @@ TextureImporter:
         width: 77
         height: 157
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1079,7 +974,7 @@ TextureImporter:
         width: 77
         height: 153
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1128,8 +1023,8 @@ TextureImporter:
       IMG_1612_30: 617092927
       IMG_1612_19: 1547139149
       IMG_1612_44: 953029525
-      IMG_1612_1: -811660667
       IMG_1612_24: 1449922158
+      IMG_1612_1: -811660667
       IMG_1612_6: 1242839574
       IMG_1612_13: -955757674
       IMG_1612_22: 1017227903
