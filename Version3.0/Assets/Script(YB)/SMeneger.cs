@@ -50,7 +50,7 @@ public class SMeneger : MonoBehaviour
         SceneManager.LoadScene(3);
     }
 
-    public void continue1()
+    public void continue11()
     {
         SceneManager.LoadScene(4);
     }
