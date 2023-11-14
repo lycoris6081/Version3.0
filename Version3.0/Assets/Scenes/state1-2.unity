@@ -5034,14 +5034,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprintCount: 0
   PASS11: 0
-  pass1D: {fileID: 0}
-  pass1B: {fileID: 0}
+  pass1D: {fileID: 766718436}
+  pass1B: {fileID: 30269391}
   PASS12: 0
-  pass2D: {fileID: 0}
-  pass2B: {fileID: 0}
-  Pass: {fileID: 0}
-  Clear: {fileID: 0}
-  WinButton: {fileID: 0}
+  pass2D: {fileID: 224143999}
+  pass2B: {fileID: 1543950941}
+  Pass: {fileID: 381115582}
+  Clear: {fileID: 533887474}
+  WinButton: {fileID: 533887474}
 --- !u!1 &766718436
 GameObject:
   m_ObjectHideFlags: 0
