@@ -54,7 +54,7 @@ public class GamePass12 : MonoBehaviour
             pass2B.SetActive(false);
         }
 
-        if(PASS11&&PASS12 == true)
+        if (PASS11 && PASS12 == true)
         {
             // 设置过关图像为激活状态
             Pass.SetActive(true);
@@ -82,7 +82,7 @@ public class GamePass12 : MonoBehaviour
         {
 
             Debug.Log("冲刺次数达到10！");
-            
+
             PlayerPrefs.SetInt("PASS11", 1); // 将通关状态存储为1
         }
     }
@@ -97,6 +97,6 @@ public class GamePass12 : MonoBehaviour
             PlayerPrefs.SetInt("PASS12", 1); // 将通关状态存储为1
         }
     }
-    
+
 
 }
