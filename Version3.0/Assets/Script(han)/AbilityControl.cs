@@ -10,6 +10,10 @@ public class AbilityControl : MonoBehaviour
     public Image[] abilityIcons; // 在Unity中分配你的能力图标数组
     public Transform abilityIconsContainer; // 在Unity中分配能力图标容器的Transform
 
+    public Image[] pauseMenuAbilityIcons; // 在Unity中分配你的暂停菜单中的能力图标数组
+    public Transform pauseMenuAbilityIconsContainer; // 在Unity中分配暂停菜单中的图标容器的Transform
+    public GameObject pause;
+
     public static bool Boom = false;
 
     public static bool Slowdown = false;
@@ -59,9 +63,81 @@ public class AbilityControl : MonoBehaviour
                 duration = 10f;
             }
         }
-    }
-    
+        if(pause != null)
 
+        {
+            ShowPauseMenuAbilityIcons();
+        }
+        else
+        {
+            HidePauseMenuAbilityIcons();
+    
+        }
+
+        
+    }
+    public void ShowPauseMenuAbilityIcons()
+    {
+        // 检查是否暂停菜单中的图标数组已分配
+        if (pauseMenuAbilityIcons == null || pauseMenuAbilityIcons.Length == 0)
+        {
+            Debug.LogWarning("Pause menu ability icons are not assigned or empty.");
+            return;
+        }
+
+        // 检查是否有暂停菜单的图标容器已分配
+        if (pauseMenuAbilityIconsContainer == null)
+        {
+            Debug.LogWarning("Pause menu ability icons container is not assigned.");
+            return;
+        }
+
+
+        // 遍历已选择的图标，显示在暂停菜单中
+        for (int i = 0; i < selectedAbilityIcons.Count && i < pauseMenuAbilityIcons.Length; i++)
+        {
+            // 创建一个新的Image对象
+            Image newPauseMenuAbilityIcon = Instantiate(pauseMenuAbilityIcons[i], pauseMenuAbilityIconsContainer);
+
+            // 设置图标的位置，这里假设图标大小是50x50
+            Vector3 newPosition = new Vector3(i * -150, 0, 0); // 60是图标之间的间隔
+            newPauseMenuAbilityIcon.rectTransform.localPosition = newPosition;
+
+            // 将新的图标添加到暂停菜单的能力图标列表中
+            pauseMenuAbilityIcons[i] = newPauseMenuAbilityIcon;
+        }
+    }
+    public void HidePauseMenuAbilityIcons()
+    {
+        // 清空暂停菜单的能力图标列表
+        foreach (Image icon in pauseMenuAbilityIcons)
+        {
+            Destroy(icon.gameObject);
+        }
+
+        // 将暂停菜单的能力图标数组置为 null
+        pauseMenuAbilityIcons = null;
+
+        // 禁用暂停菜单的图标容器对象
+        pauseMenuAbilityIconsContainer.gameObject.SetActive(false);
+    }
+    public void ShowGameplayAbilityIcons()
+    {
+        // 启用游戏内的能力图标
+        foreach (Image icon in abilityIcons)
+        {
+            icon.gameObject.SetActive(true);
+        }
+    }
+
+    public void HideGameplayAbilityIcons()
+    {
+        // 禁用游戏内的能力图标
+        foreach (Image icon in abilityIcons)
+        {
+            icon.gameObject.SetActive(false);
+        }
+    }
 
     public void Ability1()
     {

@@ -24,16 +24,20 @@ public class Monster_Flower : MonoBehaviour
 
     private bool isDead = false;
     public static bool Boom = false;
-
+    private SpriteRenderer spriteRenderer;
+    private float flashDuration = 0.1f;
+    private Color originalColor;
     void Start()
     {
        
         hp = 2;
 
-       
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        originalColor = spriteRenderer.color;
 
 
-      
+
+
     }
 
     void SoulSpawn()
@@ -54,28 +58,35 @@ public class Monster_Flower : MonoBehaviour
 
     public void Dead()
     {
-        // 播放死亡动画或其他操作
-        animator.SetFloat("Die", 1);
+        //// 播放死亡动画或其他操作
+        //animator.SetFloat("Die", 1);
 
-        // 延迟一定时间后销毁对象
-        Invoke("DestroyEnemy", 1f);
-    }
-
-    public void DestroyEnemy()
-    {
+        //// 延迟一定时间后销毁对象
+        //Invoke("DestroyEnemy", 1f);
         Destroy(this.gameObject);
         SoulSpawn();
     }
 
-    public void TakeDamage(int damageAmount)
-    {
-        hp -= damageAmount; // 減少敵人的血量
+    //public void DestroyEnemy()
+    //{
+    //    Destroy(this.gameObject);
+    //    SoulSpawn();
+    //}
 
+    public void TakeDamage(int damage)
+    {
+        hp -= damage; // 減少敵人的血量
+        StartCoroutine(FlashWhite());
+    }
+    private System.Collections.IEnumerator FlashWhite()
+    {
+        spriteRenderer.color = Color.red;
+        yield return new WaitForSeconds(flashDuration);
+        spriteRenderer.color = originalColor;
     }
 
-  
 
- 
+
 
     // Update is called once per frame
     void Update()
@@ -118,7 +129,7 @@ public class Monster_Flower : MonoBehaviour
     {
         if (other.gameObject.tag == "AttackBox")
         {
-            hp = hp -= AttackBox.Damage;
+            TakeDamage(AttackBox.Damage);
             Debug.Log("-1");
         }
         if (other.gameObject.tag == "Shield")

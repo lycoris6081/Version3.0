@@ -25,13 +25,17 @@ public class Monster_CUP : MonoBehaviour
     public Rigidbody2D rb;
     private bool isDead = false;
     public static bool Boom = false;
-
+    private SpriteRenderer spriteRenderer;
+    private float flashDuration = 0.1f;
+    private Color originalColor;
     void Start()
     {
        
         hp = 3;
         BoomRange.SetActive(false);
         rb = GameObject.Find("CATCAT").GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        originalColor = spriteRenderer.color;
     }
 
     void SoulSpawn()
@@ -56,10 +60,16 @@ public class Monster_CUP : MonoBehaviour
         SoulSpawn();
     }
 
-    public void TakeDamage(int damageAmount)
+    public void TakeDamage(int damage)
     {
-        hp -= damageAmount; // 減少敵人的血量
-
+        hp -= damage; // 減少敵人的血量
+        StartCoroutine(FlashWhite());
+    }
+    private System.Collections.IEnumerator FlashWhite()
+    {
+        spriteRenderer.color = Color.red;
+        yield return new WaitForSeconds(flashDuration);
+        spriteRenderer.color = originalColor;
     }
     public void Boomdied()
     {
@@ -112,7 +122,8 @@ public class Monster_CUP : MonoBehaviour
     {
         if (other.gameObject.tag == "AttackBox")
         {
-            hp = hp -= AttackBox.Damage;
+         
+            TakeDamage(AttackBox.Damage);
             Debug.Log("-1");
         }
         if (other.gameObject.tag == "Shield")

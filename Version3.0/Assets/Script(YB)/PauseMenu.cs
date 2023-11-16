@@ -5,7 +5,8 @@ using UnityEngine;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject panelToToggle; // 引用你想要显示/隐藏的Panel
-    private bool isGamePaused = false;
+    public  bool isGamePaused = false;
+    public AbilityControl abilityControl;
 
     void Start()
     {
@@ -51,6 +52,7 @@ public class PauseMenu : MonoBehaviour
         Debug.Log("PauseGame() called");
         Time.timeScale = 0f; // 暂停游戏时间
         isGamePaused = true;
+        abilityControl.HideGameplayAbilityIcons();
     }
 
     void ResumeGame()
@@ -58,5 +60,6 @@ public class PauseMenu : MonoBehaviour
         Debug.Log("ResumeGame() called");
         Time.timeScale = 1f; // 恢复游戏时间
         isGamePaused = false;
+        abilityControl.ShowGameplayAbilityIcons();  
     }
 }

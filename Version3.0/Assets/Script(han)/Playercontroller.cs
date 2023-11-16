@@ -9,7 +9,7 @@ public class Playercontroller : MonoBehaviour
 {
 
    public GamePass gameMenager; // 参考GameManager脚本
-
+    public bool game1pass = false;
     public float moveSpeed = 5f;
     public float sprintSpeed = 5f; // 冲刺速度
     public float maxSprintSpeed = 10f; // 冲刺最大速度
@@ -133,6 +133,7 @@ public class Playercontroller : MonoBehaviour
                 
                 animator.SetFloat("Attack1", 0);
 
+               
                 gameMenager.IncreaseSprintCount();
 
             }                    
