@@ -54,4 +54,29 @@ public class SMeneger : MonoBehaviour
     {
         SceneManager.LoadScene(4);
     }
+
+    public void continue12()
+    {
+        SceneManager.LoadScene(6);
+    }
+
+    public void continue13()
+    {
+        SceneManager.LoadScene(7);
+    }
+
+    public void continue14()
+    {
+        SceneManager.LoadScene(8);
+    }
+
+    public void continue15()
+    {
+        SceneManager.LoadScene(9);
+    }
+
+    public void continue16()
+    {
+        SceneManager.LoadScene(10);
+    }
 }
