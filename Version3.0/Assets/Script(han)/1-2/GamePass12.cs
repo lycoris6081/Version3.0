@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GamePass12 : MonoBehaviour
 {
@@ -18,6 +19,11 @@ public class GamePass12 : MonoBehaviour
     public GameObject Clear;
     public GameObject WinButton; // 参考过关按钮的GameObject
     private float showPassTimer = 0f; // 用于计时显示过关图像的时间
+    public GameObject Image1; // 图像1
+    public GameObject Image2; // 图像2
+    public GameObject Image3; // 图像3
+    public GameObject Image4; // 图像4
+    public Text enemyCountText; // 用于显示敌人计数的UI文本
 
     // 在Start方法中初始化计数并禁用亮图像
     private void Start()
@@ -37,21 +43,29 @@ public class GamePass12 : MonoBehaviour
             pass1B.SetActive(true);
             pass1D.SetActive(false);
             PASS11 = true;
+            Image1.SetActive(false);
+            Image2.SetActive(true);
         }
         else
         {
             pass1D.SetActive(true);
             pass1B.SetActive(false);
+            Image2.SetActive(false);
+            Image1.SetActive(true);
         }
         if (PASS12 == true)
         {
             pass2B.SetActive(true);
             pass2D.SetActive(false);
+            Image3.SetActive(false);
+            Image4.SetActive(true);
         }
         else
         {
             pass2D.SetActive(true);
             pass2B.SetActive(false);
+            Image4.SetActive(false);
+            Image3.SetActive(true);
         }
 
         if (PASS11 && PASS12 == true)
@@ -96,6 +110,10 @@ public class GamePass12 : MonoBehaviour
             PASS12 = true;
             PlayerPrefs.SetInt("PASS12", 1); // 将通关状态存储为1
         }
+    }
+    private void UpdateEnemyCountText()
+    {
+        enemyCountText.text = enemyCount.ToString();
     }
 
 
