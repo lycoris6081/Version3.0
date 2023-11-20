@@ -46,6 +46,7 @@ public class AbilityControl : MonoBehaviour
         cardControl = FindObjectOfType<CardControl>();
 
         characterCollider = character.GetComponent<Collider2D>();
+        
     }
 
     // Update is called once per frame
@@ -124,7 +125,7 @@ public class AbilityControl : MonoBehaviour
     public void ShowGameplayAbilityIcons()
     {
         // 启用游戏内的能力图标
-        foreach (Image icon in abilityIcons)
+        foreach (Image icon in selectedAbilityIcons)
         {
             icon.gameObject.SetActive(true);
         }
@@ -133,7 +134,7 @@ public class AbilityControl : MonoBehaviour
     public void HideGameplayAbilityIcons()
     {
         // 禁用游戏内的能力图标
-        foreach (Image icon in abilityIcons)
+        foreach (Image icon in selectedAbilityIcons)
         {
             icon.gameObject.SetActive(false);
         }
