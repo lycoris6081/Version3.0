@@ -15717,7 +15717,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 926456328}
         m_TargetAssemblyTypeName: ButtonController2, Assembly-CSharp
-        m_MethodName: OnButton5Click
+        m_MethodName: OnButton3Click
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
