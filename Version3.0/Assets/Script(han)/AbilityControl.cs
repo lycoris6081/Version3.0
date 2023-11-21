@@ -44,7 +44,7 @@ public class AbilityControl : MonoBehaviour
         abilityIconsContainer.gameObject.SetActive(false);
         Boom = false;
         cardControl = FindObjectOfType<CardControl>();
-
+        pause.SetActive(false );
         characterCollider = character.GetComponent<Collider2D>();
         
     }
@@ -68,11 +68,12 @@ public class AbilityControl : MonoBehaviour
 
         {
             ShowPauseMenuAbilityIcons();
+           
         }
         else
         {
             HidePauseMenuAbilityIcons();
-    
+            
         }
 
         
@@ -98,7 +99,7 @@ public class AbilityControl : MonoBehaviour
         for (int i = 0; i < selectedAbilityIcons.Count && i < pauseMenuAbilityIcons.Length; i++)
         {
             // 创建一个新的Image对象
-            Image newPauseMenuAbilityIcon = Instantiate(pauseMenuAbilityIcons[i], pauseMenuAbilityIconsContainer);
+            Image newPauseMenuAbilityIcon = Instantiate(selectedAbilityIcons[i], pauseMenuAbilityIconsContainer);
 
             // 设置图标的位置，这里假设图标大小是50x50
             Vector3 newPosition = new Vector3(i * -150, 0, 0); // 60是图标之间的间隔

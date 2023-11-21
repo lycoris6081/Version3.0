@@ -15,7 +15,7 @@ public class PauseMenu : MonoBehaviour
         {
             panelToToggle.SetActive(false);
         }
-        
+       
     }
 
     void Update()
@@ -53,7 +53,8 @@ public class PauseMenu : MonoBehaviour
         Debug.Log("PauseGame() called");
         Time.timeScale = 0f; // 暂停游戏时间
         isGamePaused = true;
-        abilityControl.HideGameplayAbilityIcons();
+        
+        
     }
 
     void ResumeGame()
@@ -61,6 +62,7 @@ public class PauseMenu : MonoBehaviour
         Debug.Log("ResumeGame() called");
         Time.timeScale = 1f; // 恢复游戏时间
         isGamePaused = false;
-        abilityControl.ShowGameplayAbilityIcons();  
+       
+      
     }
 }

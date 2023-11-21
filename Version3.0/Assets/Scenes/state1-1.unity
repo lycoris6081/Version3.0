@@ -655,7 +655,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &41259387
 Transform:
   m_ObjectHideFlags: 0
@@ -9333,9 +9333,9 @@ MonoBehaviour:
   pauseMenuAbilityIcons:
   - {fileID: 6185729750668628022, guid: ff056b2c293c1f349afd419632962964, type: 3}
   - {fileID: 1965001260542447826, guid: 6552873a1c965c94dbc5e9bc9e128dd6, type: 3}
-  - {fileID: 3132128744332070921, guid: d23c7e9f959d4a94786ec548096750fa, type: 3}
   - {fileID: 3214201892117395265, guid: 3566772856b2aee46958e9f3709a4bc1, type: 3}
   - {fileID: 408210438769497327, guid: a8fed3aee3d7ad241b6626397b0a750e, type: 3}
+  - {fileID: 3132128744332070921, guid: d23c7e9f959d4a94786ec548096750fa, type: 3}
   pauseMenuAbilityIconsContainer: {fileID: 1270305759}
   pause: {fileID: 908872443}
   character: {fileID: 2132485459}
