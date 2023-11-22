@@ -14392,9 +14392,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameMenager: {fileID: 0}
   game1pass: 0
-  moveSpeed: 8
-  sprintSpeed: 5000
-  maxSprintSpeed: 50
+  moveSpeed: 10
+  sprintSpeed: 90
+  maxSprintSpeed: 90
   sprintDistance: 5000
   AttackBox: {fileID: 1648438171}
   animator: {fileID: 983904391}

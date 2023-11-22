@@ -34,9 +34,7 @@ public class Boxcontroller : MonoBehaviour
         GameObject box = Instantiate(BoxPrefab, spawnPosition, Quaternion.identity); 
         IsBoxSpawned = true;
 
-        // 实例化箭头并将其指向箱子
-        Arrow = Instantiate(ArrowIndicatorPrefab, Vector3.zero, Quaternion.identity);
-        Arrow.GetComponent<Arrow>().target = box.transform;
+       
     }
 
     public void DestroyBox()

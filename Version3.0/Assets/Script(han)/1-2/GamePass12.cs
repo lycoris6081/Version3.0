@@ -42,7 +42,7 @@ public class GamePass12 : MonoBehaviour
     private void Update()
     {
         //1-2 過關條件
-        if (SoulUI.soulCount >= 10 && AbilityControl.Ability6UsageCount >= 1)
+        if (SoulUI.soulCount >= 50 && AbilityControl.Ability6UsageCount >= 5)
         {
             pass1B.SetActive(true);
             pass1D.SetActive(false);

@@ -9728,10 +9728,13 @@ MonoBehaviour:
     spawnInterval: 5
     maxEnemies: 1
     nextSpawnTime: 0
+    spawnedEnemiesCount: 0
   - spawnPoint: {fileID: 2075978122}
     spawnInterval: 2
     maxEnemies: 1
     nextSpawnTime: 0
+    spawnedEnemiesCount: 0
+  enemyManager: {fileID: 0}
 --- !u!1 &1124250528
 GameObject:
   m_ObjectHideFlags: 0
@@ -15521,9 +15524,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameMenager: {fileID: 0}
   game1pass: 0
-  moveSpeed: 8
-  sprintSpeed: 5000
-  maxSprintSpeed: 50
+  moveSpeed: 10
+  sprintSpeed: 90
+  maxSprintSpeed: 90
   sprintDistance: 5000
   AttackBox: {fileID: 1648438171}
   animator: {fileID: 983904391}

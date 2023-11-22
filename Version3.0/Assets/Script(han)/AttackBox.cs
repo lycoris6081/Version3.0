@@ -20,7 +20,7 @@ public class AttackBox : MonoBehaviour
         if (other.gameObject.tag == "Enemy")
         {
             Vector2 direction = (transform.position - other.transform.position).normalized;
-            float knockbackForce = 80f; // 调整物理反馈力的大小
+            float knockbackForce = 100f; // 调整物理反馈力的大小
             rb.AddForce(direction * knockbackForce, ForceMode2D.Impulse);
 
         }

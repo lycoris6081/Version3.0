@@ -15129,6 +15129,14 @@ PrefabInstance:
       propertyPath: lifeImages.Array.data[2]
       value: 
       objectReference: {fileID: 399142653}
+    - target: {fileID: 4971453889819881222, guid: 8e4d4ea91de2dfa4f9935cede54d00bb, type: 3}
+      propertyPath: moveSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4971453889819881222, guid: 8e4d4ea91de2dfa4f9935cede54d00bb, type: 3}
+      propertyPath: maxSprintSpeed
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 4971453889819881225, guid: 8e4d4ea91de2dfa4f9935cede54d00bb, type: 3}
       propertyPath: m_RootOrder
       value: 3

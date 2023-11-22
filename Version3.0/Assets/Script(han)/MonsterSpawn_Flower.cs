@@ -18,10 +18,10 @@ public class MonsterSpawn_Flower : MonoBehaviour
     public GameObject EnemyspawnreadyPrefab; // 预备标志的预制体
     public GameObject enemyPrefab; // 敌人的预制体
     public List<MonsterSpawnRegion> spawnAreas; // 多个生成区域
-
+    public EnemyMAXspawn12 enemyManager;
     bool isReadySpawned = false;
     float readySpawnTime = 0f;
-
+    private bool isSpawning = true;
     void Start()
     {
         // 开始生成 "ready" 标志
@@ -49,7 +49,11 @@ public class MonsterSpawn_Flower : MonoBehaviour
         isReadySpawned = true;
         readySpawnTime = Time.time;
     }
-
+    public void StopSpawning()
+    {
+        isSpawning = false;
+        Debug.Log("生成達20隻");
+    }
     IEnumerator SpawnEnemyWithDelay(GameObject readyObject, float delay)
     {
         yield return new WaitForSeconds(delay);
@@ -59,6 +63,29 @@ public class MonsterSpawn_Flower : MonoBehaviour
        
         // 实例化敌人
         Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+        // 通知 EnemyManager 生成了一個新敵人
+        enemyManager.IncrementEnemyCount();
+
+        // 将一个脚本附加到生成的敌人，以在敌人被销毁时通知 EnemyManager
+        EnemyController12 enemyController = Instantiate(enemyPrefab, spawnPosition, Quaternion.identity).AddComponent<EnemyController12>();
+        enemyController.Initialize(enemyManager);
         Destroy(readyObject);
+    }
+}
+public class EnemyController12 : MonoBehaviour
+{
+    private EnemyMAXspawn12 enemyManager;
+
+    public void Initialize(EnemyMAXspawn12 manager)
+    {
+        enemyManager = manager;
+    }
+
+    void OnDestroy()
+    {
+        if (enemyManager != null)
+        {
+            enemyManager.DecrementEnemyCount();
+        }
     }
 }
