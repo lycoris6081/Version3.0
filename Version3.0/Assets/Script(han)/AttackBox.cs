@@ -31,7 +31,7 @@ public class AttackBox : MonoBehaviour
             rb.AddForce(direction * knockbackForce, ForceMode2D.Impulse);
 
         }
-        if (other.gameObject.tag == "CUP"&&AbilityControl.AttckLevelUP)
+        if (other.gameObject.tag == "Enemy" && AbilityControl.AttckLevelUP)
         {
           
             GameObject gameManager = GameObject.Find("GameMenager");

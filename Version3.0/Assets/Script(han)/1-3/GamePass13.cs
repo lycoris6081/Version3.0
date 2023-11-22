@@ -26,6 +26,8 @@ public class GamePass13 : MonoBehaviour
     public GameObject Image4; // 图像4
     public Text enemyCountText; // 用于显示敌人计数的UI文本
 
+    public GameObject Spawn1;
+    public GameObject spawn2;
     // 在Start方法中初始化计数并禁用亮图像
     private void Start()
     {
@@ -85,6 +87,9 @@ public class GamePass13 : MonoBehaviour
                 // 启用过关按钮
                 WinButton.SetActive(true);
             }
+            Spawn1.SetActive(false);
+            spawn2.SetActive(false);
+
         }
     }
 
@@ -105,7 +110,7 @@ public class GamePass13 : MonoBehaviour
     {
         enemyCount++;
 
-        if (enemyCount >= 10)
+        if (enemyCount >= 1)
         {
             Debug.Log("擊倒10個敵人！");
             PASS12 = true;
@@ -116,7 +121,7 @@ public class GamePass13 : MonoBehaviour
     {
         AbilityenemyCount++;
 
-        if (AbilityenemyCount >= 10)
+        if (AbilityenemyCount >= 1)
         {
             Debug.Log("用能力擊倒10個敵人！");
             PASS11 = true;

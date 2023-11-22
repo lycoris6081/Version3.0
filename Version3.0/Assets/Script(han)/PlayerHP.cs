@@ -86,7 +86,7 @@ public class PlayerHP : MonoBehaviour
             {
                 hp -= 1;
                 UpdateLifeUI(); // 更新生命图像
-
+               
                 // 计算反弹力
                 Vector2 bounceForce = (transform.position - other.transform.position).normalized * 50f;
                 // 施加反弹力到玩家刚体

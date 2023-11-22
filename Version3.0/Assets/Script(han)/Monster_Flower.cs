@@ -6,7 +6,7 @@ public class Monster_Flower : MonoBehaviour
 
 {
 
-    public Animator animator;
+     Animator animator;
 
     public int hp = 0;
 
