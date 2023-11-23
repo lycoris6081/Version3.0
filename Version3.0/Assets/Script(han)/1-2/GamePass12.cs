@@ -109,19 +109,20 @@ public class GamePass12 : MonoBehaviour
 
             Debug.Log("冲刺次数达到10！");
 
-            PlayerPrefs.SetInt("PASS11", 1); // 将通关状态存储为1
+         
         }
     }
     public void EnemyDown()
     {
         enemyCount++;
 
-        if (enemyCount >= 10)
+        if (enemyCount >= 1)
         {
             Debug.Log("擊倒10個敵人！");
             PASS12 = true;
-            PlayerPrefs.SetInt("PASS12", 1); // 将通关状态存储为1
+         
         }
+        UpdateEnemyCountText();
     }
     private void UpdateEnemyCountText()
     {

@@ -19,6 +19,8 @@ public class GamePass14 : MonoBehaviour
     public GameObject WinButton; // 参考过关按钮的GameObject
     private float showPassTimer = 0f; // 用于计时显示过关图像的时间
 
+    public GameObject Spawn1;
+    public GameObject spawn2;
     // 在Start方法中初始化计数并禁用亮图像
     private void Start()
     {
@@ -32,7 +34,7 @@ public class GamePass14 : MonoBehaviour
     private void Update()
     {
         //1-2 過關條件
-        if (SoulUI.soulCount >= 50 && AbilityControl.Ability6UsageCount >= 5)
+        if (AbilityControl.Ability6UsageCount >= 1)
         {
             pass1B.SetActive(true);
             pass1D.SetActive(false);
@@ -70,6 +72,8 @@ public class GamePass14 : MonoBehaviour
                 // 启用过关按钮
                 WinButton.SetActive(true);
             }
+            Spawn1.SetActive(false);
+            spawn2.SetActive(false);
         }
     }
 
@@ -82,7 +86,7 @@ public class GamePass14 : MonoBehaviour
         {
 
             Debug.Log("冲刺次数达到10！");
-            PASS11 = true;
+           
             PlayerPrefs.SetInt("PASS11", 1); // 将通关状态存储为1
         }
     }
@@ -90,7 +94,7 @@ public class GamePass14 : MonoBehaviour
     {
         enemyCount++;
 
-        if (enemyCount >= 60)
+        if (enemyCount >= 1)
         {
             Debug.Log("擊倒10個敵人！");
             PASS12 = true;

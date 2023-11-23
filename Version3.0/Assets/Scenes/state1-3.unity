@@ -12941,7 +12941,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1791035404}
   - component: {fileID: 1791035402}
-  - component: {fileID: 1791035403}
   m_Layer: 0
   m_Name: EnemySystem (1)
   m_TagString: Untagged
@@ -12962,19 +12961,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxEnemyCount: 10
---- !u!114 &1791035403
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1791035401}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59f8c04eafb13d349964b56120fad485, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxEnemyCount: 20
 --- !u!4 &1791035404
 Transform:
   m_ObjectHideFlags: 0
