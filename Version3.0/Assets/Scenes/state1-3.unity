@@ -4185,10 +4185,10 @@ MonoBehaviour:
   Pass: {fileID: 739686442}
   Clear: {fileID: 330862051}
   WinButton: {fileID: 97439979}
-  Image1: {fileID: 387442861}
-  Image2: {fileID: 814961588}
-  Image3: {fileID: 301980216}
-  Image4: {fileID: 1234829044}
+  Image1: {fileID: 1922259077}
+  Image2: {fileID: 1950379263}
+  Image3: {fileID: 88335804}
+  Image4: {fileID: 1513763044}
   enemyCountText: {fileID: 2118989184}
   Spawn1: {fileID: 665573220}
   spawn2: {fileID: 1676626392}
@@ -8356,7 +8356,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1129161656
 RectTransform:
   m_ObjectHideFlags: 0

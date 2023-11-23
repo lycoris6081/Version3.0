@@ -5321,10 +5321,10 @@ MonoBehaviour:
   Image2: {fileID: 1242476954}
   Image3: {fileID: 1196083757}
   Image4: {fileID: 640459493}
-  Image5: {fileID: 1395229738}
-  Image6: {fileID: 1401469255}
-  Image7: {fileID: 1532860612}
-  Image8: {fileID: 1773097045}
+  Image5: {fileID: 1532860612}
+  Image6: {fileID: 1773097045}
+  Image7: {fileID: 1395229738}
+  Image8: {fileID: 1401469255}
   enemyCountText: {fileID: 1378388409}
 --- !u!1 &766718436
 GameObject:
