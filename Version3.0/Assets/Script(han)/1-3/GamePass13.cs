@@ -3,29 +3,43 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class GamePass13 : MonoBehaviour
 {
+    [Header("各種計算數量")]
     public int sprintCount = 0; // 冲刺次数
     private int enemyCount = 0; // 用于跟踪击倒的敌人数量
     private int AbilityenemyCount = 0;
+    private float showPassTimer = 0f; // 用于计时显示过关图像的时间
+    public TextMeshProUGUI enemyCountText; // 用于显示敌人计数的UI文本
 
+    [Header("image 上面放暗的 下面放亮的")]
+    [Header("條件1")]
     public bool PASS11 = false;
+    [Header(" [遊戲內]")]
     public GameObject pass1D;
     public GameObject pass1B;
-    public bool PASS12 = false;
-    public GameObject pass2D;
-    public GameObject pass2B;
-    public GameObject Pass;
-    public GameObject Clear;
-    public GameObject WinButton; // 参考过关按钮的GameObject
-    private float showPassTimer = 0f; // 用于计时显示过关图像的时间
+    [Header(" [失敗]")]
     public GameObject Image1; // 图像1
     public GameObject Image2; // 图像2
+    //[Header(" [暫停]")]
+
+    [Header("條件2")]
+    public bool PASS12 = false;
+    [Header(" [遊戲內]")]
+    public GameObject pass2D;
+    public GameObject pass2B;
+    [Header(" [失敗]")]
     public GameObject Image3; // 图像3
     public GameObject Image4; // 图像4
-    public Text enemyCountText; // 用于显示敌人计数的UI文本
 
+    [Header("遊戲內物件")]
+    public GameObject Pass;
+    public GameObject Clear;
+    public GameObject WinButton; // 参考过关按钮的GameObject       
+
+    [Header("生成怪物")]
     public GameObject Spawn1;
     public GameObject spawn2;
     // 在Start方法中初始化计数并禁用亮图像

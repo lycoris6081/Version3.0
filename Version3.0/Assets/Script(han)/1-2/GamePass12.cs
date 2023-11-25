@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class GamePass12 : MonoBehaviour
 {
     [Header("各種計算數量")]
     public int sprintCount = 0; // 冲刺次数
     private int enemyCount = 0; // 用于跟踪击倒的敌人数量
-    public Text enemyCountText; // 用于显示敌人计数的UI文本
+    public TextMeshProUGUI enemyCountText; // 用于显示敌人计数的UI文本
     
     [Header("image 上面放暗的 下面放亮的")]
 
@@ -30,7 +31,7 @@ public class GamePass12 : MonoBehaviour
     public GameObject Image6;
 
     // condition 2
-    [Header("條件2 image 上面放暗的 下面放亮的")]
+    [Header("條件2")]
     public bool PASS12 = false;
     [Header(" [遊戲內]")]
     public GameObject pass2D;
