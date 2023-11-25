@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class GamePass : MonoBehaviour
 {
     [Header("各種計算數量")]
-    public Text enemyCountText; // 用于显示敌人计数的UI文本
+    public TextMeshProUGUI enemyCountText; // 用于显示敌人计数的UI文本
     [Tooltip("衝刺次數")]
     public int sprintCount = 0; // 冲刺次数
     [Tooltip("擊倒的敵人數")]
