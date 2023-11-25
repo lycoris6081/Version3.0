@@ -6,28 +6,49 @@ using UnityEngine.UI;
 
 public class GamePass12 : MonoBehaviour
 {
+    [Header("各種計算數量")]
     public int sprintCount = 0; // 冲刺次数
     private int enemyCount = 0; // 用于跟踪击倒的敌人数量
+    public Text enemyCountText; // 用于显示敌人计数的UI文本
+    
+    [Header("image 上面放暗的 下面放亮的")]
 
+    [Header("條件1")]
     public bool PASS11 = false;
+    [Header(" [遊戲內]")]
+    [Tooltip("遊戲內，暗的")]
     public GameObject pass1D;
+    [Tooltip("遊戲內，亮的")]
     public GameObject pass1B;
+    [Header(" [暫停]")]
+    [Tooltip("暗的")]
+    public GameObject Image1; // 图像1
+    [Tooltip("亮的")]
+    public GameObject Image2; // 图像2
+    [Header(" [失敗結算]")]
+    public GameObject Image5;
+    public GameObject Image6;
+
+    // condition 2
+    [Header("條件2 image 上面放暗的 下面放亮的")]
     public bool PASS12 = false;
+    [Header(" [遊戲內]")]
     public GameObject pass2D;
     public GameObject pass2B;
+    [Header(" [暫停]")]
+    public GameObject Image3; // 图像3
+    public GameObject Image4; // 图像4
+    [Header(" [失敗結算]")]
+    public GameObject Image7;
+    public GameObject Image8;
+
+    [Header("遊戲內物件")]
     public GameObject Pass;
     public GameObject Clear;
     public GameObject WinButton; // 参考过关按钮的GameObject
     private float showPassTimer = 0f; // 用于计时显示过关图像的时间
-    public GameObject Image1; // 图像1
-    public GameObject Image2; // 图像2
-    public GameObject Image3; // 图像3
-    public GameObject Image4; // 图像4
-    public GameObject Image5;
-    public GameObject Image6;
-    public GameObject Image7;
-    public GameObject Image8;
-    public Text enemyCountText; // 用于显示敌人计数的UI文本
+    
+    
 
     // 在Start方法中初始化计数并禁用亮图像
     private void Start()

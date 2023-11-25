@@ -15228,7 +15228,7 @@ GameObject:
   - component: {fileID: 1448394408}
   - component: {fileID: 1448394407}
   m_Layer: 0
-  m_Name: Text_Lost
+  m_Name: Text_Pause
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15251,7 +15251,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 788}
+  m_AnchoredPosition: {x: 0, y: 834}
   m_SizeDelta: {x: 995.354, y: 256.535}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1448394407
@@ -18040,7 +18040,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1812864665
 MonoBehaviour:
   m_ObjectHideFlags: 0

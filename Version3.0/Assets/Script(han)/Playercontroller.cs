@@ -8,13 +8,13 @@ using UnityEngine.UI;
 public class Playercontroller : MonoBehaviour
 {
 
-   public GamePass gameMenager; // 参考GameManager脚本
+    public GamePass gameMenager; // 参考GameManager脚本
     public bool game1pass = false;
     public float moveSpeed = 5f;
     public float sprintSpeed = 5f; // 冲刺速度
     public float maxSprintSpeed = 10f; // 冲刺最大速度
     public float sprintDistance = 5f; // 冲刺距离
-        public GameObject AttackBox;
+    public GameObject AttackBox;
 
 
 
