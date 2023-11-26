@@ -5282,8 +5282,8 @@ MonoBehaviour:
   Image4: {fileID: 1869327136}
   Image7: {fileID: 1207884625}
   Image8: {fileID: 1420290304}
-  Pass: {fileID: 0}
-  Clear: {fileID: 0}
+  Pass: {fileID: 381115582}
+  Clear: {fileID: 581746539}
   WinButton: {fileID: 1161951058}
 --- !u!114 &757122000
 MonoBehaviour:
