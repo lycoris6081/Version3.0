@@ -13,6 +13,9 @@ public class PlayerHP : MonoBehaviour
     public static bool gameover;
     public GameObject gameOverUI; // 游戏结束UI
     public Image[] lifeImages; // 存放生命图像的数组
+    private SpriteRenderer spriteRenderer;
+    private float flashDuration = 0.1f;
+    private Color originalColor;
 
     // Start is called before the first frame update
     void Start()
@@ -23,8 +26,17 @@ public class PlayerHP : MonoBehaviour
         Isdead = false;
         gameover= false;
         rb = GameObject.Find("CATCAT").GetComponent<Rigidbody2D>();
-    }
 
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        originalColor = spriteRenderer.color;
+
+    }
+    private System.Collections.IEnumerator FlashWhite()
+    {
+        spriteRenderer.color = new Color32(255, 144, 144, 255);
+        yield return new WaitForSeconds(flashDuration);
+        spriteRenderer.color = originalColor;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -64,7 +76,7 @@ public class PlayerHP : MonoBehaviour
             {
                 hp -= 1;
                 UpdateLifeUI(); // 更新生命图像
-
+                StartCoroutine(FlashWhite());
                 // 计算反弹力
                 Vector2 bounceForce = (transform.position - other.transform.position).normalized * 50f;
                 // 施加反弹力到玩家刚体
@@ -86,7 +98,7 @@ public class PlayerHP : MonoBehaviour
             {
                 hp -= 1;
                 UpdateLifeUI(); // 更新生命图像
-               
+                StartCoroutine(FlashWhite());
                 // 计算反弹力
                 Vector2 bounceForce = (transform.position - other.transform.position).normalized * 50f;
                 // 施加反弹力到玩家刚体
@@ -102,8 +114,8 @@ public class PlayerHP : MonoBehaviour
             {
                 hp -= 2;
                 UpdateLifeUI(); // 更新生命图像
+                StartCoroutine(FlashWhite());
 
-               
             }
 
         }

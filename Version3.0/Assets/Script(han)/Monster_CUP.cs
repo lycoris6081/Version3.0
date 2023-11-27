@@ -96,7 +96,7 @@ public class Monster_CUP : MonoBehaviour
             isDead = true;
 
             CupShake.ShakeBeforeExplosion();
-            Invoke("Boomdied", 1f);
+            Invoke("Boomdied", 1.5f);
 
             
 

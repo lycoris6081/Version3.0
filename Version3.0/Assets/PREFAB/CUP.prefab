@@ -134,7 +134,7 @@ MonoBehaviour:
   CupShake: {fileID: 7479666679974682846}
   playerTransform: {fileID: 0}
   rb: {fileID: 0}
-  explosionPrefab: {fileID: 6192724089161036641, guid: e17d9a3f04750764c8c0a7a0461e4c3b, type: 3}
+  explosionPrefab: {fileID: 1134129239631916, guid: 7e48ba6b1b968764490bbc70b66e3fe1, type: 3}
 --- !u!114 &7479666679974682846
 MonoBehaviour:
   m_ObjectHideFlags: 0

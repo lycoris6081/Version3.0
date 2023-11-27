@@ -15,7 +15,7 @@ public class Playercontroller : MonoBehaviour
     public float maxSprintSpeed = 10f; // 冲刺最大速度
     public float sprintDistance = 5f; // 冲刺距离
     public GameObject AttackBox;
-
+    
 
 
     /*public float knockbackForce = 5f;*/ // 物理衝撞反射的大小
@@ -51,7 +51,7 @@ public class Playercontroller : MonoBehaviour
         CCUI = GameObject.Find("Cardsystem").GetComponent<CardControl>();
         // 获取对GameManager脚本的引用
         gameMenager = GameObject.Find("GameMenager").GetComponent<GamePass>();
-
+        
     }
 
    
@@ -205,7 +205,7 @@ public class Playercontroller : MonoBehaviour
 
     }
 
-
+   
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.CompareTag("Soul"))
