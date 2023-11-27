@@ -15,6 +15,7 @@ public class SpawnRegion
 
 public class BossSKILL : MonoBehaviour
 {
+    Animator animator;
     public GameObject[] enemyPrefabs; // 敌人的预制体数组
     public GameObject EnemyspawnreadyPrefab; // 预备标志的预制体
     public List<SpawnRegion> spawnAreas; // 多个生成区域
@@ -56,9 +57,11 @@ public class BossSKILL : MonoBehaviour
                 // 实例化敌人
                 Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
                 Destroy(readyObject);
+                animator.SetTrigger("ATK");
 
                 // 更新已生成的敌人数量
                 spawnArea.nextSpawnTime = Time.time + spawnArea.spawnInterval;
+               
             }
 
             yield return null;

@@ -55,7 +55,7 @@ public class MonsterSpawner13 : MonoBehaviour
 
     void SpawnEnemy(SpawnArea spawnArea)
     {
-        Vector3 spawnPosition = spawnArea.spawnPoint.position;
+        Vector3 spawnPosition = GetRandomSpawnPosition(spawnArea.spawnPoint.position);
         GameObject enemy = Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
 
         // 通知EnemyManager生成了一個新敵人
@@ -71,6 +71,15 @@ public class MonsterSpawner13 : MonoBehaviour
     {
         isSpawning = false;
         Debug.Log("生成達20隻");
+    }
+    Vector3 GetRandomSpawnPosition(Vector3 center)
+    {
+        // 在指定区域内随机生成敌人
+        float spawnRadius = 15f; // 你可以根据需要调整生成的半径
+        Vector2 randomPoint = Random.insideUnitCircle * spawnRadius;
+        Vector3 spawnPosition = center + new Vector3(randomPoint.x, randomPoint.y, 0f);
+
+        return spawnPosition;
     }
 }
 

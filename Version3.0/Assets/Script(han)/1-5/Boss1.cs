@@ -6,7 +6,7 @@ public class Boss1 : MonoBehaviour
 
 {
 
-
+    Animator animator;
 
     public int hp = 0;
 
