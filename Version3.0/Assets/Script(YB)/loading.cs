@@ -5,8 +5,9 @@ using UnityEngine.UI;
 
 public class loading : MonoBehaviour
 {
-    public GameObject[] images; // 放置你的六張圖片的陣列
-    public Button nextLevelButton; // 按鈕來觸發顯示圖片的過程
+    public GameObject[] images;
+    public Button nextLevelButton;
+    public int nextLevelIndex; // 宣告變數來存儲下一個關卡的索引
 
     void Start()
     {
@@ -44,9 +45,11 @@ public class loading : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
         }
 
-        // 延遲一秒後進入下一個關卡（假設你有兩個關卡）
+        // 延遲一秒後進入下一個關卡
         yield return new WaitForSeconds(1.0f);
-        SceneManager.LoadScene(3);
+
+        // 使用宣告的nextLevelIndex加載下一個關卡
+        SceneManager.LoadScene(nextLevelIndex);
     }
 }
 
