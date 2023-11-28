@@ -78,7 +78,7 @@ public class PlayerHP : MonoBehaviour
                 UpdateLifeUI(); // 更新生命图像
                 StartCoroutine(FlashWhite());
                 // 计算反弹力
-                Vector2 bounceForce = (transform.position - other.transform.position).normalized * 50f;
+                Vector2 bounceForce = (transform.position - other.transform.position).normalized * 100f;
                 // 施加反弹力到玩家刚体
                 rb.AddForce(bounceForce, ForceMode2D.Impulse);
 
