@@ -1186,7 +1186,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 226835881}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1702766843}
+        m_TargetAssemblyTypeName: loading, Assembly-CSharp
+        m_MethodName: StartImageSequence
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1201174545}
+        m_TargetAssemblyTypeName: SMeneger, Assembly-CSharp
+        m_MethodName: choose
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &226835881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6455,17 +6479,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   images:
-  - {fileID: 1458550560}
-  - {fileID: 1014175642}
-  - {fileID: 1616947693}
-  - {fileID: 75511774}
-  - {fileID: 74042817}
-  - {fileID: 1646779670}
-  - {fileID: 1318408761}
-  - {fileID: 137431825}
-  - {fileID: 181247159}
-  nextLevelButton: {fileID: 226835880}
-  nextLevelIndex: 3
+  - {fileID: 1458550562}
+  - {fileID: 1014175644}
+  - {fileID: 1616947695}
+  - {fileID: 75511776}
+  - {fileID: 74042819}
+  - {fileID: 1646779672}
+  - {fileID: 1318408763}
+  - {fileID: 137431827}
+  - {fileID: 181247161}
 --- !u!1 &1726199159
 GameObject:
   m_ObjectHideFlags: 0

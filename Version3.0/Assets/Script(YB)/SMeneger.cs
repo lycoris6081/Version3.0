@@ -41,6 +41,7 @@ public class SMeneger : MonoBehaviour
     }
     public void choose()
     {
+        
         //回到遊戲介面
         SceneManager.LoadScene(3);
     }

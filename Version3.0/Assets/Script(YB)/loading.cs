@@ -1,55 +1,34 @@
 ﻿using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class loading : MonoBehaviour
 {
-    public GameObject[] images;
-    public Button nextLevelButton;
-    public int nextLevelIndex; // 宣告變數來存儲下一個關卡的索引
+    public Image[] images; // 放置圖片的數組
 
-    void Start()
+    private void Start()
     {
-        // 初始化，將所有圖片設置為不可見
+        // 初始時將所有圖片設置為不可見
         foreach (var image in images)
         {
-            image.SetActive(false);
+            image.gameObject.SetActive(false);
         }
-
-        // 設置按鈕點擊事件
-        nextLevelButton.onClick.AddListener(ShowImagesAndLoadNextLevel);
     }
 
-    void ShowImagesAndLoadNextLevel()
+    // 由按鈕的點擊事件調用的方法
+    public void StartImageSequence()
     {
-        StartCoroutine(DisplayImages());
+        StartCoroutine(ShowImagesCoroutine());
     }
 
-    IEnumerator DisplayImages()
+    private IEnumerator ShowImagesCoroutine()
     {
-        yield return new WaitForSeconds(0.5f);
-
-        for (int i = 0; i < images.Length; i++)
+        // 依次顯示圖片，每隔0.5秒顯示一張
+        foreach (var image in images)
         {
-            // 顯示圖片
-            images[i].SetActive(true);
-
-            // 將圖片的sortingOrder設置為最上面（假設你的圖片有Renderer組件）
-            Renderer renderer = images[i].GetComponent<Renderer>();
-            if (renderer != null)
-            {
-                renderer.sortingOrder = i + 1;
-            }
-
+            image.gameObject.SetActive(true);
             yield return new WaitForSeconds(0.5f);
         }
-
-        // 延遲一秒後進入下一個關卡
-        yield return new WaitForSeconds(1.0f);
-
-        // 使用宣告的nextLevelIndex加載下一個關卡
-        SceneManager.LoadScene(nextLevelIndex);
     }
 }
 
