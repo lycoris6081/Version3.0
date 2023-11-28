@@ -5921,7 +5921,6 @@ GameObject:
   - component: {fileID: 593586273}
   - component: {fileID: 593586272}
   - component: {fileID: 593586271}
-  - component: {fileID: 593586274}
   m_Layer: 0
   m_Name: Button_continue
   m_TagString: Untagged
@@ -5993,19 +5992,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 593586272}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 724720844}
-        m_TargetAssemblyTypeName: SMeneger, Assembly-CSharp
-        m_MethodName: back
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &593586272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6044,29 +6031,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 593586269}
   m_CullTransparentMesh: 1
---- !u!114 &593586274
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 593586269}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a96c59e2cabb254cbb2eaac002f3bb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  images:
-  - {fileID: 324831410}
-  - {fileID: 275960295}
-  - {fileID: 1748696190}
-  - {fileID: 1133842888}
-  - {fileID: 1196990125}
-  - {fileID: 1530159246}
-  - {fileID: 1640581541}
-  - {fileID: 2126466752}
-  - {fileID: 1213896016}
-  nextLevelButton: {fileID: 593586271}
 --- !u!1 &607731708
 GameObject:
   m_ObjectHideFlags: 0
@@ -6856,6 +6820,7 @@ GameObject:
   - component: {fileID: 724720846}
   - component: {fileID: 724720845}
   - component: {fileID: 724720844}
+  - component: {fileID: 724720847}
   m_Layer: 0
   m_Name: Gameover
   m_TagString: Untagged
@@ -6945,6 +6910,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 724720842}
   m_CullTransparentMesh: 1
+--- !u!114 &724720847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 724720842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a96c59e2cabb254cbb2eaac002f3bb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  images:
+  - {fileID: 324831410}
+  - {fileID: 275960295}
+  - {fileID: 1748696190}
+  - {fileID: 1133842888}
+  - {fileID: 1196990125}
+  - {fileID: 1530159246}
+  - {fileID: 1640581541}
+  - {fileID: 2126466752}
+  - {fileID: 1213896016}
+  nextLevelButton: {fileID: 593586271}
+  nextLevelIndex: 3
 --- !u!1 &732162478
 GameObject:
   m_ObjectHideFlags: 0
