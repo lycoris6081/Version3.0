@@ -79,4 +79,5 @@ public class SMeneger : MonoBehaviour
     {
         SceneManager.LoadScene(10);
     }
+
 }
