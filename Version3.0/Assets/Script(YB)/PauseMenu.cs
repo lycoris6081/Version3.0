@@ -1,28 +1,36 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI; // Add this line to use Unity UI components
 
 public class PauseMenu : MonoBehaviour
 {
-    public GameObject panelToToggle; // 引用你想要显示/隐藏的Panel
-    public  bool isGamePaused = false;
+    public GameObject panelToToggle; // Reference to the panel you want to show/hide
+    public bool isGamePaused = false;
     public AbilityControl abilityControl;
+    public Button resumeButton; // Reference to the UI button for resuming the game
 
     void Start()
     {
-        // 确保在游戏开始时将Panel隐藏
+        // Make sure to hide the panel when the game starts
         if (panelToToggle != null)
         {
             panelToToggle.SetActive(false);
         }
-       
+
+        // Add a listener to the button to call the ResumeGameOnClick function when clicked
+        if (resumeButton != null)
+        {
+            resumeButton.onClick.AddListener(ResumeGameOnClick);
+            resumeButton.gameObject.SetActive(false); // Hide the button initially
+        }
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            TogglePanel(); // 按下ESC键时调用TogglePanel函数
+            TogglePanel(); // Call TogglePanel function when the ESC key is pressed
         }
     }
 
@@ -32,11 +40,11 @@ public class PauseMenu : MonoBehaviour
         {
             Debug.Log("TogglePanel() called");
 
-            // 反转Panel的显示状态
+            // Toggle the display state of the panel
             panelToToggle.SetActive(!panelToToggle.activeSelf);
             Debug.Log("Panel is active: " + panelToToggle.activeSelf);
 
-            // 根据Panel的显示状态暂停/恢复游戏时间
+            // Depending on the panel's display state, pause or resume the game
             if (panelToToggle.activeSelf)
             {
                 PauseGame();
@@ -51,18 +59,31 @@ public class PauseMenu : MonoBehaviour
     void PauseGame()
     {
         Debug.Log("PauseGame() called");
-        Time.timeScale = 0f; // 暂停游戏时间
+        Time.timeScale = 0f; // Pause the game
         isGamePaused = true;
-        
-        
+
+        if (resumeButton != null)
+        {
+            resumeButton.gameObject.SetActive(true); // Show the resume button
+        }
     }
 
     void ResumeGame()
     {
         Debug.Log("ResumeGame() called");
-        Time.timeScale = 1f; // 恢复游戏时间
+        Time.timeScale = 1f; // Resume the game
         isGamePaused = false;
-       
-      
+
+        if (resumeButton != null)
+        {
+            resumeButton.gameObject.SetActive(false); // Hide the resume button
+        }
+    }
+
+    // Function to be called when the resume button is clicked
+    void ResumeGameOnClick()
+    {
+        TogglePanel(); // Toggle the panel when the resume button is clicked
     }
 }
+

@@ -5992,7 +5992,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 593586272}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 724720844}
+        m_TargetAssemblyTypeName: SMeneger, Assembly-CSharp
+        m_MethodName: choose
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &593586272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6820,7 +6832,6 @@ GameObject:
   - component: {fileID: 724720846}
   - component: {fileID: 724720845}
   - component: {fileID: 724720844}
-  - component: {fileID: 724720847}
   m_Layer: 0
   m_Name: Gameover
   m_TagString: Untagged
@@ -6910,30 +6921,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 724720842}
   m_CullTransparentMesh: 1
---- !u!114 &724720847
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 724720842}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a96c59e2cabb254cbb2eaac002f3bb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  images:
-  - {fileID: 324831410}
-  - {fileID: 275960295}
-  - {fileID: 1748696190}
-  - {fileID: 1133842888}
-  - {fileID: 1196990125}
-  - {fileID: 1530159246}
-  - {fileID: 1640581541}
-  - {fileID: 2126466752}
-  - {fileID: 1213896016}
-  nextLevelButton: {fileID: 593586271}
-  nextLevelIndex: 3
 --- !u!1 &732162478
 GameObject:
   m_ObjectHideFlags: 0
@@ -8732,7 +8719,6 @@ GameObject:
   - component: {fileID: 946260623}
   - component: {fileID: 946260622}
   - component: {fileID: 946260626}
-  - component: {fileID: 946260627}
   m_Layer: 0
   m_Name: pause menu
   m_TagString: Untagged
@@ -8837,20 +8823,7 @@ MonoBehaviour:
   panelToToggle: {fileID: 908872443}
   isGamePaused: 0
   abilityControl: {fileID: 1203074353}
---- !u!114 &946260627
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 946260621}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ada6dee084c2edf4990d7cb92923f982, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  panel: {fileID: 908872443}
-  showButton: {fileID: 23543313}
+  resumeButton: {fileID: 23543313}
 --- !u!1 &947065587
 GameObject:
   m_ObjectHideFlags: 0
