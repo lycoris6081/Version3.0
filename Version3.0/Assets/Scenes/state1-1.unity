@@ -9424,7 +9424,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &848450823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10754,7 +10754,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &946260622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10850,9 +10850,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panelToToggle: {fileID: 908872443}
-  isGamePaused: 0
+  isGamePaused: 1
   abilityControl: {fileID: 1203074353}
   resumeButton: {fileID: 23543313}
+  myCanvas: {fileID: 1234349520}
 --- !u!1 &947065587
 GameObject:
   m_ObjectHideFlags: 0
@@ -11327,7 +11328,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 951784601}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 028099f81cdeb794a9753cccaa0f200a, type: 3}
   m_Name: 
@@ -17609,7 +17610,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1353777668
 Transform:
   m_ObjectHideFlags: 0
@@ -19174,7 +19175,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1471309279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22400,7 +22401,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1752478207
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22991,7 +22992,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1812864665
 MonoBehaviour:
   m_ObjectHideFlags: 0

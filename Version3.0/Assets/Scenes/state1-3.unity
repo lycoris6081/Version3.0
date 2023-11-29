@@ -10423,6 +10423,8 @@ MonoBehaviour:
   panelToToggle: {fileID: 590080708}
   isGamePaused: 0
   abilityControl: {fileID: 1203074353}
+  resumeButton: {fileID: 1242003516}
+  myCanvas: {fileID: 452480210}
 --- !u!114 &1263566422
 MonoBehaviour:
   m_ObjectHideFlags: 0

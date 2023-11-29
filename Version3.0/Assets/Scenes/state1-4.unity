@@ -14815,7 +14815,8 @@ MonoBehaviour:
   panelToToggle: {fileID: 385203732}
   isGamePaused: 0
   abilityControl: {fileID: 1203074353}
-  resumeButton: {fileID: 0}
+  resumeButton: {fileID: 1955114688}
+  myCanvas: {fileID: 21602076}
 --- !u!114 &1800752279
 MonoBehaviour:
   m_ObjectHideFlags: 0

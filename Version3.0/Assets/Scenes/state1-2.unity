@@ -12341,7 +12341,8 @@ MonoBehaviour:
   panelToToggle: {fileID: 1859341723}
   isGamePaused: 0
   abilityControl: {fileID: 1203074353}
-  resumeButton: {fileID: 0}
+  resumeButton: {fileID: 1581978196}
+  myCanvas: {fileID: 1743895447}
 --- !u!114 &1361732929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17623,7 +17624,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1843339861}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 028099f81cdeb794a9753cccaa0f200a, type: 3}
   m_Name: 
