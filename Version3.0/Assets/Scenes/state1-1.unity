@@ -8459,6 +8459,7 @@ GameObject:
   - component: {fileID: 724720846}
   - component: {fileID: 724720845}
   - component: {fileID: 724720844}
+  - component: {fileID: 724720847}
   m_Layer: 0
   m_Name: Gameover
   m_TagString: Untagged
@@ -8548,6 +8549,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 724720842}
   m_CullTransparentMesh: 1
+--- !u!114 &724720847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 724720842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2fba1fab71fc047b66c65a5eaeb95e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resumeButton: {fileID: 593586271}
 --- !u!1 &732162478
 GameObject:
   m_ObjectHideFlags: 0
@@ -9917,6 +9931,7 @@ GameObject:
   - component: {fileID: 908872446}
   - component: {fileID: 908872445}
   - component: {fileID: 908872447}
+  - component: {fileID: 908872448}
   m_Layer: 0
   m_Name: pause
   m_TagString: Untagged
@@ -10008,6 +10023,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e10ae77eaae1c34383b55b255d2e902, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &908872448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 908872443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2fba1fab71fc047b66c65a5eaeb95e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resumeButton: {fileID: 511121275}
 --- !u!1 &908938994
 GameObject:
   m_ObjectHideFlags: 0
