@@ -29,11 +29,11 @@ public class loading : MonoBehaviour
         foreach (var image in images)
         {
             image.gameObject.SetActive(true);
-            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(0.1f);
         }
 
         // 顯示圖片後等待額外的0.5秒再加載下一個關卡
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.1f);
 
         // 加載下一個關卡
         LoadNextLevel();

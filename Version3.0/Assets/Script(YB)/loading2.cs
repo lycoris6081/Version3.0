@@ -22,17 +22,17 @@ public class loading2 : MonoBehaviour
     IEnumerator HideImages()
     {
         // 延遲0.5秒
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.1f);
 
         // 依次隱藏每張圖片
         for (int i = 0; i < images.Length; i++)
         {
             images[i].SetActive(false);
-            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(0.1f);
         }
 
         // 延遲0.5秒
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.1f);
 
         // 關閉 Panel
         if (panel != null)
