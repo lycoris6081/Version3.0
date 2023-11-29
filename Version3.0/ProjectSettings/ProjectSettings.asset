@@ -12,8 +12,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
-  productName: Version3.0
+  companyName: Box
+  productName: "\u7BB1\u8C93BoxCat"
   defaultCursor: {fileID: 2800000, guid: ef911ac5f03740848ab758bba2074eca, type: 3}
   cursorHotspot: {x: 50, y: 50}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -273,7 +273,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: dd587c743683ce849a7ed3ba0497f594, type: 3}
+      m_Icon: {fileID: 2800000, guid: 6128223ba19688a41bf10d0c0d667072, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
