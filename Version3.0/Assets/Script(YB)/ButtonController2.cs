@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 public class ButtonController2 : MonoBehaviour
 {
+    [Header("控制切換小關卡詳細內容")]
     public Image image1;
     public Image image2;
     public Image image3;
