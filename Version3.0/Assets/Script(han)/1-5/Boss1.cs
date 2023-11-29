@@ -6,7 +6,6 @@ public class Boss1 : MonoBehaviour
 
 {
 
-    Animator animator;
 
     public int hp = 0;
 
@@ -23,13 +22,17 @@ public class Boss1 : MonoBehaviour
 
     private bool isDead = false;
     public static bool Boom = false;
+    private SpriteRenderer spriteRenderer;
+    private float flashDuration = 0.1f;
+    private Color originalColor;
 
     void Start()
     {
 
         hp = 60;
 
-
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        originalColor = spriteRenderer.color;
     }
 
     void SoulSpawn()
@@ -54,12 +57,14 @@ public class Boss1 : MonoBehaviour
         SoulSpawn();
     }
 
-    public void TakeDamage(int damageAmount)
+   
+
+    private System.Collections.IEnumerator FlashWhite()
     {
-        hp -= damageAmount; // 減少敵人的血量
-
+        spriteRenderer.color = Color.red;
+        yield return new WaitForSeconds(flashDuration);
+        spriteRenderer.color = originalColor;
     }
-
 
 
 
@@ -104,6 +109,8 @@ public class Boss1 : MonoBehaviour
         if (other.gameObject.tag == "AttackBox")
         {
             hp = hp -= AttackBox.Damage;
+
+            StartCoroutine(FlashWhite());
             Debug.Log("-1");
         }
         
