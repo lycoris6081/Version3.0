@@ -1,28 +1,32 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI; // Add this line to use Unity UI components
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
-    public GameObject panelToToggle; // Reference to the panel you want to show/hide
+    public GameObject panelToToggle;
     public bool isGamePaused = false;
     public AbilityControl abilityControl;
-    public Button resumeButton; // Reference to the UI button for resuming the game
+    public Button resumeButton;
+    public Canvas myCanvas; // Declare a Canvas variable
 
     void Start()
     {
-        // Make sure to hide the panel when the game starts
         if (panelToToggle != null)
         {
             panelToToggle.SetActive(false);
         }
 
-        // Add a listener to the button to call the ResumeGameOnClick function when clicked
         if (resumeButton != null)
         {
             resumeButton.onClick.AddListener(ResumeGameOnClick);
-            resumeButton.gameObject.SetActive(false); // Hide the button initially
+            resumeButton.gameObject.SetActive(false);
+        }
+
+        if (myCanvas != null)
+        {
+            myCanvas.enabled = true; // Set the canvas to be initially visible
         }
     }
 
@@ -30,7 +34,7 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            TogglePanel(); // Call TogglePanel function when the ESC key is pressed
+            TogglePanel();
         }
     }
 
@@ -40,18 +44,19 @@ public class PauseMenu : MonoBehaviour
         {
             Debug.Log("TogglePanel() called");
 
-            // Toggle the display state of the panel
             panelToToggle.SetActive(!panelToToggle.activeSelf);
             Debug.Log("Panel is active: " + panelToToggle.activeSelf);
 
-            // Depending on the panel's display state, pause or resume the game
+            // Toggle the canvas visibility based on the panel's state
             if (panelToToggle.activeSelf)
             {
                 PauseGame();
+                ToggleCanvasVisibility(false);
             }
             else
             {
                 ResumeGame();
+                ToggleCanvasVisibility(true);
             }
         }
     }
@@ -59,31 +64,37 @@ public class PauseMenu : MonoBehaviour
     void PauseGame()
     {
         Debug.Log("PauseGame() called");
-        Time.timeScale = 0f; // Pause the game
+        Time.timeScale = 0f;
         isGamePaused = true;
 
         if (resumeButton != null)
         {
-            resumeButton.gameObject.SetActive(true); // Show the resume button
+            resumeButton.gameObject.SetActive(true);
         }
     }
 
     void ResumeGame()
     {
         Debug.Log("ResumeGame() called");
-        Time.timeScale = 1f; // Resume the game
+        Time.timeScale = 1f;
         isGamePaused = false;
 
         if (resumeButton != null)
         {
-            resumeButton.gameObject.SetActive(false); // Hide the resume button
+            resumeButton.gameObject.SetActive(false);
         }
     }
 
-    // Function to be called when the resume button is clicked
+    void ToggleCanvasVisibility(bool isVisible)
+    {
+        if (myCanvas != null)
+        {
+            myCanvas.enabled = isVisible;
+        }
+    }
+
     void ResumeGameOnClick()
     {
-        TogglePanel(); // Toggle the panel when the resume button is clicked
+        TogglePanel();
     }
 }
-
