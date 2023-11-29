@@ -17,6 +17,7 @@ public class SpawnRegion
 
 public class BossSKILL : MonoBehaviour
 {
+    Animator animator;
     
     public GameObject[] enemyPrefabs; // 敌人的预制体数组
     public GameObject EnemyspawnreadyPrefab; // 预备标志的预制体
@@ -34,7 +35,7 @@ public class BossSKILL : MonoBehaviour
         }
         // 获取玩家对象（假设玩家对象是场景中唯一带有 Playercontroller 组件的对象）
         player = FindObjectOfType<Playercontroller>().gameObject;
-      
+        animator.SetTrigger("IDLE");
     }
 
     IEnumerator SpawnEnemiesInRegion(SpawnRegion spawnArea)
@@ -42,7 +43,7 @@ public class BossSKILL : MonoBehaviour
         while (true)
         {
             int enemiesToSpawn = Random.Range(3, spawnArea.maxEnemies + 1); // 随机生成数量
-
+            
             for (int i = 0; i < enemiesToSpawn; i++)
             {
                 Vector3 spawnPosition = spawnArea.spawnPoint.position;
@@ -80,20 +81,20 @@ public class BossSKILL : MonoBehaviour
                 // 触发下降操作
                 Vector3 descentPosition = landingIndicatorPosition;
                 yield return StartCoroutine(MoveToPosition(descentPosition, 0.5f));
-
+                
                 // 等待一段时间
                 yield return new WaitForSeconds(3f);
 
             }
-
+           
+            
             // 更新已生成的敌人数量
             spawnArea.nextSpawnTime = Time.time + spawnArea.spawnInterval;
 
-           
-
+          
             yield return null;
         }
-
+        
     }
     IEnumerator SpawnLandingCircle(Vector3 position)
     {
