@@ -16,12 +16,19 @@ public class PlayerHP : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private float flashDuration = 0.1f;
     private Color originalColor;
+    public bool isPlayingSound;
+
+
+    AudioSource AudioSource;
+    public AudioClip SFX_dieSound;
 
     // Start is called before the first frame update
     void Start()
     {
         hp = 3;
-       
+
+        isPlayingSound = false;
+
         gameOverUI.SetActive(false);
         Isdead = false;
         gameover= false;
@@ -29,6 +36,8 @@ public class PlayerHP : MonoBehaviour
 
         spriteRenderer = GetComponent<SpriteRenderer>();
         originalColor = spriteRenderer.color;
+
+        AudioSource = GetComponent<AudioSource>();
 
     }
     private System.Collections.IEnumerator FlashWhite()
@@ -45,7 +54,8 @@ public class PlayerHP : MonoBehaviour
             if (hp <= 0)
             {
 
-
+                PlayDieSound();
+                isPlayingSound = true;
                 gameover = true;
                 // 显示游戏结束UI
                 gameOverUI.SetActive(true);
@@ -65,6 +75,25 @@ public class PlayerHP : MonoBehaviour
 
        
 
+
+    }
+    
+    private void PlayDieSound()
+    {
+        if(isPlayingSound == false)
+        {
+            
+            AudioSource.PlayOneShot(SFX_dieSound);
+            Delayed(20);
+            //isPlayingSound = false;
+            Debug.Log("bapu");
+        }
+
+    }
+    IEnumerator Delayed(float n)
+    {
+
+        yield return new WaitForSeconds(n); // 等待0.3秒
 
     }
 

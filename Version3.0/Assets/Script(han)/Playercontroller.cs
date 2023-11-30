@@ -15,6 +15,7 @@ public class Playercontroller : MonoBehaviour
     public float maxSprintSpeed = 10f; // 冲刺最大速度
     public float sprintDistance = 5f; // 冲刺距离
     public GameObject AttackBox;
+
     
 
 
@@ -41,9 +42,15 @@ public class Playercontroller : MonoBehaviour
     private Vector2 originalVelocity; // 用于保存原始速度
     private float sprintTimer = 0f; // 用于计时衝刺持续时间
 
+    [Header("音效")]
+    public AudioClip SFX_hitSound;
+    
+    AudioSource AudioSource;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>(); // 获取Rigidbody2D组件
+        AudioSource = GetComponent<AudioSource>();
         rb.gravityScale = 0; // 防止重力影响
         AttackBox.SetActive(false);
         UI = GameObject.Find("SoulScript").GetComponent<SoulUI>();
@@ -84,14 +91,16 @@ public class Playercontroller : MonoBehaviour
     {
 
         MouseMove();
-        
+        //PlayHitSound();
 
-       
+
+
 
         if (Input.GetMouseButtonDown(0) && canSprint)
         {
             // 禁止再次点击鼠标
             canSprint = false;
+            AudioSource.PlayOneShot(SFX_hitSound);
 
             isAttacking = true;
             AttackBox.SetActive(true);
@@ -168,6 +177,7 @@ public class Playercontroller : MonoBehaviour
 
         if(PlayerHP.Isdead == true)
         {
+            //AudioSource.PlayOneShot(SFX_dieSound);
             animator.SetFloat("DEAD1", 1);
             GameStop();
 
@@ -178,6 +188,7 @@ public class Playercontroller : MonoBehaviour
         }
         IEnumerator DelayedGameOver()
         {
+
             yield return new WaitForSeconds(0.5f); // 等待0.3秒
 
             // 停止游戏
@@ -236,6 +247,12 @@ public class Playercontroller : MonoBehaviour
        
     }
 
+
+    void PlayHitSound()
+    {
+        if (isAttacking == true)
+            AudioSource.PlayOneShot(SFX_hitSound);
+    }
     
 }
 

@@ -47,11 +47,14 @@ public class GamePass : MonoBehaviour
     public GameObject WinButton; // 参考过关按钮的GameObject
     private float showPassTimer = 0f; // 用于计时显示过关图像的时间
 
-    
+    AudioSource AudioSource;
+
+
 
     // 在Start方法中初始化计数并禁用亮图像
     private void Start()
     {
+        AudioSource = GetComponent<AudioSource>();
         sprintCount = 0;
         enemyCount = 0;
         img_Pass.SetActive(false);
