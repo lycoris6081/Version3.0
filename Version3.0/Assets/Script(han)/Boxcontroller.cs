@@ -7,17 +7,27 @@ public class Boxcontroller : MonoBehaviour
 
     public GameObject BoxPrefab;
     public GameObject ArrowIndicatorPrefab; // 箭头预制体
+    [Header("需要的靈魂數量")]
     public int NeedsSoul = 10;//需要的靈魂數量
 
     private bool IsBoxSpawned = false;
     private int currentSoulCount = 0; // 当前的灵魂获取量
     private GameObject Arrow; // 用于存储箭头的引用
 
+    public AudioClip BoxOpen;
+    AudioSource AudioSource;
+
+    private void Start()
+    {
+        AudioSource = GetComponent<AudioSource>();
+    }
+
     public void CheckSoulcount(int soulCount)
     {
         if(!IsBoxSpawned && soulCount >= NeedsSoul)
         {
             SpawnBox();
+            AudioSource.PlayOneShot(BoxOpen);
             NeedsSoul += 10;
         }
 

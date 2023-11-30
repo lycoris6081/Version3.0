@@ -21,6 +21,7 @@ public class PlayerHP : MonoBehaviour
 
     AudioSource AudioSource;
     public AudioClip SFX_dieSound;
+    public AudioClip SFX_hurtSound;
 
     // Start is called before the first frame update
     void Start()
@@ -104,6 +105,7 @@ public class PlayerHP : MonoBehaviour
             if (Playercontroller.isAttacking == false)
             {
                 hp -= 1;
+                AudioSource.PlayOneShot(SFX_hurtSound);
                 UpdateLifeUI(); // 更新生命图像
                 StartCoroutine(FlashWhite());
                 // 计算反弹力

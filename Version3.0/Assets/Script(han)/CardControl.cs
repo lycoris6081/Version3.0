@@ -9,14 +9,19 @@ public class CardControl : MonoBehaviour
     public List<Button> buttons; // 七个按钮的列表
     private List<Button> activeButtons; // 显示的三个按钮的列表
 
+    public AudioClip CardPickSound;
+    AudioSource AudioSource;
+
     private void Start()
     {
         choicePanel.SetActive(false); // 初始时禁用选择界面
         activeButtons = new List<Button>();
+        AudioSource = GetComponent<AudioSource>();
     }
 
     public void ShowChoicePanel()
     {
+        AudioSource.PlayOneShot(CardPickSound);
         choicePanel.SetActive(true);
         RandomlySelectButtons();
         Time.timeScale = 0;

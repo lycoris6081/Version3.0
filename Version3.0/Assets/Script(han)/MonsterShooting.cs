@@ -14,10 +14,14 @@ public class MonsterShooting : MonoBehaviour
     private Transform player; // 玩家的Transform
     private float nextFireTime; // 下一次射击的时间
 
+    public AudioClip fireSound;
+    AudioSource AudioSource;
+
     void Start()
     {
         player = GameObject.Find("CATCAT").transform; // 根据玩家的名称查找玩家对象
         nextFireTime = Time.time; // 初始化下一次射击时间
+        AudioSource = GetComponent<AudioSource>();
         
     }
 
@@ -35,8 +39,9 @@ public class MonsterShooting : MonoBehaviour
 
             // 创建子弹，并将其旋转到正确的角度
             GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.Euler(0, 0, angle));
+            AudioSource.PlayOneShot(fireSound);
 
-           
+
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
  
             // 应用射击力量

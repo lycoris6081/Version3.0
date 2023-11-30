@@ -7,6 +7,7 @@ public class AudioManager : MonoBehaviour
 {
 
     public AudioMixer audioMixer;    // 進行控制的Mixer變量
+    
 
     public void SetMasterVolume(float volume)    // 控制主音量的函數
     {

@@ -22,9 +22,12 @@ public class GamePass14 : MonoBehaviour
     public GameObject Spawn1;
     public GameObject spawn2;
     // 在Start方法中初始化计数并禁用亮图像
+
+    AudioSource AudioSource;
+
     private void Start()
     {
-        
+        AudioSource = GetComponent<AudioSource>();
         sprintCount = 0;
         enemyCount = 0;
         Pass.SetActive(false);

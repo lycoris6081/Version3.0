@@ -7,6 +7,8 @@ public class loading : MonoBehaviour
 {
     public Image[] images; // 放置圖片的數組
     public string nextLevelName; // 要加載的下一個關卡的名稱
+    AudioSource audioSource;
+    public AudioClip buttonClick;
 
     private void Start()
     {
@@ -20,6 +22,7 @@ public class loading : MonoBehaviour
     // 由按鈕的點擊事件調用的方法
     public void StartImageSequence()
     {
+        //AudioSource.PlayOneShot(buttonClick);
         StartCoroutine(ShowImagesCoroutine());
     }
 

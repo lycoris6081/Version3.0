@@ -6,7 +6,7 @@ public class Monster_Flower : MonoBehaviour
 
 {
 
-     Animator animator;
+    Animator animator;
 
     public int hp = 0;
 
@@ -27,6 +27,7 @@ public class Monster_Flower : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private float flashDuration = 0.1f;
     private Color originalColor;
+
     void Start()
     {
        
