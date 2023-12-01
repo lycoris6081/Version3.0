@@ -143,22 +143,40 @@ public class AbilityControl : MonoBehaviour
 
     public void Ability1()
     {
-        PlayerHP.hp++;
+        int missingHealth = PlayerHP.MaxHp - PlayerHP.hp; // 计算缺少的血量
 
-        // 创建一个新的Image对象
-        Image newAbilityIcon = Instantiate(abilityIcons[0], abilityIconsContainer);
+        if (missingHealth > 0)
+        {
+            int healAmount = Mathf.Min(2, missingHealth); // 最多补充2点血量或者缺少的血量，取较小值
+            PlayerHP.hp += healAmount; // 补充血量
 
-        // 设置图标的位置，这里假设图标大小是50x50
-        Vector3 newPosition = new Vector3(selectedAbilityIcons.Count * 130, 0, 0); // 60是图标之间的间隔
-        newAbilityIcon.rectTransform.localPosition = newPosition;
+            // 创建一个新的Image对象
+            Image newAbilityIcon = Instantiate(abilityIcons[0], abilityIconsContainer);
 
-        // 将新的图标添加到已选择的能力列表中
-        selectedAbilityIcons.Add(newAbilityIcon);
-        // 启用AbilityIconsContainer对象
-        abilityIconsContainer.gameObject.SetActive(true);
+            // 设置图标的位置，这里假设图标大小是50x50
+            Vector3 newPosition = new Vector3(selectedAbilityIcons.Count * 130, 0, 0); // 60是图标之间的间隔
+            newAbilityIcon.rectTransform.localPosition = newPosition;
 
-        Ability6UsageCount++;
-        Debug.Log("+1");
+            // 将新的图标添加到已选择的能力列表中
+            selectedAbilityIcons.Add(newAbilityIcon);
+
+            // 启用AbilityIconsContainer对象
+            abilityIconsContainer.gameObject.SetActive(true);
+
+            // 更新生命UI
+            PlayerHP playerHP = FindObjectOfType<PlayerHP>();
+            if (playerHP != null)
+            {
+                playerHP.UpdateLifeUI();
+            }
+
+            Ability6UsageCount++;
+            Debug.Log("Healed for: " + healAmount + " health");
+        }
+        else
+        {
+            Debug.Log("Health is already full"); // 输出血量已满的消息
+        }
     }
     public void Ability2()
     {

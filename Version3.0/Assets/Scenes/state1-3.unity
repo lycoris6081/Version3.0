@@ -649,6 +649,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4971453891446671967}
+        m_TargetAssemblyTypeName: AbilityEffect, Assembly-CSharp
+        m_MethodName: AttackLvUpStart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &146243850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5579,6 +5591,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1203074353}
         m_TargetAssemblyTypeName: AbilityControl, Assembly-CSharp
         m_MethodName: Ability5
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4971453891446671967}
+        m_TargetAssemblyTypeName: AbilityEffect, Assembly-CSharp
+        m_MethodName: ShieldStart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11972,6 +11996,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4971453891446671967}
+        m_TargetAssemblyTypeName: AbilityEffect, Assembly-CSharp
+        m_MethodName: BoomStart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1455802385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13470,6 +13506,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4971453891446671967}
+        m_TargetAssemblyTypeName: AbilityEffect, Assembly-CSharp
+        m_MethodName: SlowDownStart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1677353316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13797,6 +13845,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1203074353}
         m_TargetAssemblyTypeName: AbilityControl, Assembly-CSharp
         m_MethodName: Ability1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4971453891446671967}
+        m_TargetAssemblyTypeName: AbilityEffect, Assembly-CSharp
+        m_MethodName: HealthStart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17713,3 +17773,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e4d4ea91de2dfa4f9935cede54d00bb, type: 3}
+--- !u!114 &4971453891446671967 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3527780943817111421, guid: 8e4d4ea91de2dfa4f9935cede54d00bb, type: 3}
+  m_PrefabInstance: {fileID: 4971453891446671966}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1905721c57c63674db80b3cace34edfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

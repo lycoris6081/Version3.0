@@ -37,8 +37,8 @@ public class Boxcontroller : MonoBehaviour
     void SpawnBox()
     {
         // 随机生成箱子的位置
-        float randomX = Random.Range(-10f, 10f); // 你可以根据需要调整范围
-        float randomY = Random.Range(-10f, 10f); // 你可以根据需要调整范围
+        float randomX = Random.Range(-16f, 15f); // 你可以根据需要调整范围
+        float randomY = Random.Range(-16f, 5f); // 你可以根据需要调整范围
         Vector3 spawnPosition = new Vector3(randomX, randomY, 0f);
 
         GameObject box = Instantiate(BoxPrefab, spawnPosition, Quaternion.identity); 

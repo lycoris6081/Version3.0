@@ -7,8 +7,9 @@ public class PlayerHP : MonoBehaviour
 {
     private Rigidbody2D rb;
     public static int hp = 3;
-
+    public static int MaxHp = 3;
     public static bool Hp;
+  
     public static bool Isdead;
     public static bool gameover;
     public GameObject gameOverUI; // 游戏结束UI
@@ -151,7 +152,7 @@ public class PlayerHP : MonoBehaviour
 
         }
     }
-    private void UpdateLifeUI()
+    public void UpdateLifeUI()
     {
         for (int i = 0; i < lifeImages.Length; i++)
         {
