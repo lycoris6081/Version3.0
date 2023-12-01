@@ -8685,6 +8685,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e10ae77eaae1c34383b55b255d2e902, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ButtonSound: {fileID: 0}
 --- !u!114 &724720845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10274,6 +10275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e10ae77eaae1c34383b55b255d2e902, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ButtonSound: {fileID: 0}
 --- !u!114 &908872448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10310,6 +10312,7 @@ MonoBehaviour:
   - {fileID: 1887595115}
   - {fileID: 1976501895}
   nextLevelName: Home screen
+  buttonClick: {fileID: 0}
 --- !u!1 &908938994
 GameObject:
   m_ObjectHideFlags: 0
@@ -12411,7 +12414,6 @@ GameObject:
   m_Component:
   - component: {fileID: 983904390}
   - component: {fileID: 983904392}
-  - component: {fileID: 983904393}
   m_Layer: 3
   m_Name: Ani
   m_TagString: Untagged
@@ -12486,18 +12488,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &983904393
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 983904389}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca0b162e3009ce459db789cc1fbb683, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &997772022
 GameObject:
   m_ObjectHideFlags: 0
@@ -15151,6 +15141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e10ae77eaae1c34383b55b255d2e902, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ButtonSound: {fileID: 0}
 --- !u!114 &1156886424
 MonoBehaviour:
   m_ObjectHideFlags: 0

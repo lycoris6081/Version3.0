@@ -51,6 +51,7 @@ public class Playercontroller : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>(); // 获取Rigidbody2D组件
         AudioSource = GetComponent<AudioSource>();
+       
         rb.gravityScale = 0; // 防止重力影响
         AttackBox.SetActive(false);
         UI = GameObject.Find("SoulScript").GetComponent<SoulUI>();

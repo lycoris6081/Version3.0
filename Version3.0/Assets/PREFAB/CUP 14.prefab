@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5669763353197261730}
   - component: {fileID: 5669763353197261729}
   - component: {fileID: 848190316344936650}
+  - component: {fileID: 7730871607716902294}
   m_Layer: 0
   m_Name: CUP 14
   m_TagString: CUP
@@ -130,8 +131,24 @@ MonoBehaviour:
   minSouls: 3
   maxSouls: 4
   BoomRange: {fileID: 5669763353605392540}
+  CupShake: {fileID: 7730871607716902294}
   playerTransform: {fileID: 0}
   rb: {fileID: 0}
+  explosionPrefab: {fileID: 1134129239631916, guid: 7e48ba6b1b968764490bbc70b66e3fe1, type: 3}
+--- !u!114 &7730871607716902294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5669763353197261743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df7dd114fc097544db121d3791c83c0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeIntensity: 0.07
+  shakeDuration: 1
 --- !u!1 &5669763353605392540
 GameObject:
   m_ObjectHideFlags: 0

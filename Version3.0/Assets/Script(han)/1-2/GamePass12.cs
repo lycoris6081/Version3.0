@@ -129,7 +129,7 @@ public class GamePass12 : MonoBehaviour
     {
         sprintCount++;
 
-        if (sprintCount >= 1)
+        if (sprintCount >= 10)
         {
 
             Debug.Log("冲刺次数达到10！");

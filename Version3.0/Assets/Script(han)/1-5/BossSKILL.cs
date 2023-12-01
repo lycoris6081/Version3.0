@@ -35,7 +35,7 @@ public class BossSKILL : MonoBehaviour
         }
         // 获取玩家对象（假设玩家对象是场景中唯一带有 Playercontroller 组件的对象）
         player = FindObjectOfType<Playercontroller>().gameObject;
-        animator.SetTrigger("IDLE");
+        
     }
 
     IEnumerator SpawnEnemiesInRegion(SpawnRegion spawnArea)

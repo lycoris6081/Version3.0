@@ -20,7 +20,7 @@ public class Monster_CUP14 : MonoBehaviour
     public int minSouls = 3; // 最少掉落的灵魂数量
     public int maxSouls = 4; // 最多掉落的灵魂数量
     public GameObject BoomRange;
-
+    public CupBoom CupShake;
     public Transform playerTransform;
     public Rigidbody2D rb;
     private bool isDead = false;
@@ -28,12 +28,15 @@ public class Monster_CUP14 : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private float flashDuration = 0.1f;
     private Color originalColor;
+
+    public GameObject explosionPrefab;
     void Start()
     {
        
         hp = 3;
         BoomRange.SetActive(false);
         rb = GameObject.Find("CATCAT").GetComponent<Rigidbody2D>();
+        CupBoom CupShake = GetComponent<CupBoom>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         originalColor = spriteRenderer.color;
     }
@@ -74,6 +77,11 @@ public class Monster_CUP14 : MonoBehaviour
     public void Boomdied()
     {
         BoomRange.SetActive(true);
+        if (explosionPrefab != null)
+        {
+            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+        }
+        
         Invoke("Dead", 1f);
     }
   
@@ -98,9 +106,10 @@ public class Monster_CUP14 : MonoBehaviour
         if (!isDead && hp <= 0)
         {
             isDead = true;
-                    
-            
-            Invoke("Boomdied", 1f);
+
+
+            CupShake.ShakeBeforeExplosion();
+            Invoke("Boomdied", 1.5f);
 
 
             GamePass14();
