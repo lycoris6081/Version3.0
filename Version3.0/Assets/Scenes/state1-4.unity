@@ -10588,7 +10588,7 @@ MonoBehaviour:
   - {fileID: 3214201892117395265, guid: 3566772856b2aee46958e9f3709a4bc1, type: 3}
   - {fileID: 408210438769497327, guid: a8fed3aee3d7ad241b6626397b0a750e, type: 3}
   pauseMenuAbilityIconsContainer: {fileID: 1641635881}
-  pause: {fileID: 1800752276}
+  pause: {fileID: 385203732}
   character: {fileID: 2132485459}
 --- !u!4 &1203074354
 Transform:
