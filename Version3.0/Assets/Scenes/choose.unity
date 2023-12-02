@@ -5888,6 +5888,7 @@ GameObject:
   - component: {fileID: 560584227}
   - component: {fileID: 560584226}
   - component: {fileID: 560584229}
+  - component: {fileID: 560584230}
   m_Layer: 5
   m_Name: CAN_1-4
   m_TagString: Untagged
@@ -6025,6 +6026,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textToHide: {fileID: 512525437}
   yourButton: {fileID: 560584226}
+--- !u!114 &560584230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560584224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a96c59e2cabb254cbb2eaac002f3bb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  images:
+  - {fileID: 1208560499}
+  - {fileID: 1650873229}
+  - {fileID: 1223646111}
+  - {fileID: 757697784}
+  - {fileID: 1644759433}
+  - {fileID: 502721195}
+  - {fileID: 300845505}
+  - {fileID: 98129624}
+  - {fileID: 1619259490}
+  nextLevelName: state1-4
+  buttonClick: {fileID: 0}
 --- !u!1 &571742925
 GameObject:
   m_ObjectHideFlags: 0
@@ -6560,9 +6585,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2113255960}
-        m_TargetAssemblyTypeName: SMeneger, Assembly-CSharp
-        m_MethodName: continue14
+      - m_Target: {fileID: 560584230}
+        m_TargetAssemblyTypeName: loading, Assembly-CSharp
+        m_MethodName: StartImageSequence
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8775,9 +8800,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2113255960}
-        m_TargetAssemblyTypeName: SMeneger, Assembly-CSharp
-        m_MethodName: continue12
+      - m_Target: {fileID: 871752143}
+        m_TargetAssemblyTypeName: loading, Assembly-CSharp
+        m_MethodName: StartImageSequence
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8956,6 +8981,7 @@ GameObject:
   - component: {fileID: 871752140}
   - component: {fileID: 871752139}
   - component: {fileID: 871752142}
+  - component: {fileID: 871752143}
   m_Layer: 5
   m_Name: CAN_1-2
   m_TagString: Untagged
@@ -9093,6 +9119,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textToHide: {fileID: 512525437}
   yourButton: {fileID: 871752139}
+--- !u!114 &871752143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871752137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a96c59e2cabb254cbb2eaac002f3bb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  images:
+  - {fileID: 1208560499}
+  - {fileID: 1650873229}
+  - {fileID: 1223646111}
+  - {fileID: 757697784}
+  - {fileID: 1644759433}
+  - {fileID: 502721195}
+  - {fileID: 300845505}
+  - {fileID: 98129624}
+  - {fileID: 1619259490}
+  nextLevelName: state1-2
+  buttonClick: {fileID: 0}
 --- !u!1 &889481365
 GameObject:
   m_ObjectHideFlags: 0
@@ -9727,6 +9777,7 @@ MonoBehaviour:
   - {fileID: 98129624}
   - {fileID: 1619259490}
   nextLevelName: state1-1
+  buttonClick: {fileID: 0}
 --- !u!1 &931678937
 GameObject:
   m_ObjectHideFlags: 0
@@ -11342,6 +11393,7 @@ GameObject:
   - component: {fileID: 1083691786}
   - component: {fileID: 1083691785}
   - component: {fileID: 1083691788}
+  - component: {fileID: 1083691789}
   m_Layer: 5
   m_Name: CAN_1-6
   m_TagString: Untagged
@@ -11479,6 +11531,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textToHide: {fileID: 512525437}
   yourButton: {fileID: 1083691785}
+--- !u!114 &1083691789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083691783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a96c59e2cabb254cbb2eaac002f3bb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  images:
+  - {fileID: 1208560499}
+  - {fileID: 1650873229}
+  - {fileID: 1223646111}
+  - {fileID: 757697784}
+  - {fileID: 1644759433}
+  - {fileID: 502721195}
+  - {fileID: 300845505}
+  - {fileID: 98129624}
+  - {fileID: 1619259490}
+  nextLevelName: state1-6
+  buttonClick: {fileID: 0}
 --- !u!1 &1097791140
 GameObject:
   m_ObjectHideFlags: 0
@@ -16506,9 +16582,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2113255960}
-        m_TargetAssemblyTypeName: SMeneger, Assembly-CSharp
-        m_MethodName: continue16
+      - m_Target: {fileID: 1083691789}
+        m_TargetAssemblyTypeName: loading, Assembly-CSharp
+        m_MethodName: StartImageSequence
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -18919,9 +18995,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2113255960}
-        m_TargetAssemblyTypeName: SMeneger, Assembly-CSharp
-        m_MethodName: continue13
+      - m_Target: {fileID: 1924442500}
+        m_TargetAssemblyTypeName: loading, Assembly-CSharp
+        m_MethodName: StartImageSequence
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -19100,6 +19176,7 @@ GameObject:
   - component: {fileID: 1870390323}
   - component: {fileID: 1870390322}
   - component: {fileID: 1870390325}
+  - component: {fileID: 1870390326}
   m_Layer: 5
   m_Name: CAN_1-5
   m_TagString: Untagged
@@ -19237,6 +19314,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textToHide: {fileID: 512525437}
   yourButton: {fileID: 1870390322}
+--- !u!114 &1870390326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870390320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a96c59e2cabb254cbb2eaac002f3bb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  images:
+  - {fileID: 1208560499}
+  - {fileID: 1650873229}
+  - {fileID: 1223646111}
+  - {fileID: 757697784}
+  - {fileID: 1644759433}
+  - {fileID: 502721195}
+  - {fileID: 300845505}
+  - {fileID: 98129624}
+  - {fileID: 1619259490}
+  nextLevelName: state1-5
+  buttonClick: {fileID: 0}
 --- !u!1 &1878258035
 GameObject:
   m_ObjectHideFlags: 0
@@ -20030,6 +20131,7 @@ GameObject:
   - component: {fileID: 1924442497}
   - component: {fileID: 1924442496}
   - component: {fileID: 1924442499}
+  - component: {fileID: 1924442500}
   m_Layer: 5
   m_Name: CAN_1-3
   m_TagString: Untagged
@@ -20167,6 +20269,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textToHide: {fileID: 512525437}
   yourButton: {fileID: 1924442496}
+--- !u!114 &1924442500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1924442494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a96c59e2cabb254cbb2eaac002f3bb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  images:
+  - {fileID: 1208560499}
+  - {fileID: 1650873229}
+  - {fileID: 1223646111}
+  - {fileID: 757697784}
+  - {fileID: 1644759433}
+  - {fileID: 502721195}
+  - {fileID: 300845505}
+  - {fileID: 98129624}
+  - {fileID: 1619259490}
+  nextLevelName: state1-3
+  buttonClick: {fileID: 0}
 --- !u!1 &1925715148
 GameObject:
   m_ObjectHideFlags: 0
@@ -21311,9 +21437,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2113255960}
-        m_TargetAssemblyTypeName: SMeneger, Assembly-CSharp
-        m_MethodName: continue15
+      - m_Target: {fileID: 1870390326}
+        m_TargetAssemblyTypeName: loading, Assembly-CSharp
+        m_MethodName: StartImageSequence
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -22196,6 +22322,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e10ae77eaae1c34383b55b255d2e902, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ButtonSound: {fileID: 0}
 --- !u!114 &2113255961
 MonoBehaviour:
   m_ObjectHideFlags: 0
