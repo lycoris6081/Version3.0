@@ -67,7 +67,7 @@ public class GamePass12 : MonoBehaviour
     private void Update()
     {
         //1-2 過關條件
-        if (SoulUI.soulCount >= 50 && AbilityControl.Ability6UsageCount >= 5)
+        if (SoulUI.soulCount >= 1 && AbilityControl.Ability6UsageCount >= 1)
         {
             pass1B.SetActive(true);
             pass1D.SetActive(false);
@@ -141,7 +141,7 @@ public class GamePass12 : MonoBehaviour
     {
         enemyCount++;
 
-        if (enemyCount >= 1)
+        if (enemyCount >=1)
         {
             Debug.Log("擊倒10個敵人！");
             PASS12 = true;
