@@ -6,8 +6,16 @@ using UnityEngine.Audio;
 public class AudioManager : MonoBehaviour
 {
 
+    public AudioClip ButtonSound;
+
     public AudioMixer audioMixer;    // 進行控制的Mixer變量
-    
+    AudioSource audioSource;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
 
     public void SetMasterVolume(float volume)    // 控制主音量的函數
     {
@@ -25,5 +33,10 @@ public class AudioManager : MonoBehaviour
     {
         audioMixer.SetFloat("SoundEffectVolume", volume);
         // SoundEffectVolume爲我們暴露出來的SoundEffect的參數
+    }
+
+    public void PlayButtonSound()
+    {
+        audioSource.PlayOneShot(ButtonSound);
     }
 }
