@@ -48,6 +48,9 @@ public class GamePass13 : MonoBehaviour
     public GameObject spawn2;
     // 在Start方法中初始化计数并禁用亮图像
 
+    public GameObject Image5;
+    public GameObject Image6;
+
     AudioSource AudioSource;
 
     private void Start()
