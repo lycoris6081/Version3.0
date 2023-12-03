@@ -21,6 +21,13 @@ public class GamePass14 : MonoBehaviour
 
     public GameObject Spawn1;
     public GameObject spawn2;
+    [Header(" [失敗]")]
+    public GameObject Image1; // 图像1
+    public GameObject Image2; // 图像2
+    //[Header(" [暫停]")]
+    [Header(" [失敗]")]
+    public GameObject Image3; // 图像3
+    public GameObject Image4; // 图像4
     // 在Start方法中初始化计数并禁用亮图像
 
     AudioSource AudioSource;
@@ -42,21 +49,29 @@ public class GamePass14 : MonoBehaviour
             pass1B.SetActive(true);
             pass1D.SetActive(false);
             PASS11 = true;
+            Image1.SetActive(false);
+            Image2.SetActive(true);
         }
         else
         {
             pass1D.SetActive(true);
             pass1B.SetActive(false);
+            Image2.SetActive(false);
+            Image1.SetActive(true);
         }
         if (PASS12 == true)
         {
             pass2B.SetActive(true);
             pass2D.SetActive(false);
+            Image3.SetActive(false);
+            Image4.SetActive(true);
         }
         else
         {
             pass2D.SetActive(true);
             pass2B.SetActive(false);
+            Image4.SetActive(false);
+            Image3.SetActive(true);
         }
 
         if(PASS11&&PASS12 == true)
@@ -104,6 +119,7 @@ public class GamePass14 : MonoBehaviour
             PlayerPrefs.SetInt("PASS12", 1); // 将通关状态存储为1
         }
     }
-   
+
+    
 
 }
