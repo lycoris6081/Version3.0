@@ -75,10 +75,11 @@ public class Boss1 : MonoBehaviour
 
         if (!isDead && hp <= 0)
         {
+            GamePass15.PASS11 = true;
             isDead = true;
             Dead();
             //Invoke("Dead", 0.1f);
-
+            
 
             GameObject gameManager = GameObject.Find("GameMenager");
             if (gameManager != null)
