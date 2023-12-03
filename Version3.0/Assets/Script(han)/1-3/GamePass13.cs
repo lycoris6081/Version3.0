@@ -34,6 +34,10 @@ public class GamePass13 : MonoBehaviour
     public GameObject Image3; // 图像3
     public GameObject Image4; // 图像4
 
+    [Header(" [失敗結算]")]
+    public GameObject Image7;
+    public GameObject Image8;
+
     [Header("遊戲內物件")]
     public GameObject Pass;
     public GameObject Clear;
@@ -64,6 +68,8 @@ public class GamePass13 : MonoBehaviour
             pass1D.SetActive(false);
             Image1.SetActive(false);
             Image2.SetActive(true);
+            Image5.SetActive(false);
+            Image6.SetActive(true);
 
         }
         else
@@ -72,6 +78,8 @@ public class GamePass13 : MonoBehaviour
             pass1B.SetActive(false);
             Image2.SetActive(false);
             Image1.SetActive(true);
+            Image6.SetActive(false);
+            Image5.SetActive(true);
         }
         if (PASS12 == true)
         {
@@ -79,6 +87,8 @@ public class GamePass13 : MonoBehaviour
             pass2D.SetActive(false);
             Image3.SetActive(false);
             Image4.SetActive(true);
+            Image7.SetActive(false);
+            Image8.SetActive(true);
         }
         else
         {
@@ -86,6 +96,8 @@ public class GamePass13 : MonoBehaviour
             pass2B.SetActive(false);
             Image4.SetActive(false);
             Image3.SetActive(true);
+            Image8.SetActive(false);
+            Image7.SetActive(true);
         }
 
         if(PASS11&&PASS12 == true)
