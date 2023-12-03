@@ -6,7 +6,9 @@ using UnityEngine.Audio;
 public class AudioManager : MonoBehaviour
 {
 
-    public AudioClip ButtonSound;
+    public AudioClip ButtonASound;
+    public AudioClip ButtonBSound;
+    public AudioClip CatSound;
 
     public AudioMixer audioMixer;    // 進行控制的Mixer變量
     AudioSource audioSource;
@@ -35,8 +37,17 @@ public class AudioManager : MonoBehaviour
         // SoundEffectVolume爲我們暴露出來的SoundEffect的參數
     }
 
-    public void PlayButtonSound()
+    public void PlayButtonASound()
     {
-        audioSource.PlayOneShot(ButtonSound);
+        audioSource.PlayOneShot(ButtonASound);
+    }
+    public void PlayButtonBSound()
+    {
+        audioSource.PlayOneShot(ButtonBSound);
+    }
+
+    public void PlayCatSound()
+    {
+        audioSource.PlayOneShot(CatSound);
     }
 }
