@@ -18748,6 +18748,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CATCAT
       objectReference: {fileID: 0}
+    - target: {fileID: 6349325696474531178, guid: 8e4d4ea91de2dfa4f9935cede54d00bb, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1fb20fc2a5b988a4582408e35513ad95, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e4d4ea91de2dfa4f9935cede54d00bb, type: 3}
 --- !u!114 &4971453891446671967 stripped
