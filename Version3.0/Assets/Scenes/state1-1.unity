@@ -7873,7 +7873,7 @@ RectTransform:
   - {fileID: 965533214}
   - {fileID: 1557817921}
   m_Father: {fileID: 1234349521}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -16593,9 +16593,9 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1290065922}
   - {fileID: 632449658}
   - {fileID: 2050196039}
-  - {fileID: 1290065922}
   m_Father: {fileID: 1353777668}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -17318,7 +17318,7 @@ RectTransform:
   - {fileID: 1508012539}
   - {fileID: 1491311240}
   m_Father: {fileID: 1234349521}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -21525,7 +21525,7 @@ AudioSource:
   m_GameObject: {fileID: 1629216395}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: a2a39dcccb2db6c46a852e5d758e0858, type: 2}
   m_audioClip: {fileID: 8300000, guid: 2cebe5ef59f447d4d803665e3ecf1a2f, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.468
@@ -26200,7 +26200,7 @@ RectTransform:
   - {fileID: 2099822233}
   - {fileID: 1291547279}
   m_Father: {fileID: 1234349521}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
