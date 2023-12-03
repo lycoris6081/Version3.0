@@ -5106,11 +5106,15 @@ MonoBehaviour:
   pass2B: {fileID: 1596746955}
   Image3: {fileID: 222328863}
   Image4: {fileID: 1943660804}
+  Image7: {fileID: 1984588964}
+  Image8: {fileID: 2028447482}
   Pass: {fileID: 739686442}
   Clear: {fileID: 330862051}
   WinButton: {fileID: 97439979}
-  Spawn1: {fileID: 0}
-  spawn2: {fileID: 0}
+  Spawn1: {fileID: 1371556040}
+  spawn2: {fileID: 1400789134}
+  Image5: {fileID: 156675007}
+  Image6: {fileID: 744279516}
 --- !u!114 &549805248
 MonoBehaviour:
   m_ObjectHideFlags: 0
