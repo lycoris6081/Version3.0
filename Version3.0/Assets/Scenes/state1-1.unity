@@ -15126,6 +15126,8 @@ GameObject:
   - component: {fileID: 1156886424}
   - component: {fileID: 1156886423}
   - component: {fileID: 1156886426}
+  - component: {fileID: 1156886428}
+  - component: {fileID: 1156886427}
   m_Layer: 0
   m_Name: Gameover
   m_TagString: Untagged
@@ -15240,6 +15242,32 @@ MonoBehaviour:
   - {fileID: 1976501895}
   nextLevelName: choose
   buttonClick: {fileID: 0}
+--- !u!114 &1156886427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1156886421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2fba1fab71fc047b66c65a5eaeb95e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resumeButton: {fileID: 382947438}
+--- !u!114 &1156886428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1156886421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2fba1fab71fc047b66c65a5eaeb95e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resumeButton: {fileID: 307470220}
 --- !u!1 &1174597808
 GameObject:
   m_ObjectHideFlags: 0
