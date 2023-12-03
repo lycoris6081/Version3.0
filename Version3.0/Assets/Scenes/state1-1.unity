@@ -4048,7 +4048,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 307470221}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1156886426}
+        m_TargetAssemblyTypeName: loading, Assembly-CSharp
+        m_MethodName: StartImageSequence
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &307470221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5334,7 +5346,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 382947439}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1156886423}
+        m_TargetAssemblyTypeName: SMeneger, Assembly-CSharp
+        m_MethodName: continue12
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &382947439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15101,6 +15125,7 @@ GameObject:
   - component: {fileID: 1156886425}
   - component: {fileID: 1156886424}
   - component: {fileID: 1156886423}
+  - component: {fileID: 1156886426}
   m_Layer: 0
   m_Name: Gameover
   m_TagString: Untagged
@@ -15191,6 +15216,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1156886421}
   m_CullTransparentMesh: 1
+--- !u!114 &1156886426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1156886421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a96c59e2cabb254cbb2eaac002f3bb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  images:
+  - {fileID: 1925622092}
+  - {fileID: 1873227784}
+  - {fileID: 1231419407}
+  - {fileID: 763920974}
+  - {fileID: 1312454850}
+  - {fileID: 1137485076}
+  - {fileID: 238896776}
+  - {fileID: 1887595115}
+  - {fileID: 1976501895}
+  nextLevelName: choose
+  buttonClick: {fileID: 0}
 --- !u!1 &1174597808
 GameObject:
   m_ObjectHideFlags: 0
@@ -21491,6 +21540,10 @@ MonoBehaviour:
   Image4: {fileID: 1384280711}
   Image7: {fileID: 1982196389}
   Image8: {fileID: 501676031}
+  Image9: {fileID: 1059138210}
+  Image10: {fileID: 1847816085}
+  Image11: {fileID: 864836584}
+  Image12: {fileID: 496675022}
   img_Pass: {fileID: 1597696956}
   img_Clear: {fileID: 642015778}
   WinButton: {fileID: 355549182}
