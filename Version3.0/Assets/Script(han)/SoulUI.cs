@@ -31,9 +31,7 @@ public class SoulUI : MonoBehaviour
 
         UpdateSoulCountText();
 
-        // 将灵魂数量保存到PlayerPrefs
-        PlayerPrefs.SetInt("SoulCount", soulCount);
-        PlayerPrefs.Save();
+  
     }
     public int GetSoulCount()
     {
@@ -58,11 +56,8 @@ public class SoulUI : MonoBehaviour
             // 將之前的數量添加到當前的靈魂計數中
             soulCount += previousSoulCount;
 
-            // 将灵魂数量保存到PlayerPrefs
-            PlayerPrefs.SetInt("SoulCount", soulCount);
-            PlayerPrefs.Save();
+
         }
-       
     }
    
 

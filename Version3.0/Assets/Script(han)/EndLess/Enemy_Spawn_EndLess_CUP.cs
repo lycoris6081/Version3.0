@@ -17,7 +17,7 @@ public class Enemy_Spawn_EndLess_CUP : MonoBehaviour
 
     IEnumerator DelayedSpawnEnemies()
     {
-        yield return new WaitForSeconds(120f); // 等待80秒
+        yield return new WaitForSeconds(100f); // 等待80秒
 
         while (true)
         {

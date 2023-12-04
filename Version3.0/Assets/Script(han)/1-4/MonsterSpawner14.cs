@@ -55,7 +55,7 @@ public class MonsterSpawner14 : MonoBehaviour
 
     void SpawnEnemy(SpawnArea spawnArea)
     {
-        Vector3 spawnPosition = spawnArea.spawnPoint.position;
+        Vector3 spawnPosition = GetRandomSpawnPosition(spawnArea.spawnPoint.position);
         GameObject enemy = Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
 
         // 通知EnemyManager生成了一個新敵人

@@ -17,6 +17,7 @@ TagManager:
   - BOOM
   - FxTemporaire
   - EnemyInWave
+  - EndLessWall
   layers:
   - Default
   - TransparentFX

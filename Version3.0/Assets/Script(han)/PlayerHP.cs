@@ -5,6 +5,10 @@ using UnityEngine.UI;
 
 public class PlayerHP : MonoBehaviour
 {
+
+    private static bool isInvincible = false;
+    private float invincibilityDuration = 10f; // 设置无敌持续时间
+
     private Rigidbody2D rb;
     public static int hp = 3;
     public static int MaxHp = 3;
@@ -79,7 +83,22 @@ public class PlayerHP : MonoBehaviour
 
 
     }
-    
+    // 添加一个属性以检查玩家当前是否无敌
+    public static bool IsInvincible
+    {
+        get { return isInvincible; }
+    }
+    public IEnumerator InvincibilityCoroutine()
+    {
+        isInvincible = true;
+
+        // 等待指定的持续时间
+        yield return new WaitForSeconds(invincibilityDuration);
+
+        // 无敌状态在持续时间结束后结束
+        isInvincible = false;
+    }
+
     private void PlayDieSound()
     {
         if(isPlayingSound == false)
@@ -101,7 +120,7 @@ public class PlayerHP : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.tag == "Enemy")
+        if (other.gameObject.tag == "Enemy" && !isInvincible)
         {
             if (Playercontroller.isAttacking == false)
             {
@@ -123,7 +142,7 @@ public class PlayerHP : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Bullet")
+        if (other.gameObject.tag == "Bullet" && !isInvincible)
         {
             if (Playercontroller.isAttacking == false&&Shield.shieldopen == false)
             {
@@ -139,7 +158,7 @@ public class PlayerHP : MonoBehaviour
             }
 
         }
-        if (other.gameObject.tag == "BOOM")
+        if (other.gameObject.tag == "BOOM" && !isInvincible)
         {
             if (Playercontroller.isAttacking == false && Shield.shieldopen == false)
             {

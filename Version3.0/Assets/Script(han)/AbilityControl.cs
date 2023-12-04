@@ -29,7 +29,9 @@ public class AbilityControl : MonoBehaviour
 
     private float iconDuration = 2f; // icon 顯示持續時間（秒）
 
-    private Collider2D characterCollider;
+    private PlayerHP playerHP;
+
+
     private bool isColliderDisabled = false;
     private float duration = 10f;
     public static int Ability6UsageCount = 0; // 追踪Ability6的使用次数
@@ -46,8 +48,9 @@ public class AbilityControl : MonoBehaviour
         Boom = false;
         cardControl = FindObjectOfType<CardControl>();
         pause.SetActive(false );
-        characterCollider = character.GetComponent<Collider2D>();
-        
+
+        // 在 Start 方法中获取对 PlayerHP 实例的引用
+        playerHP = FindObjectOfType<PlayerHP>();
     }
 
     // Update is called once per frame
@@ -59,7 +62,8 @@ public class AbilityControl : MonoBehaviour
 
             if (duration <= 0f)
             {
-                characterCollider.enabled = true;
+                
+               
                 isColliderDisabled = false;
                 Shield.shieldopen = false;
                 duration = 10f;
@@ -240,7 +244,9 @@ public class AbilityControl : MonoBehaviour
     {
         Shield.shieldopen = true;
 
-        characterCollider.enabled = false;
+        // 触发无敌状态
+        StartCoroutine(playerHP.InvincibilityCoroutine());
+
         isColliderDisabled = true;
         print("5");
         // 创建一个新的Image对象

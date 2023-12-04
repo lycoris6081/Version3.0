@@ -21,5 +21,14 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "EndLessWall")
+        {
+            // 销毁子弹
+            Destroy(gameObject);
 
+        }
+
+    }
 }

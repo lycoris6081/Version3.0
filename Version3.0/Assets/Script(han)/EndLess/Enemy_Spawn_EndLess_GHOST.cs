@@ -17,7 +17,7 @@ public class Enemy_Spawn_EndLess_GHOST : MonoBehaviour
 
     IEnumerator DelayedSpawnEnemies()
     {
-        yield return new WaitForSeconds(200f); // 等待80秒
+        yield return new WaitForSeconds(150f); // 等待80秒
 
         while (true)
         {
