@@ -10673,7 +10673,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &828062204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20277,7 +20277,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1447198690}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dc6cb0d32f601741b370e618e020d72, type: 3}
+  m_Script: {fileID: 11500000, guid: 95bf503dd6585b049bb8c84df019f438, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 0
