@@ -7345,6 +7345,12 @@ MonoBehaviour:
   ButtonASound: {fileID: 8300000, guid: 7a17e90ecae258b498ed3f988ee73ec0, type: 3}
   ButtonBSound: {fileID: 8300000, guid: 3be024c768de9a34b856f9ac6b9be63f, type: 3}
   CatSound: {fileID: 8300000, guid: 1fb20fc2a5b988a4582408e35513ad95, type: 3}
+  Ability_Heal: {fileID: 0}
+  Ability_twohit: {fileID: 0}
+  Ability_DrawAAgain: {fileID: 0}
+  Ability_CantHurt: {fileID: 0}
+  Ability_bullettime: {fileID: 0}
+  Ability_Boom: {fileID: 0}
   audioMixer: {fileID: 24100000, guid: a2a39dcccb2db6c46a852e5d758e0858, type: 2}
 --- !u!4 &689323433
 Transform:
@@ -10360,7 +10366,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 689323432}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: PlayButtonSound
+        m_MethodName: PlayButtonBSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -20655,6 +20661,12 @@ MonoBehaviour:
   ButtonASound: {fileID: 0}
   ButtonBSound: {fileID: 0}
   CatSound: {fileID: 0}
+  Ability_Heal: {fileID: 0}
+  Ability_twohit: {fileID: 0}
+  Ability_DrawAAgain: {fileID: 0}
+  Ability_CantHurt: {fileID: 0}
+  Ability_bullettime: {fileID: 0}
+  Ability_Boom: {fileID: 0}
   audioMixer: {fileID: 24100000, guid: a2a39dcccb2db6c46a852e5d758e0858, type: 2}
 --- !u!82 &1925715150
 AudioSource:
