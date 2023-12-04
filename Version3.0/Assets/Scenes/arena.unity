@@ -5850,10 +5850,10 @@ MonoBehaviour:
   - {fileID: 1041040409}
   enemyPrefab: {fileID: 4957626455272888662, guid: 62bbffdbad549974098acfaeb3a8457a, type: 3}
   spawnIntervals:
+  - 15
   - 20
-  - 30
-  - 40
   - 10
+  - 5
 --- !u!1 &816781715
 GameObject:
   m_ObjectHideFlags: 0

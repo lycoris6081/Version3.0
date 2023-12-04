@@ -7,7 +7,7 @@ public class MonsterSpawnRegion
 {
     public Transform spawnPoint;
     public float spawnInterval = 3f;
-    public int maxEnemies = 3;
+    public int maxEnemies = 1;
 
     [HideInInspector]
     public float nextSpawnTime;
@@ -60,15 +60,16 @@ public class MonsterSpawn_Flower : MonoBehaviour
 
         Vector3 spawnPosition = readyObject.transform.position;
 
-       
         // 实例化敌人
-        Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+        GameObject enemyObject = Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+
         // 通知 EnemyManager 生成了一個新敵人
         enemyManager.IncrementEnemyCount();
 
         // 将一个脚本附加到生成的敌人，以在敌人被销毁时通知 EnemyManager
-        EnemyController12 enemyController = Instantiate(enemyPrefab, spawnPosition, Quaternion.identity).AddComponent<EnemyController12>();
+        EnemyController12 enemyController = enemyObject.AddComponent<EnemyController12>();
         enemyController.Initialize(enemyManager);
+
         Destroy(readyObject);
     }
 }

@@ -128,8 +128,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   SoulPrefab: {fileID: 2084250237380657556, guid: 39e4a32fcdc04b443a9f67b52efcc9e1, type: 3}
-  minSouls: 3
-  maxSouls: 4
+  minSouls: 6
+  maxSouls: 7
   BoomRange: {fileID: 5669763353605392540}
   CupShake: {fileID: 7479666679974682846}
   playerTransform: {fileID: 0}
