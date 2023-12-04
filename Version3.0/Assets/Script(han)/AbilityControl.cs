@@ -133,6 +133,7 @@ public class AbilityControl : MonoBehaviour
                 Monster_Flower monsterController_F = enemy.GetComponent<Monster_Flower>();
                 Monster_Flower14 monsterController_F14 = enemy.GetComponent<Monster_Flower14>();
                 Monstercontroller14 monsterController14 = enemy.GetComponent<Monstercontroller14>();
+                MonstercontrollerEndLess monsterControllerEndLess = enemy.GetComponent<MonstercontrollerEndLess>();
                 // 如果帶有 Monstercontroller 腳本，則對其調用 TakeDamage 方法
                 if (monsterController != null)
                 {
@@ -149,6 +150,10 @@ public class AbilityControl : MonoBehaviour
                 if (monsterController14 != null)
                 {
                     monsterController14.TakeDamage(3);
+                }
+                if (monsterControllerEndLess != null)
+                {
+                    monsterControllerEndLess.TakeDamage(3);
                 }
             }
             foreach (GameObject enemy in enemiesCup)
