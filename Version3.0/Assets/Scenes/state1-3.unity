@@ -1438,6 +1438,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 184739938}
+        m_TargetAssemblyTypeName: loading, Assembly-CSharp
+        m_MethodName: StartImageSequence
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &155544371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1656,6 +1668,9 @@ GameObject:
   - component: {fileID: 184739935}
   - component: {fileID: 184739934}
   - component: {fileID: 184739933}
+  - component: {fileID: 184739938}
+  - component: {fileID: 184739937}
+  - component: {fileID: 184739936}
   m_Layer: 0
   m_Name: Gameover
   m_TagString: Untagged
@@ -1746,6 +1761,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 184739931}
   m_CullTransparentMesh: 1
+--- !u!114 &184739936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184739931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2fba1fab71fc047b66c65a5eaeb95e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resumeButton: {fileID: 155544370}
+--- !u!114 &184739937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184739931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2fba1fab71fc047b66c65a5eaeb95e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resumeButton: {fileID: 617845877}
+--- !u!114 &184739938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184739931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a96c59e2cabb254cbb2eaac002f3bb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  images:
+  - {fileID: 1135874856}
+  - {fileID: 1178285156}
+  - {fileID: 833806333}
+  - {fileID: 1803051774}
+  - {fileID: 421762344}
+  - {fileID: 1751380926}
+  - {fileID: 1771466970}
+  - {fileID: 1350845861}
+  - {fileID: 1223113422}
+  nextLevelName: choose
+  buttonClick: {fileID: 0}
 --- !u!1 &196656796
 GameObject:
   m_ObjectHideFlags: 0
@@ -7731,6 +7796,18 @@ MonoBehaviour:
       - m_Target: {fileID: 549805250}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
         m_MethodName: PlayButtonASound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 184739933}
+        m_TargetAssemblyTypeName: SMeneger, Assembly-CSharp
+        m_MethodName: continue14
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14000,7 +14077,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1203244817
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14848,7 +14925,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1263566420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17775,7 +17852,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1627322599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23911,7 +23988,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2094074907
 MonoBehaviour:
   m_ObjectHideFlags: 0
