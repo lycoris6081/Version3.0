@@ -10688,7 +10688,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   panelToToggle: {fileID: 57615072}
   isGamePaused: 1
-  abilityControl: {fileID: 0}
+  abilityControl: {fileID: 1203074353}
   resumeButton: {fileID: 1047849821}
   myCanvas: {fileID: 0}
 --- !u!114 &828062205
