@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameClear : MonoBehaviour
 {
     public GameObject gameClearCanvas;
-
+    SoulUI SoulReset;
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "CATCAT")
@@ -14,6 +14,8 @@ public class GameClear : MonoBehaviour
             if (gameClearCanvas != null)
             {
                 gameClearCanvas.SetActive(true);
+
+                SoulReset.ResetSoulCount();
                 PauseGame();
             }
         }

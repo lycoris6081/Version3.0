@@ -118,7 +118,6 @@ public class PlayerHP : MonoBehaviour
             }
 
         }
-       
 
     }
 
@@ -152,6 +151,8 @@ public class PlayerHP : MonoBehaviour
 
         }
     }
+
+    
     public void UpdateLifeUI()
     {
         for (int i = 0; i < lifeImages.Length; i++)
