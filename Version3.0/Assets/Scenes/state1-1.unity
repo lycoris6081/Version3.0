@@ -21771,8 +21771,8 @@ MonoBehaviour:
   Text_Time: {fileID: 383687043}
   Gameover_text: {fileID: 383687043}
   inGameDebug_text: {fileID: 418569631}
-  Pass_text: {fileID: 383687043}
-  Pause_text: {fileID: 33217905}
+  Pass_text: {fileID: 1474259143}
+  Pause_text: {fileID: 1114741760}
 --- !u!82 &1629216399
 AudioSource:
   m_ObjectHideFlags: 0
@@ -23472,7 +23472,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1752478207
 RectTransform:
   m_ObjectHideFlags: 0
