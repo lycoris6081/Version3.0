@@ -30363,7 +30363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87a58fb2e23e37e46958ec764ee95b52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOverUI: {fileID: 0}
+  gameOverUI: {fileID: 128368067}
   lifeImages:
   - {fileID: 2094878503}
   - {fileID: 912998254}
