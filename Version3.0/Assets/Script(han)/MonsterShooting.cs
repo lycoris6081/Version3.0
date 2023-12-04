@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class MonsterShooting : MonoBehaviour
 {
-    
+    private BulletSpeed BulletSpeed;
+
     public Transform firePoint; // 射击点
     public GameObject bulletPrefab; // 子弹预制体
     public float bulletForce = 10f; // 子弹发射力量
@@ -22,7 +23,7 @@ public class MonsterShooting : MonoBehaviour
         player = GameObject.Find("CATCAT").transform; // 根据玩家的名称查找玩家对象
         nextFireTime = Time.time; // 初始化下一次射击时间
         AudioSource = GetComponent<AudioSource>();
-        
+        BulletSpeed = GetComponent<BulletSpeed>();
     }
 
     void Update()
@@ -56,8 +57,10 @@ public class MonsterShooting : MonoBehaviour
 
         if (AbilityControl.Slowdown)
         {
-            SlowdownBulletsWithTag("Bullet", 2f);
+            // 通知 BulletManager 減慢子彈
+            BulletSpeed.SlowDownBullets(5f, 0.5f); // 根據需要調整持續時間和減速因子
         }
+
 
     }
     private IEnumerator SlowDownBullet(GameObject bullet, float duration)

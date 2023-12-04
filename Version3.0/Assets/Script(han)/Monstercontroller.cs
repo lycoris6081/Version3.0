@@ -104,7 +104,7 @@ public class Monstercontroller : MonoBehaviour
         spriteRenderer.color = originalColor;
     }
 
-    private IEnumerator SlowDown(float duration)
+    private IEnumerator SlowDown(float duration = 5f)
     {
         // 保存原始速度
         float originalSpeed = Speed;

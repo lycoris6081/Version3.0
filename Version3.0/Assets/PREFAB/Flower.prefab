@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8024544536985701848}
   - component: {fileID: 8024544536985701849}
   - component: {fileID: 1061125836318482473}
+  - component: {fileID: 6822122470669645029}
   - component: {fileID: 4109264366385979257}
   - component: {fileID: 6292535873169869854}
   - component: {fileID: 7687616669657919153}
@@ -105,7 +106,7 @@ MonoBehaviour:
   firePoint: {fileID: 8024544537876520763}
   bulletPrefab: {fileID: 3423636653185167368, guid: fc80fa6581ccfdc4ca45bd4845f37076, type: 3}
   bulletForce: 12
-  fireRate: 0.15
+  fireRate: 0.4
   fireSound: {fileID: 8300000, guid: 916f5968d1a12f7448602ef7025091b7, type: 3}
 --- !u!61 &1061125836318482473
 BoxCollider2D:
@@ -133,6 +134,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.0814795, y: 2.4947076}
   m_EdgeRadius: 0
+--- !u!114 &6822122470669645029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8024544536985701854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eca8a6048f0c57540a94e773e672eafb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &4109264366385979257
 MonoBehaviour:
   m_ObjectHideFlags: 0
