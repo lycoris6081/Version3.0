@@ -167,6 +167,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b1db12947cc07548938635164c24c48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ButtonASound: {fileID: 0}
+  ButtonBSound: {fileID: 0}
+  CatSound: {fileID: 0}
+  Ability_Heal: {fileID: 0}
+  Ability_twohit: {fileID: 0}
+  Ability_DrawAAgain: {fileID: 0}
+  Ability_CantHurt: {fileID: 0}
+  Ability_bullettime: {fileID: 0}
+  Ability_Boom: {fileID: 0}
   audioMixer: {fileID: 24100000, guid: a2a39dcccb2db6c46a852e5d758e0858, type: 2}
 --- !u!1 &777184065
 GameObject:
@@ -572,7 +581,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: a2a39dcccb2db6c46a852e5d758e0858, type: 2}
-  m_audioClip: {fileID: 8300000, guid: df5237287d0ae5a45a29d2c0bb21ee1d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 3615acc6658db694aaf2c56885789d58, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.2
   m_Pitch: 1
@@ -685,6 +694,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b1db12947cc07548938635164c24c48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ButtonASound: {fileID: 0}
+  ButtonBSound: {fileID: 0}
+  CatSound: {fileID: 0}
+  Ability_Heal: {fileID: 0}
+  Ability_twohit: {fileID: 0}
+  Ability_DrawAAgain: {fileID: 0}
+  Ability_CantHurt: {fileID: 0}
+  Ability_bullettime: {fileID: 0}
+  Ability_Boom: {fileID: 0}
   audioMixer: {fileID: 24100000, guid: a2a39dcccb2db6c46a852e5d758e0858, type: 2}
 --- !u!1 &1376746968
 GameObject:
@@ -1158,6 +1176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e10ae77eaae1c34383b55b255d2e902, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ButtonSound: {fileID: 0}
 --- !u!1 &1918494222
 GameObject:
   m_ObjectHideFlags: 0
