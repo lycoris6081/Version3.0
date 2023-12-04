@@ -242,7 +242,7 @@ public class Monstercontroller : MonoBehaviour
         {
 
             hp = 0;
-            
+           
 
         }
 

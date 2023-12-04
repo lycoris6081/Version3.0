@@ -41,6 +41,16 @@ public class AttackBox : MonoBehaviour
                 gamePass.EnemyDowninAbility();
             }
         }
+        if (other.gameObject.tag == "Enemy" && Shield.shieldopen)
+        {
+
+            GameObject gameManager = GameObject.Find("GameMenager");
+            GamePass13 gamePass = gameManager.GetComponent<GamePass13>();
+            if (gamePass != null)
+            {
+                gamePass.EnemyDowninAbility();
+            }
+        }
 
     }
 }

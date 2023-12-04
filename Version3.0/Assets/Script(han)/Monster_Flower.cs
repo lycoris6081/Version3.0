@@ -138,6 +138,7 @@ public class Monster_Flower : MonoBehaviour
 
             hp = 0;
 
+           
 
         }
 

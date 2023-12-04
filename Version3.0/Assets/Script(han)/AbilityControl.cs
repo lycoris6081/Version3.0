@@ -124,7 +124,7 @@ public class AbilityControl : MonoBehaviour
 
             // 尋找所有帶有 "Enemy" 標籤的遊戲物體
             GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-
+            GameObject[] enemiesCup = GameObject.FindGameObjectsWithTag("CUP");
             // 對每個敵人減少1點血量
             foreach (GameObject enemy in enemies)
             {
@@ -150,6 +150,23 @@ public class AbilityControl : MonoBehaviour
                 {
                     monsterController14.TakeDamage(3);
                 }
+            }
+            foreach (GameObject enemy in enemiesCup)
+            {
+                // 檢查是否帶有 Monstercontroller 腳本
+                Monster_CUP monsterController = enemy.GetComponent<Monster_CUP>();
+                Monster_CUP14 monsterController_C = enemy.GetComponent<Monster_CUP14>();
+
+                // 如果帶有 Monstercontroller 腳本，則對其調用 TakeDamage 方法
+                if (monsterController != null)
+                {
+                    monsterController.TakeDamage(3);
+                }
+                if (monsterController_C != null)
+                {
+                    monsterController_C.TakeDamage(3);
+                }
+               
             }
             Ability6UsageCount++;
         }
