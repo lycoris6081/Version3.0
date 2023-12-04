@@ -14,9 +14,9 @@ public class GameClear : MonoBehaviour
             if (gameClearCanvas != null)
             {
                 gameClearCanvas.SetActive(true);
-
-                SoulReset.ResetSoulCount();
                 PauseGame();
+                SoulReset.ResetSoulCount();
+                
             }
         }
     }

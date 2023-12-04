@@ -56,7 +56,7 @@ public class GamePass14 : MonoBehaviour
     private void Update()
     {
         //1-2 過關條件
-        if (AbilityControl.Ability6UsageCount >= 10)
+        if (AbilityControl.Ability6UsageCount >= 1)
         {
             pass1B.SetActive(true);
             pass1D.SetActive(false);
@@ -140,7 +140,7 @@ public class GamePass14 : MonoBehaviour
     {
         enemyCount++;
 
-        if (enemyCount >= 60)
+        if (enemyCount >= 1)
         {
             Debug.Log("擊倒10個敵人！");
             PASS12 = true;

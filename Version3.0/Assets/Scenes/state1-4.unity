@@ -6624,9 +6624,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1179948471}
-        m_TargetAssemblyTypeName: AbilityEffect, Assembly-CSharp
-        m_MethodName: BoomStart
+      - m_Target: {fileID: 1203074353}
+        m_TargetAssemblyTypeName: AbilityControl, Assembly-CSharp
+        m_MethodName: Ability2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13705,9 +13705,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1179948471}
-        m_TargetAssemblyTypeName: AbilityEffect, Assembly-CSharp
-        m_MethodName: AttackLvUpStart
+      - m_Target: {fileID: 1203074353}
+        m_TargetAssemblyTypeName: AbilityControl, Assembly-CSharp
+        m_MethodName: Ability4
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15825,7 +15825,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1172918970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16433,9 +16433,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1179948471}
-        m_TargetAssemblyTypeName: AbilityEffect, Assembly-CSharp
-        m_MethodName: SlowDownStart
+      - m_Target: {fileID: 1203074353}
+        m_TargetAssemblyTypeName: AbilityControl, Assembly-CSharp
+        m_MethodName: Ability6
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -26490,9 +26490,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1179948471}
-        m_TargetAssemblyTypeName: AbilityEffect, Assembly-CSharp
-        m_MethodName: ShieldStart
+      - m_Target: {fileID: 1203074353}
+        m_TargetAssemblyTypeName: AbilityControl, Assembly-CSharp
+        m_MethodName: Ability5
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -27880,9 +27880,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1179948471}
-        m_TargetAssemblyTypeName: AbilityEffect, Assembly-CSharp
-        m_MethodName: HealthStart
+      - m_Target: {fileID: 1203074353}
+        m_TargetAssemblyTypeName: AbilityControl, Assembly-CSharp
+        m_MethodName: Ability1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
