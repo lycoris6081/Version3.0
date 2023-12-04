@@ -1438,6 +1438,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 184739938}
+        m_TargetAssemblyTypeName: loading, Assembly-CSharp
+        m_MethodName: StartImageSequence
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &155544371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1656,6 +1668,9 @@ GameObject:
   - component: {fileID: 184739935}
   - component: {fileID: 184739934}
   - component: {fileID: 184739933}
+  - component: {fileID: 184739938}
+  - component: {fileID: 184739937}
+  - component: {fileID: 184739936}
   m_Layer: 0
   m_Name: Gameover
   m_TagString: Untagged
@@ -1746,6 +1761,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 184739931}
   m_CullTransparentMesh: 1
+--- !u!114 &184739936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184739931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2fba1fab71fc047b66c65a5eaeb95e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resumeButton: {fileID: 155544370}
+--- !u!114 &184739937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184739931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2fba1fab71fc047b66c65a5eaeb95e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resumeButton: {fileID: 617845877}
+--- !u!114 &184739938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184739931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a96c59e2cabb254cbb2eaac002f3bb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  images:
+  - {fileID: 1135874856}
+  - {fileID: 1178285156}
+  - {fileID: 833806333}
+  - {fileID: 1803051774}
+  - {fileID: 421762344}
+  - {fileID: 1751380926}
+  - {fileID: 1771466970}
+  - {fileID: 1350845861}
+  - {fileID: 1223113422}
+  nextLevelName: choose
+  buttonClick: {fileID: 0}
 --- !u!1 &196656796
 GameObject:
   m_ObjectHideFlags: 0
@@ -6053,7 +6118,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u512A\u96C5\u5C0F\u8C93\uFF1A\u5728\u7121\u50B7\u6A21\u5F0F\u4E0B\u901A\u95DC"
+  m_text: "\u99AC\u514B\u676F\u624E\u8173\uFF1A\u4E0D\u88AB\u99AC\u514B\u676F\u788E\u7247\u50B7\u5BB3"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 17d44e3157f5c99408dda75334884ca1, type: 2}
   m_sharedMaterial: {fileID: -7724924611644189373, guid: 17d44e3157f5c99408dda75334884ca1, type: 2}
@@ -7731,6 +7796,18 @@ MonoBehaviour:
       - m_Target: {fileID: 549805250}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
         m_MethodName: PlayButtonASound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 184739933}
+        m_TargetAssemblyTypeName: SMeneger, Assembly-CSharp
+        m_MethodName: continue14
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11472,7 +11549,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1287.8, y: -275}
+  m_AnchoredPosition: {x: 1287.8, y: -250}
   m_SizeDelta: {x: 485.8526, y: 58.2815}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &955575317
@@ -11495,7 +11572,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u628A20\u96BB\u6050\u9F8D\u6495\u788E\uFF01"
+  m_text: "\u4F7F\u7528\u5361\u724C\u6548\u679C\u6253\u501210\u500B\u6575\u4EBA"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 17d44e3157f5c99408dda75334884ca1, type: 2}
   m_sharedMaterial: {fileID: -7724924611644189373, guid: 17d44e3157f5c99408dda75334884ca1, type: 2}
@@ -20063,7 +20140,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u885D\u523A10\u6B21\uFF01"
+  m_text: "\u649E\u788E10\u500B\u99AC\u514B\u676F"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 17d44e3157f5c99408dda75334884ca1, type: 2}
   m_sharedMaterial: {fileID: -7724924611644189373, guid: 17d44e3157f5c99408dda75334884ca1, type: 2}
