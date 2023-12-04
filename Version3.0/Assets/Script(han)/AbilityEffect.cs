@@ -9,7 +9,12 @@ public class AbilityEffect : MonoBehaviour
     public GameObject BoomEffect;
     public GameObject AttackLvUpEffect;
     public GameObject SlowDownEffect;
+ 
 
+    void Start()
+    {
+      
+    }
 
     public void HealthStart()
     {
@@ -33,8 +38,11 @@ public class AbilityEffect : MonoBehaviour
             Instantiate(BoomEffect, transform.position, Quaternion.identity);
         }
     }
+
+    
     public void AttackLvUpStart()
     {
+       
         if (AttackLvUpEffect != null)
         {
             // 实例化效果
@@ -45,8 +53,12 @@ public class AbilityEffect : MonoBehaviour
             {
                 effectInstance.transform.parent = transform.parent;
             }
+
         }
     }
+   
+
+
     public void SlowDownStart()
     {
         if (SlowDownEffect != null)

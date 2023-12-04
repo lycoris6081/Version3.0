@@ -67,6 +67,9 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 0f;
         isGamePaused = true;
 
+        // 隐藏能力图标
+        abilityControl.HideAbilityIconsOnPause();
+
         if (resumeButton != null)
         {
             resumeButton.gameObject.SetActive(true);
@@ -78,6 +81,9 @@ public class PauseMenu : MonoBehaviour
         Debug.Log("ResumeGame() called");
         Time.timeScale = 1f;
         isGamePaused = false;
+
+        // 显示能力图标
+        abilityControl.ShowAbilityIconsOnResume();
 
         if (resumeButton != null)
         {

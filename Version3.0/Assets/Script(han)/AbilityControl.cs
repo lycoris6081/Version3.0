@@ -69,7 +69,15 @@ public class AbilityControl : MonoBehaviour
 
         
     }
-   
+    public void HideAbilityIconsOnPause()
+    {
+        abilityIconsContainer.gameObject.SetActive(false);
+    }
+    public void ShowAbilityIconsOnResume()
+    {
+        abilityIconsContainer.gameObject.SetActive(true);
+    }
+
 
     public void Ability1()
     {
