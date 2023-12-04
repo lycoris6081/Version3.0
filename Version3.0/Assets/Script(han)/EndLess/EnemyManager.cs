@@ -1,61 +1,30 @@
-﻿using UnityEngine;
-using System.Collections;
-using UnityEngine.UI;
-using TMPro;
-
+﻿using System.Collections;
+using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
-    public GameObject enemyPrefab;
-    public Transform[] spawnPoints;
-    public float[] spawnIntervals;
-    public int maxEnemiesPerWave;
-    public int wavesCount;
-    public int maxEnemiesFinalWave;
-
-    public TMP_Text victoryTextPrefab;
-    public float victoryTextDuration = 3f;
-
-    private int currentWave = 1;
-    private int enemiesSpawned = 0;
+    public Transform[] spawnPoints; // 重生点数组
+    public GameObject enemyPrefab; // 敌人Prefab
+    public float[] spawnIntervals; // 每个重生点的生成间隔
 
     void Start()
     {
-        StartCoroutine(StartEnemyWaves());
-       
+        // 启动协程，开始生成敌人
+        StartCoroutine(SpawnEnemies());
     }
 
-    IEnumerator StartEnemyWaves()
+    IEnumerator SpawnEnemies()
     {
-        while (currentWave <= wavesCount)
+        while (true)
         {
-            yield return StartCoroutine(SpawnEnemiesInWave());
+            // 在随机的重生点生成敌人
+            int randomSpawnPointIndex = Random.Range(0, spawnPoints.Length);
+            Transform spawnPoint = spawnPoints[randomSpawnPointIndex];
 
-            victoryTextPrefab.text = "Wave " + currentWave + " Cleared!";
-            victoryTextPrefab.gameObject.SetActive(true);
-            yield return new WaitForSeconds(victoryTextDuration);
-            victoryTextPrefab.gameObject.SetActive(false);
-            currentWave++;
-            enemiesSpawned = 0;
-            Debug.Log("ENTER NEXT WAVE");
-            yield return new WaitForSeconds(5f);
+            Instantiate(enemyPrefab, spawnPoint.position, Quaternion.identity);
+
+            // 根据当前重生点的生成间隔等待一段时间
+            yield return new WaitForSeconds(spawnIntervals[randomSpawnPointIndex]);
         }
     }
-
-    IEnumerator SpawnEnemiesInWave()
-    {
-        int enemiesToSpawn = Mathf.Min(maxEnemiesPerWave, maxEnemiesFinalWave - enemiesSpawned);
-
-        for (int i = 0; i < enemiesToSpawn; i++)
-        {
-            int spawnPointIndex = Random.Range(0, spawnPoints.Length);
-            float spawnInterval = spawnIntervals[spawnPointIndex];
-
-            yield return new WaitForSeconds(spawnInterval);
-
-            Instantiate(enemyPrefab, spawnPoints[spawnPointIndex].position, Quaternion.identity);
-            enemiesSpawned++;
-        }
-    }
-   
 }

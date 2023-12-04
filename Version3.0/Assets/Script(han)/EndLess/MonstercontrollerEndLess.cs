@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class MonstercontrollerEndLess : MonoBehaviour
@@ -10,9 +11,8 @@ public class MonstercontrollerEndLess : MonoBehaviour
     
     public int hp = 0;
 
-    // 定义一个DieCallback委托
-    public delegate void DieCallbackDelegate();
-    public DieCallbackDelegate DieCallback;
+    // 定義一個公開的事件，用於通知其他腳本敵人被消滅
+    public event Action OnEnemyDestroyed;
 
 
     private static int Boomhp = 0;
@@ -78,20 +78,21 @@ public class MonstercontrollerEndLess : MonoBehaviour
     void SoulSpawn()
     {
 
-        int soulCount = Random.Range(minSouls, maxSouls + 1); // 随机掉落1到2颗灵魂
+        int soulCount = UnityEngine.Random.Range(minSouls, maxSouls + 1); // 随机掉落1到2颗灵魂
 
         for (int i = 0; i < soulCount; i++)
         {
-            Vector3 spawnPosition = transform.position + new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), 0); // 随机生成掉落位置
+            Vector3 spawnPosition = transform.position + new Vector3(UnityEngine.Random.Range(-1f, 1f), UnityEngine.Random.Range(-1f, 1f), 0); // 随机生成掉落位置
             GameObject Soul = Instantiate(SoulPrefab, spawnPosition, Quaternion.identity);
             Debug.Log("soul");
 
             Destroy(Soul, 2f); // 假设2秒后销毁灵魂对象，根据需要进行调整
         }
 
+      
     }
 
-    void Dead()
+     void Dead()
     {
         Destroy(this.gameObject);
         
@@ -151,6 +152,12 @@ public class MonstercontrollerEndLess : MonoBehaviour
           animator.SetFloat("Die", 1);
           Invoke("Dead", 0.2f);
           Invoke("SoulSpawn", 0.2f);
+
+            // 通知其他腳本敵人被消滅
+            if (OnEnemyDestroyed != null)
+            {
+                OnEnemyDestroyed.Invoke();
+            }
 
             GameObject gameManager = GameObject.Find("GameMenager");
             if (gameManager != null)
@@ -230,6 +237,8 @@ public class MonstercontrollerEndLess : MonoBehaviour
 
     }
 
+
+   
 
     private void OnTriggerEnter2D(Collider2D other)
     {
