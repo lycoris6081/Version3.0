@@ -940,7 +940,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49fbeb67d2297c648b4edcb1c3c6a728, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameClearCanvas: {fileID: 0}
+  gameClearCanvas: {fileID: 1887043561}
 --- !u!61 &97439981
 BoxCollider2D:
   m_ObjectHideFlags: 0
