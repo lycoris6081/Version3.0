@@ -119,8 +119,7 @@ public class GamePass13 : MonoBehaviour
                 // 启用过关按钮
                 WinButton.SetActive(true);
             }
-            Spawn1.SetActive(false);
-            spawn2.SetActive(false);
+         
 
         }
     }
@@ -142,7 +141,7 @@ public class GamePass13 : MonoBehaviour
     {
         enemyCount++;
 
-        if (enemyCount >= 10)
+        if (enemyCount >= 1)
         {
             Debug.Log("擊倒10個敵人！");
             PASS12 = true;
@@ -153,7 +152,7 @@ public class GamePass13 : MonoBehaviour
     {
         AbilityenemyCount++;
 
-        if (AbilityenemyCount >= 10)
+        if (AbilityenemyCount >= 1)
         {
             Debug.Log("用能力擊倒10個敵人！");
             PASS11 = true;
