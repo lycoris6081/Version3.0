@@ -141,7 +141,7 @@ public class GamePass13 : MonoBehaviour
     {
         enemyCount++;
 
-        if (enemyCount >= 1)
+        if (enemyCount >= 10)
         {
             Debug.Log("擊倒10個敵人！");
             PASS12 = true;
@@ -152,7 +152,7 @@ public class GamePass13 : MonoBehaviour
     {
         AbilityenemyCount++;
 
-        if (AbilityenemyCount >= 1)
+        if (AbilityenemyCount >= 10)
         {
             Debug.Log("用能力擊倒10個敵人！");
             PASS11 = true;
