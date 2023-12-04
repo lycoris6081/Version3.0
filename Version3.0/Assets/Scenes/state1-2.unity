@@ -7752,7 +7752,7 @@ MonoBehaviour:
   Text_Time: {fileID: 1128954139}
   Gameover_text: {fileID: 1128954139}
   inGameDebug_text: {fileID: 2016835410}
-  Pass_text: {fileID: 1128954139}
+  Pass_text: {fileID: 1182620003}
   Pause_text: {fileID: 663638957}
 --- !u!82 &757122001
 AudioSource:
