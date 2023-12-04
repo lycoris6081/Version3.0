@@ -17321,7 +17321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49fbeb67d2297c648b4edcb1c3c6a728, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameClearCanvas: {fileID: 1508570829}
+  gameClearCanvas: {fileID: 1537741229}
 --- !u!61 &1143389590
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18551,6 +18551,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1290027289}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
         m_MethodName: PlayButtonASound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1467864065}
+        m_TargetAssemblyTypeName: SMeneger, Assembly-CSharp
+        m_MethodName: choose
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -22531,6 +22543,9 @@ GameObject:
   - component: {fileID: 1467864067}
   - component: {fileID: 1467864066}
   - component: {fileID: 1467864065}
+  - component: {fileID: 1467864070}
+  - component: {fileID: 1467864069}
+  - component: {fileID: 1467864068}
   m_Layer: 0
   m_Name: Gameover
   m_TagString: Untagged
@@ -22621,6 +22636,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1467864063}
   m_CullTransparentMesh: 1
+--- !u!114 &1467864068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467864063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2fba1fab71fc047b66c65a5eaeb95e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resumeButton: {fileID: 1207372500}
+--- !u!114 &1467864069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467864063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2fba1fab71fc047b66c65a5eaeb95e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resumeButton: {fileID: 198146393}
+--- !u!114 &1467864070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467864063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a96c59e2cabb254cbb2eaac002f3bb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  images:
+  - {fileID: 1568637258}
+  - {fileID: 608826458}
+  - {fileID: 69416815}
+  - {fileID: 1498295925}
+  - {fileID: 234784296}
+  - {fileID: 981686587}
+  - {fileID: 1482730002}
+  - {fileID: 516507042}
+  - {fileID: 1411148512}
+  nextLevelName: choose
+  buttonClick: {fileID: 0}
 --- !u!1 &1471309278
 GameObject:
   m_ObjectHideFlags: 0
