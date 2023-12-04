@@ -1193,9 +1193,33 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1203074353}
-        m_TargetAssemblyTypeName: AbilityControl, Assembly-CSharp
-        m_MethodName: Ability4
+      - m_Target: {fileID: 549805250}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayButtonBSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 549805250}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayAbility4Sound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4971453891446671967}
+        m_TargetAssemblyTypeName: AbilityEffect, Assembly-CSharp
+        m_MethodName: AttackLvUpStart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1401,7 +1425,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 155544371}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 549805250}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayButtonASound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &155544371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2394,6 +2430,30 @@ MonoBehaviour:
       - m_Target: {fileID: 1203074353}
         m_TargetAssemblyTypeName: AbilityControl, Assembly-CSharp
         m_MethodName: Ability7
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 549805250}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayButtonBSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 549805250}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayAbility7Sound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6955,6 +7015,7 @@ GameObject:
   - component: {fileID: 549805247}
   - component: {fileID: 549805248}
   - component: {fileID: 549805249}
+  - component: {fileID: 549805250}
   m_Layer: 0
   m_Name: GameMenager
   m_TagString: Untagged
@@ -7128,6 +7189,28 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &549805250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 549805244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b1db12947cc07548938635164c24c48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ButtonASound: {fileID: 8300000, guid: 7a17e90ecae258b498ed3f988ee73ec0, type: 3}
+  ButtonBSound: {fileID: 8300000, guid: 3be024c768de9a34b856f9ac6b9be63f, type: 3}
+  CatSound: {fileID: 0}
+  Ability_Heal: {fileID: 8300000, guid: 0387290990f4966409054f71f92edb73, type: 3}
+  Ability_twohit: {fileID: 8300000, guid: 1a2fb14dd31bd22439eb94f9f2a45b4c, type: 3}
+  Ability_DrawAAgain: {fileID: 8300000, guid: d5190c0f0a403134287b7797d4e9d142, type: 3}
+  Ability_CantHurt: {fileID: 8300000, guid: 40f7943f420377f4d83cca63a6f3729e, type: 3}
+  Ability_bullettime: {fileID: 8300000, guid: 39020caf0df39da4ca9c23e70c2bc439, type: 3}
+  Ability_Boom: {fileID: 8300000, guid: 3c737c96b047e754c8b6e37cfd19758b, type: 3}
+  audioMixer: {fileID: 0}
 --- !u!1 &568223702
 GameObject:
   m_ObjectHideFlags: 0
@@ -7644,7 +7727,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 617845878}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 549805250}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayButtonASound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &617845878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7758,9 +7853,33 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1203074353}
-        m_TargetAssemblyTypeName: AbilityControl, Assembly-CSharp
-        m_MethodName: Ability5
+      - m_Target: {fileID: 549805250}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayButtonBSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 549805250}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayAbility5Sound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4971453891446671967}
+        m_TargetAssemblyTypeName: AbilityEffect, Assembly-CSharp
+        m_MethodName: ShieldStart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10769,6 +10888,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 549805250}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayButtonASound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 92935479}
         m_TargetAssemblyTypeName: SMeneger, Assembly-CSharp
         m_MethodName: choose
@@ -11080,7 +11211,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 949847912}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 30.22, y: -24.8, z: 0.1476456}
+  m_LocalPosition: {x: 29.57, y: -24.8, z: 0.1476456}
   m_LocalScale: {x: 3.35, y: 1.9900007, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14500,7 +14631,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1242003517}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 549805250}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayButtonASound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1242003517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14623,6 +14766,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 549805250}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayButtonASound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 590080713}
         m_TargetAssemblyTypeName: loading, Assembly-CSharp
         m_MethodName: StartImageSequence
@@ -16367,9 +16522,33 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1203074353}
-        m_TargetAssemblyTypeName: AbilityControl, Assembly-CSharp
-        m_MethodName: Ability2
+      - m_Target: {fileID: 549805250}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayButtonBSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 549805250}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayAbility2Sound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4971453891446671967}
+        m_TargetAssemblyTypeName: AbilityEffect, Assembly-CSharp
+        m_MethodName: BoomStart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -18200,9 +18379,33 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1203074353}
-        m_TargetAssemblyTypeName: AbilityControl, Assembly-CSharp
-        m_MethodName: Ability6
+      - m_Target: {fileID: 549805250}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayButtonBSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 549805250}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayAbility6Sound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4971453891446671967}
+        m_TargetAssemblyTypeName: AbilityEffect, Assembly-CSharp
+        m_MethodName: SlowDownStart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -18320,10 +18523,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u50B3\u8AAA\u4E2D\u8C93\u8C93\u9577\u51FA\u7B2C\u4E8C\u689D\u5C3E\u5DF4\u6642\u5B83\u5C31\u591A\u4E86\u4E00\u689D\u547D\uFF0C\u5C0F\u5FC3\u4E0D\u8981\u8E29\u5230\u5B83\uFF01\r\n[\u53EF\u4EE5\u591A\u627F\u53D7\u4E00\u6B21\u653B\u64CA]"
+  m_text: "\u50B3\u8AAA\u4E2D\u8C93\u8C93\u9577\u51FA\u7B2C\u4E8C\u689D\u5C3E\u5DF4\u6642\u5B83\u5C31\u591A\u4E86\u4E00\u689D\u547D\uFF0C\u5C0F\u5FC3\u4E0D\u8981\u8E29\u5230\u5B83\uFF01\r\n[\u5C07\u8840\u91CF\u56DE\u5FA9\u81F3\u5168\u6EFF]"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b54172ced19a50c469c8862b0ae037c9, type: 2}
-  m_sharedMaterial: {fileID: -8058814143550150742, guid: b54172ced19a50c469c8862b0ae037c9, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b5660b64dff42624eba667bd5aa226b5, type: 2}
+  m_sharedMaterial: {fileID: -626726624508757696, guid: b5660b64dff42624eba667bd5aa226b5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -18624,9 +18827,33 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1203074353}
-        m_TargetAssemblyTypeName: AbilityControl, Assembly-CSharp
-        m_MethodName: Ability1
+      - m_Target: {fileID: 549805250}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayButtonBSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 549805250}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayAbility1Sound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4971453891446671967}
+        m_TargetAssemblyTypeName: AbilityEffect, Assembly-CSharp
+        m_MethodName: HealthStart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -23595,7 +23822,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2092728092}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -26.8, y: -24.9, z: 0.1476456}
+  m_LocalPosition: {x: -26.39, y: -24.9, z: 0.1476456}
   m_LocalScale: {x: 3.35, y: 1.99, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
