@@ -72,6 +72,15 @@ public class MonsterSpawner14 : MonoBehaviour
         isSpawning = false;
         Debug.Log("生成達20隻");
     }
+    Vector3 GetRandomSpawnPosition(Vector3 center)
+    {
+        // 在指定区域内随机生成敌人
+        float spawnRadius = 15f; // 你可以根据需要调整生成的半径
+        Vector2 randomPoint = Random.insideUnitCircle * spawnRadius;
+        Vector3 spawnPosition = center + new Vector3(randomPoint.x, randomPoint.y, 0f);
+
+        return spawnPosition;
+    }
 }
 
 public class EnemyController14 : MonoBehaviour

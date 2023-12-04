@@ -14011,7 +14011,7 @@ MonoBehaviour:
   - {fileID: 3214201892117395265, guid: 3566772856b2aee46958e9f3709a4bc1, type: 3}
   - {fileID: 408210438769497327, guid: a8fed3aee3d7ad241b6626397b0a750e, type: 3}
   pauseMenuAbilityIconsContainer: {fileID: 0}
-  pause: {fileID: 57615072}
+  pause: {fileID: 0}
   character: {fileID: 2132485459}
 --- !u!4 &1203074354
 Transform:
@@ -16691,10 +16691,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1447198690}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dc6cb0d32f601741b370e618e020d72, type: 3}
+  m_Script: {fileID: 11500000, guid: 95bf503dd6585b049bb8c84df019f438, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 0
+  hp: 100
   SoulPrefab: {fileID: 2084250237380657556, guid: 39e4a32fcdc04b443a9f67b52efcc9e1, type: 3}
   minSouls: 50
   maxSouls: 60

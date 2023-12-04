@@ -638,7 +638,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 627125056}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7842,6 +7843,37 @@ RectTransform:
   m_AnchoredPosition: {x: 6.9999924, y: -32.80489}
   m_SizeDelta: {x: 522.2112, y: 135.0044}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &627125055
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 627125056}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &627125056
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 627125055}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -16, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 61399609}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &632330080
 GameObject:
   m_ObjectHideFlags: 0
@@ -11823,7 +11855,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 999114331}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.2850826, y: -6.31, z: 0.18143257}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.9593226, y: 1.1298643, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -24348,6 +24380,10 @@ PrefabInstance:
     - target: {fileID: 4971453889819881229, guid: 8e4d4ea91de2dfa4f9935cede54d00bb, type: 3}
       propertyPath: m_Name
       value: CATCAT
+      objectReference: {fileID: 0}
+    - target: {fileID: 4971453891166095647, guid: 8e4d4ea91de2dfa4f9935cede54d00bb, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6349325696474531178, guid: 8e4d4ea91de2dfa4f9935cede54d00bb, type: 3}
       propertyPath: m_audioClip

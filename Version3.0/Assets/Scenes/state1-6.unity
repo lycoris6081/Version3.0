@@ -1591,6 +1591,7 @@ MonoBehaviour:
   BoxPrefab: {fileID: 1337520893320094713, guid: f6489e4dacff31649840c5046e6660eb, type: 3}
   ArrowIndicatorPrefab: {fileID: 5831095170735610345, guid: b264fb23b4f711d4c839f785376a57ab, type: 3}
   NeedsSoul: 6
+  BoxOpen: {fileID: 0}
 --- !u!4 &235483963
 Transform:
   m_ObjectHideFlags: 0
@@ -2030,6 +2031,7 @@ MonoBehaviour:
   isGamePaused: 0
   abilityControl: {fileID: 0}
   resumeButton: {fileID: 0}
+  myCanvas: {fileID: 0}
 --- !u!114 &277061380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7067,6 +7069,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 3423636653185167368, guid: fc80fa6581ccfdc4ca45bd4845f37076, type: 3}
   bulletForce: 12
   fireRate: 0.5
+  fireSound: {fileID: 0}
 --- !u!212 &1143869077
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9584,6 +9587,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  CardPickSound: {fileID: 0}
 --- !u!1 &1620491197
 GameObject:
   m_ObjectHideFlags: 0
@@ -11156,6 +11160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e10ae77eaae1c34383b55b255d2e902, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ButtonSound: {fileID: 0}
 --- !u!114 &1973849487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12508,6 +12513,7 @@ MonoBehaviour:
   sprintDistance: 5000
   AttackBox: {fileID: 1648438171}
   animator: {fileID: 983904391}
+  SFX_hitSound: {fileID: 0}
 --- !u!114 &2132485466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12555,6 +12561,9 @@ MonoBehaviour:
   - {fileID: 2094878503}
   - {fileID: 912998254}
   - {fileID: 399142653}
+  isPlayingSound: 0
+  SFX_dieSound: {fileID: 0}
+  SFX_hurtSound: {fileID: 0}
 --- !u!70 &2132485468
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

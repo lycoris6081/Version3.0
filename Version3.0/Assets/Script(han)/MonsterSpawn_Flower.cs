@@ -35,7 +35,7 @@ public class MonsterSpawn_Flower : MonoBehaviour
             Vector3 spawnPosition = spawnArea.spawnPoint.position;
 
             // 添加一个随机偏移，以在指定区域内随机生成
-            float randomX = Random.Range(-17f, 17f); // 根据需要调整X轴的随机范围
+            float randomX = Random.Range(-10f, 17f); // 根据需要调整X轴的随机范围
             float randomY = Random.Range(-16f, 3f); // 根据需要调整Y轴的随机范围
             spawnPosition += new Vector3(randomX, randomY, 0);
 
