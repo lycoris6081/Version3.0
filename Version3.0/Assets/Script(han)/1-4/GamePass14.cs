@@ -28,6 +28,18 @@ public class GamePass14 : MonoBehaviour
     [Header(" [失敗]")]
     public GameObject Image3; // 图像3
     public GameObject Image4; // 图像4
+
+    public GameObject Image5; // 图像3
+    public GameObject Image6; // 图像4
+
+    public GameObject Image7; // 图像3
+    public GameObject Image8; // 图像4
+
+    public GameObject Image9; // 图像3
+    public GameObject Image10; // 图像4
+
+    public GameObject Image11; // 图像3
+    public GameObject Image12; // 图像4
     // 在Start方法中初始化计数并禁用亮图像
 
     AudioSource AudioSource;
@@ -51,6 +63,10 @@ public class GamePass14 : MonoBehaviour
             PASS11 = true;
             Image1.SetActive(false);
             Image2.SetActive(true);
+            Image5.SetActive(false);
+            Image6.SetActive(true);
+            Image9.SetActive(false);
+            Image10.SetActive(true);
         }
         else
         {
@@ -58,6 +74,10 @@ public class GamePass14 : MonoBehaviour
             pass1B.SetActive(false);
             Image2.SetActive(false);
             Image1.SetActive(true);
+            Image6.SetActive(false);
+            Image5.SetActive(true);
+            Image10.SetActive(false);
+            Image9.SetActive(true);
         }
         if (PASS12 == true)
         {
@@ -65,6 +85,10 @@ public class GamePass14 : MonoBehaviour
             pass2D.SetActive(false);
             Image3.SetActive(false);
             Image4.SetActive(true);
+            Image7.SetActive(false);
+            Image8.SetActive(true);
+            Image11.SetActive(false);
+            Image12.SetActive(true);
         }
         else
         {
@@ -72,6 +96,10 @@ public class GamePass14 : MonoBehaviour
             pass2B.SetActive(false);
             Image4.SetActive(false);
             Image3.SetActive(true);
+            Image8.SetActive(false);
+            Image7.SetActive(true);
+            Image12.SetActive(false);
+            Image11.SetActive(true);
         }
 
         if(PASS11&&PASS12 == true)
