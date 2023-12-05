@@ -3166,6 +3166,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1467864065}
+        m_TargetAssemblyTypeName: SMeneger, Assembly-CSharp
+        m_MethodName: choose
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &198146394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19016,6 +19028,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1290027289}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
         m_MethodName: PlayButtonASound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1467864070}
+        m_TargetAssemblyTypeName: loading, Assembly-CSharp
+        m_MethodName: StartImageSequence
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
