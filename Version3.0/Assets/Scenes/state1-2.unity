@@ -15128,8 +15128,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   countdownText: {fileID: 1352716973}
-  images: []
-  panel: {fileID: 0}
 --- !u!4 &1257018341
 Transform:
   m_ObjectHideFlags: 0
