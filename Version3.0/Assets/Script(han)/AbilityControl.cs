@@ -301,13 +301,7 @@ public class AbilityControl : MonoBehaviour
         // 持續時間結束後，將 icon 隱藏
         Slowdown = false;
 
-        // 找到 Ability6() 按鈕對應的 icon 並刪除它
-        Image iconToRemove = selectedAbilityIcons.Find(icon => icon.sprite == abilityIcons[6].sprite);
-        if (iconToRemove != null)
-        {
-            selectedAbilityIcons.Remove(iconToRemove);
-            Destroy(iconToRemove.gameObject);
-        }
+        
 
         // 重新排列剩餘的 icon 的位置
         RearrangeIcons();

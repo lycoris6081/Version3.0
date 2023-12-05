@@ -7,7 +7,7 @@ public class PlayerHP : MonoBehaviour
 {
 
     private static bool isInvincible = false;
-    private float invincibilityDuration = 10f; // 设置无敌持续时间
+    public static float invincibilityDuration = 10f; // 设置无敌持续时间
 
     private Rigidbody2D rb;
     public static int hp = 3;
