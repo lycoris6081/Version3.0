@@ -19792,6 +19792,7 @@ GameObject:
   - component: {fileID: 1290027285}
   - component: {fileID: 1290027289}
   - component: {fileID: 1290027288}
+  - component: {fileID: 1290027290}
   m_Layer: 0
   m_Name: GameMenager
   m_TagString: Untagged
@@ -19948,6 +19949,28 @@ MonoBehaviour:
   Ability_bullettime: {fileID: 8300000, guid: 39020caf0df39da4ca9c23e70c2bc439, type: 3}
   Ability_Boom: {fileID: 8300000, guid: 3c737c96b047e754c8b6e37cfd19758b, type: 3}
   audioMixer: {fileID: 0}
+--- !u!114 &1290027290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290027284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95d2d975f239d404b9707b24df4d02b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timing: 0
+  startTime: 0
+  countTime: 0
+  int_mins: 0
+  int_secs: 0
+  Text_Time: {fileID: 72817405}
+  Gameover_text: {fileID: 72817405}
+  inGameDebug_text: {fileID: 72817405}
+  Pass_text: {fileID: 231802127}
+  Pause_text: {fileID: 2066037727}
 --- !u!1 &1295392638
 GameObject:
   m_ObjectHideFlags: 0
@@ -21813,8 +21836,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   countdownText: {fileID: 347335853}
-  images: []
-  panel: {fileID: 0}
 --- !u!4 &1427195316
 Transform:
   m_ObjectHideFlags: 0
