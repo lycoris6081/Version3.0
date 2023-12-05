@@ -47,6 +47,9 @@ public class GamePass12 : MonoBehaviour
     public GameObject Image11;
     public GameObject Image12;
 
+    [Header("生成怪物")]
+    public GameObject Spawn1;
+
     [Header("遊戲內物件")]
     public GameObject Pass;
     public GameObject Clear;
@@ -133,6 +136,8 @@ public class GamePass12 : MonoBehaviour
                 // 启用过关按钮
                 WinButton.SetActive(true);
             }
+            Spawn1.SetActive(false);
+         
         }
     }
 
