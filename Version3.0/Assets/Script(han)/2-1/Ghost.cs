@@ -35,14 +35,22 @@ public class Ghost : MonoBehaviour
 
     public static bool Boom = false;
 
+    private SpriteRenderer spriteRenderer;
+    private float flashDuration = 0.1f;
+    private Color originalColor;
+
     void Start()
     {
         Boomhp = 0;
         hp = 1;
+
+       
         status = Status.walk;
 
         spr = this.transform.GetComponent<SpriteRenderer>();
-        
+
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        originalColor = spriteRenderer.color;
 
         if (spr.flipX)
         {
@@ -94,10 +102,15 @@ public class Ghost : MonoBehaviour
     public void TakeDamage(int damageAmount)
     {
         hp -= damageAmount; // 減少敵人的血量
-
+        
     }
-
-    private IEnumerator SlowDown(float duration)
+    private System.Collections.IEnumerator FlashWhite()
+    {
+        spriteRenderer.color = Color.red;
+        yield return new WaitForSeconds(flashDuration);
+        spriteRenderer.color = originalColor;
+    }
+    private IEnumerator SlowDown(float duration = 5f)
     {
         // 保存原始速度
         float originalSpeed = Speed;
@@ -227,13 +240,13 @@ public class Ghost : MonoBehaviour
         if (other.gameObject.tag == "AttackBox")
         {
             hp = hp -= AttackBox.Damage;
-
+            StartCoroutine(FlashWhite());
         }
         if (other.gameObject.tag == "Shield")
         {
 
             hp = 0;
-
+            StartCoroutine(FlashWhite());
 
         }
 

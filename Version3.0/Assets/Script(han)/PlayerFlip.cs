@@ -5,25 +5,26 @@ using UnityEngine;
 public class PlayerFlip : MonoBehaviour
 {
     private SpriteRenderer spriteRenderer;
-    private float lastMouseX;
 
     // Start is called before the first frame update
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        lastMouseX = Input.mousePosition.x;
     }
 
     void PictureFlip()
     {
-        // 獲取滑鼠當前的X位置
-        float mouseX = Input.mousePosition.x;
+        // 獲取滑鼠在相機中的位置
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-        // 計算滑鼠移動的方向
-        float direction = Mathf.Sign(mouseX - lastMouseX);
+        // 計算滑鼠相對於角色的位置
+        float relativeX = mousePos.x - transform.position.x;
 
-        // 根據方向切換圖片
-        if (direction > 0)
+        // 計算滑鼠相對於角色中點的位置
+        float relativeXCentered = relativeX / Mathf.Abs(relativeX);
+
+        // 根據相對位置切換圖片
+        if (relativeXCentered > 0)
         {
             spriteRenderer.flipX = true;
         }
@@ -31,12 +32,11 @@ public class PlayerFlip : MonoBehaviour
         {
             spriteRenderer.flipX = false;
         }
-
     }
+
     // Update is called once per frame
     void Update()
     {
         PictureFlip();
-        
     }
 }
