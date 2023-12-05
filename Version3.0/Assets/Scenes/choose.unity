@@ -11780,7 +11780,7 @@ MonoBehaviour:
   - {fileID: 300845505}
   - {fileID: 98129624}
   - {fileID: 1619259490}
-  nextLevelName: state1-6
+  nextLevelName: state1-5 1
   buttonClick: {fileID: 0}
 --- !u!1 &1097791140
 GameObject:
