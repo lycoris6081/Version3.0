@@ -43,6 +43,8 @@ public class GameCountdown : MonoBehaviour
         // 延遲0.5秒
         yield return new WaitForSeconds(0.5f);
 
+        
+
         // 依次隱藏每張圖片
         for (int i = 0; i < images.Length; i++)
         {

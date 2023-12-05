@@ -30,4 +30,20 @@ public class CheatCodeAbility : MonoBehaviour
     {
         SceneManager.LoadScene(4);
     }
+    public void Skipto11()
+    {
+        SceneManager.LoadScene(5);
+    }
+    public void Skipto12()
+    {
+        SceneManager.LoadScene(6);
+    }
+    public void Skipto13()
+    {
+        SceneManager.LoadScene(7);
+    }
+    public void Skipto14()
+    {
+        SceneManager.LoadScene(8);
+    }
 }
