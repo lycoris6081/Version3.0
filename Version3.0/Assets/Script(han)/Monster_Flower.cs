@@ -138,7 +138,15 @@ public class Monster_Flower : MonoBehaviour
 
             hp = 0;
 
-           
+            GameObject gameManager = GameObject.Find("GameMenager");
+            if (gameManager != null)
+            {
+                GamePass13 gamePass = gameManager.GetComponent<GamePass13>();
+                if (gamePass != null)
+                {
+                    gamePass.EnemyDowninAbility();
+                }
+            }
 
         }
 

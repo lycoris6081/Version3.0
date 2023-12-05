@@ -119,7 +119,8 @@ public class GamePass13 : MonoBehaviour
                 // 启用过关按钮
                 WinButton.SetActive(true);
             }
-         
+            Spawn1.SetActive(false);
+            spawn2.SetActive(false);
 
         }
     }

@@ -7334,8 +7334,8 @@ MonoBehaviour:
   Pass: {fileID: 739686442}
   Clear: {fileID: 330862051}
   WinButton: {fileID: 97439979}
-  Spawn1: {fileID: 0}
-  spawn2: {fileID: 0}
+  Spawn1: {fileID: 665573220}
+  spawn2: {fileID: 1676626392}
   Image5: {fileID: 156675007}
   Image6: {fileID: 744279516}
 --- !u!114 &549805248
