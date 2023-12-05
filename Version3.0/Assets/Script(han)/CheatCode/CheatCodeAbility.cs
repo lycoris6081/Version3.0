@@ -32,7 +32,7 @@ public class CheatCodeAbility : MonoBehaviour
     }
     public void Skipto11()
     {
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene(1);
     }
     public void Skipto12()
     {
