@@ -82,6 +82,11 @@ public class AbilityControl : MonoBehaviour
         abilityIconsContainer.gameObject.SetActive(true);
     }
 
+    public void ResetAbility6UsageCount()
+    {
+        Ability6UsageCount = 0;
+    }
+
 
     public void Ability1()
     {
